@@ -1,0 +1,22 @@
+﻿Scopus-50-Analyze-Year
+
+"Your query : (""machine learning"" OR ""deep learning"" OR ""neural networks"" AND ""wave propagation"" OR ""wave equation"" AND (modeling OR modelling OR model OR simulation) AND (PUBYEAR > 2009 AND PUBYEAR < 2024))"
+
+
+Number of results : 50
+
+"YEAR",
+"2023","5009"
+"2022","4124"
+"2021","2975"
+"2020","2084"
+"2019","1538"
+"2018","1076"
+"2017","856"
+"2016","647"
+"2015","531"
+"2014","520"
+"2013","478"
+"2012","401"
+"2011","384"
+"2010","351"

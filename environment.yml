@@ -1,0 +1,10 @@
+name: review-elastic-waves-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.12.3
+  - numpy==1.26.4
+  - matplotlib==3.8.4
+  - pandas==2.2.2
+  - requests==2.32.3
