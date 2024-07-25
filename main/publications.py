@@ -26,19 +26,19 @@ def figsize(width_scale=1, height_scale=1, nplots=1):
     return fig_size
 
 pgf_with_latex = {                      # setup matplotlib to use latex for output
-    "pgf.texsystem": "pdflatex",        # change this if using xetex or lautex
+    "pgf.texsystem": "xelatex",        # change this if using xetex or lautex
     "text.usetex": True,                # use LaTeX to write all text
-    "font.family": "serif",
-    "font.serif": [],                   # blank entries should cause plots to inherit fonts from the document
-    "font.sans-serif": [],
-    "font.monospace": [],
+    #"font.family": "serif",
+    #"font.serif": [],                   # blank entries should cause plots to inherit fonts from the document
+    #"font.sans-serif": [],
+    #"font.monospace": [],
     "axes.labelsize": 10,               # LaTeX default is 10pt font.
     "font.size": 10,
     "legend.fontsize": 8,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 8,
     "ytick.labelsize": 8,
     "figure.figsize": figsize(1.0),     # default fig size of 0.9 textwidth
-    "pgf.preamble": r'\usepackage[utf8x]{inputenc},\usepackage[T1]{fontenc},\usepackage{amssymb},\usepackage{amsfonts}',
+    "pgf.preamble": r'\usepackage{amssymb},\usepackage{amsfonts},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault}',
         # plots will be generated using this preamble
     }
 mpl.rcParams.update(pgf_with_latex)
@@ -75,8 +75,8 @@ df_new = pd.DataFrame(new_data)
 df_new['RELATIVE_PERCENT'] = (df['WORKS'] / df_new['RELATIVE_WORKS']) 
 
 # Convertir ancho de mm a pulgadas
-width_in_inches = 90 / 25.4
-height_in_inches = 50 / 25.4
+width_in_inches = 80 / 25.4
+height_in_inches = 55 / 25.4
 
 # Graficar
 plt.figure(figsize=(width_in_inches, height_in_inches))
@@ -93,15 +93,20 @@ selected_years = [2010, 2013, 2016, 2019, 2022]  # Años seleccionados para most
 plt.xticks(selected_years)
 
 # Crear un segundo eje Y para los valores relativos
+plt.xlabel('Year')
 ax2 = ax.twinx()
 ax2.step(df_new['YEAR'], df_new['RELATIVE_PERCENT'], linestyle='--', color='blue', label='Relative')
 ax2.set_ylabel('Relative', color='blue')  # Establece el color del texto del eje Y a azul
 ax2.tick_params(axis='y', colors='blue')  # Cambia el color de los ticks del eje Y a azul
+ax2.spines['right'].set_color('blue')  # Cambia el color de la línea del eje Y derecho a azul
+ax2.yaxis.set_minor_locator(AutoMinorLocator(n=2))
 
 
+ax.spines['top'].set_visible(False)  # Oculta el eje superior en el eje principal
+ax2.spines['top'].set_visible(False)  # Oculta el eje superior en el eje secundario
 # Ajustes finales
 plt.xlabel('Year')
 #plt.xticks([df['YEAR'].iloc[0], df['YEAR'].iloc[-1]])
 plt.tight_layout()
-plt.savefig('publications_with_relative.png')
+plt.savefig('publications_with_relative.pdf')
 plt.show()
