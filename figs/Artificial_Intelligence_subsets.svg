@@ -3,8 +3,8 @@
 
 <svg
    width="196.20935mm"
-   height="57.356728mm"
-   viewBox="0 0 196.20935 57.356728"
+   height="58.10508mm"
+   viewBox="0 0 196.20935 58.10508"
    version="1.1"
    id="svg20144"
    sodipodi:docname="Artificial_Intelligence_subsets.svg"
@@ -13,7 +13,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:ns1="http://www.iki.fi/pav/software/textext/">
+   xmlns:ns16="http://www.iki.fi/pav/software/textext/">
   <sodipodi:namedview
      id="namedview20146"
      pagecolor="#ffffff"
@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="4.051698"
-     inkscape:cx="408.1005"
-     inkscape:cy="157.34144"
+     inkscape:zoom="1.4324916"
+     inkscape:cx="401.04949"
+     inkscape:cy="243.9805"
      inkscape:window-width="2400"
      inkscape:window-height="1261"
      inkscape:window-x="2391"
@@ -552,17 +552,17 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-3.11174, -28.5791)">
+     transform="translate(-3.1117437,-28.861696)">
     <g
        id="g19098"
        transform="matrix(0.35277776,0,0,0.35277778,3.1117437,30.037129)">
       <path
-         d="M 0,0 H 556.184 V 158.234 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0,-3.3319364 H 556.184 V 161.37538 H 0 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.02025"
          id="path19100" />
       <path
-         d="M 8.562,-4.133 H 524.468 V 158.453 H 8.562 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0.70855014,-4.133 H 524.468 V 158.453 H 0.70855014 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00758"
          id="path19102" />
       <path
          d="m 222.141,91.34 c 0,35.332 -28.641,63.972 -63.973,63.972 -35.328,0 -63.973,-28.64 -63.973,-63.972 0,-35.328 28.645,-63.973 63.973,-63.973 35.332,0 63.973,28.645 63.973,63.973 z"
@@ -975,15 +975,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,49.925232,43.045428)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nArtificial\\\\\nIntelligence\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nArtificial\\\\\nIntelligence\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000">
       <defs
          id="id-d4e700ba-b375-494d-adef-dc0db2f47141">
@@ -1233,15 +1233,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,51.937742,55.650916)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nMachine\\\\\nLearning\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nMachine\\\\\nLearning\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-5">
       <defs
          id="id-0e3eb42b-b10a-4500-9e72-63976aae4339">
@@ -1437,15 +1437,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,51.433402,70.584081)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nNeural\\\\\nNetworks\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nNeural\\\\\nNetworks\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-5-8">
       <defs
          id="id-2b5df210-a825-4760-a6f6-d2d284009afb">
@@ -1652,15 +1652,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,94.828415,30.171463)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nInput\\\\\nLayer\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nInput\\\\\nLayer\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3">
       <defs
          id="id-682e836e-b486-4352-b262-30b0ba141f30">
@@ -1827,15 +1827,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,122.79823,30.171463)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nHidden\\\\\nLayers\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nHidden\\\\\nLayers\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7">
       <defs
          id="id-66822e16-3f67-482a-ae75-6a22f5026198">
@@ -2016,15 +2016,15 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,149.57517,30.149415)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\nOutput\\\\\nLayer\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\nOutput\\\\\nLayer\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-8">
       <defs
          id="id-53b867d5-da8b-4d2b-9637-cca82b19cfd2">
@@ -2192,15 +2192,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,118.11102,42.581758)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb">
@@ -2232,15 +2232,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,137.10845,42.581758)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5-2">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb-3">
@@ -2272,15 +2272,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,118.11102,60.220647)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5-1">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb-1">
@@ -2312,15 +2312,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,137.10845,60.220647)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5-23">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb-2">
@@ -2352,15 +2352,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,118.11102,77.860947)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5-8">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb-0">
@@ -2392,15 +2392,15 @@
     </g>
     <g
        transform="matrix(0.38987254,0,0,0.38987254,137.10845,77.860947)"
-       ns1:version="1.8.2"
-       ns1:texconverter="pdflatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
-       ns1:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:jacobian_sqrt="0.352778"
+       ns16:version="1.8.2"
+       ns16:texconverter="pdflatex"
+       ns16:pdfconverter="inkscape"
+       ns16:text="{\\begin{center}\n$\\sigma$\n\\end{center}\n}"
+       ns16:preamble="C:\Users\orincon\Documents\default_packages_inks.tex"
+       ns16:scale="1.0"
+       ns16:alignment="middle center"
+       ns16:stroke-to-path="0"
+       ns16:jacobian_sqrt="0.352778"
        id="g23000-3-7-5-19">
       <defs
          id="id-3a352d66-2dc8-4e25-a8db-5e40ab1c5edb-6">
