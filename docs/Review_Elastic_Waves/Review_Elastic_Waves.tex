@@ -1,0 +1,391 @@
+\documentclass[11pt,twoside]{article}
+\usepackage[body={17cm, 24cm},headheight=1mm]{geometry}
+\geometry{
+  top=2cm, % Top margin
+  bottom=2cm, % Bottom margin
+  left=2cm, % Left margin
+  right=2cm % Right margin
+}
+
+%\usepackage[paperheight=240mm,
+%			paperwidth=170mm,
+%			left=22mm,
+%			right=22mm,
+%			top=30mm,
+%			bottom=20mm,
+%			headsep=11mm,
+%			%showframe,%para incluir líneas de caja.
+%			headheight=5mm,
+%			centering]{geometry}
+%--------------------------------------------------------------------------------------------------------------------------------
+\usepackage[margin=1cm]{caption}
+
+\captionsetup[figure]{font={sf, small},labelfont={normal,small,bf},labelsep=period}
+%\captionsetup[figure]{
+%  font={sf, small}, % Fuente sans-serif y tamaño pequeño
+%  labelfont={normal,small,bf}, % Fuente normal, pequeña y negrita para la etiqueta
+%%  width=22cm, % Ancho máximo del caption
+%%  belowskip=-7pt, % Espacio debajo del caption
+%%  aboveskip=-5pt, % Espacio arriba del caption
+%%  skip=7pt, % Espacio entre el caption y el contenido
+%  labelsep=period % Separador entre la etiqueta y el texto
+%}
+ 
+\usepackage{amsmath} % Paquete necesario para \boldsymbol
+\usepackage{amssymb} % Paquete necesario para \mathbb
+\usepackage{graphicx} % Paquete necesario para incluir gráficos
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\setcitestyle{square,numbers}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+% Definición del comando \iconbox
+\newtcbox{\iconbox}[1][]{%
+  nobeforeafter, tcbox raise base, 
+  boxrule=0.4pt, top=0pt, bottom=-1pt,
+  right=0.1pt, left=0.1pt, arc=1pt, boxsep=1pt,
+  fontupper={\tiny \sffamily}, before upper={\vphantom{dlg}},
+  colframe=white, colback=black!10!white, coltext=black, #1}
+
+\usepackage{tikz} % Paquete necesario para dibujar líneas
+\usepackage{lettrine}
+
+\renewcommand{\citep}[2][]{\textcolor{gray}{(\citeauthor{#2}, \citeyear[#1]{#2})}}
+\renewcommand{\citeauthoryear}[2][]{\textcolor{gray}{\citeauthor{#2} (\textcolor{gray}{\citeyear[#1]{#2}})}}
+\usepackage{fontspec}
+\setmainfont{newbask}[
+  Path = ./fonts/,
+  UprightFont = *n.ttf,
+  BoldItalicFont = *z.ttf,
+  BoldFont = *b.ttf,
+  ItalicFont = *i.ttf,
+  BoldFeatures = {SmallCapsFont = {nbaskervillecapbold}},
+  ItalicFeatures = {SmallCapsFont = {lmromancaps10-oblique-webfont}},%newbaskervillecap%lmromancaps10-oblique-webfont
+  SmallCapsFont ={lmromancaps}
+]  
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = blue,
+     linkcolor = red,
+     urlcolor= gray
+}
+%--------------------------------------------------------------------------------------------------------------------------------
+% Configuración de fancyhdr
+\pagestyle{fancy}
+\fancyhf{} % Borrar el estilo defecto
+\renewcommand{\headrulewidth}{0pt} % Eliminar la línea horizontal del encabezado
+
+% Configuración del encabezado
+\fancyhead[LE]{\thepage\, / \textit{Machine Learning Modeling of Elastic Waves}} % Encabezado para páginas pares
+\fancyhead[RO]{\textit{Introduction}\, / \thepage} % Encabezado para páginas impares
+
+\pagenumbering{arabic} % Configuración de numeración de páginas
+\setcounter{page}{1} % Establecer el número de página inicial
+
+%--------------------------------------------------------------------------------------------------------------------------------
+ 
+\begin{document}
+\thispagestyle{empty}
+%\noindent\rule{\textwidth}{0.3pt}  
+\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
+
+\vspace{-2mm} 
+ 
+
+
+\begin{minipage}{10cm}
+        \begin{center}
+            \textbf{\large A Review of Recent Progress in Elastic Waves Propagation Modeling Using Machine Learning Based Methods}  
+            \end{center}                 
+    \end{minipage} 
+    \begin{minipage}{3.3cm}
+        \begin{center}
+            \hspace{-0.2cm}\includegraphics[width=2.8cm]{figs/logo_EAFIT.pdf}
+        \end{center}
+    \end{minipage}    
+    \begin{minipage}{2.2cm}
+        \begin{center}
+           \includegraphics[width=2.5cm]{figs/logo_grupo.pdf}
+        \end{center}
+    \end{minipage}
+\vspace{-2mm} 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
+
+
+%\noindent\rule{\textwidth}{0.3pt} 
+
+{\begin{center}
+Oscar Rincón-Cardeño\textsuperscript{1,2,\iconbox{\href{https://orcid.org/0000-0002-5308-9710}{ID}},\iconbox{\href{https://github.com/oscar-rincon}{GH}}}
+
+\end{center}
+}
+
+\vspace{-0.3cm}
+
+{\footnotesize
+\textsuperscript{1} School of Applied Sciences and Engineering, Universidad EAFIT, Medellín, Colombia – \textsuperscript{2} Applied Mechanics research group from
+Universidad EAFIT
+}
+
+{\noindent\footnotesize{\textbf{Associated document repository:} \href{https://github.com/oscar-rincon/review-elastic-waves}{https://github.com/oscar-rincon/review-elastic-waves}}}
+%\vspace{0.5cm}
+
+\end{tcolorbox}
+
+
+
+
+\begin{tcolorbox}[colback=gray!20, colframe=gray!20,sharp corners]
+
+\begin{abstract}
+
+\vspace{-1mm}
+
+\noindent
+Numerical modeling has been crucial for addressing problems across various scientific and engineering disciplines that involve partial differential equations. In particular, wave propagation modeling is one of the areas where intensive scientific computation has been developed. Standard numerical modeling methods demonstrate notable accuracy. However, their computational cost can be significant. Alternative methods based on machine learning have recently emerged, showing an adequate balance between computational cost and accuracy when applied to wave propagation problems. In this work, we present a review of machine learning methods that have been developed and used to model elastic wave propagation, with special emphasis on geophysical applications.
+\end{abstract}
+\end{tcolorbox}
+
+ 
+\section*{Introduction}
+
+
+
+\lettrine{W}{ }ave propagation is a physical phenomenon governed by partial differential equations, which hold significant importance across various applied sciences and engineering fields. However, analytical solutions are not always available for most nonlinear systems, and numerical methods are usually required to approximate the exact solutions. Consequently, these methods have been applied to solve the partial differential equations, achieving the required accuracy \citep{Seriani2020}.
+
+In the field of wave propagation, numerous techniques address wave propagation challenges. Classical methods include finite-difference, finite-element and spectral-element methods \citep{Moczo, virieux_review_2011, Igel2017,komatitsch_introduction_1999,chaljub_spectral-element_2007}. In these approaches, the spatial coordinates are discretized. In the context of mathematical modeling, the primary objective is to ensure that the solution methods are computationally efficient without sacrificing accuracy to capture the physical details inherent to the system. However, standard numerical methods often encounter difficulties when addressing complex problems such as irregular geometries, material changes, and mixed boundary conditions. Therefore, the computational demand associated with many common models in computational mechanics has increased the development of innovative strategies.
+
+Research conducted with the use of machine learning has considerably grown in the late 2010s, owing to advancements in hardware, such as graphic processing units and data storage technologies and the growth of available data. Additionally, the discovery of better training practices for neural networks, and the availability of open-source packages like Tensorflow, PyTorch and JAX \citep{abadi_tensorflow_2016,paszke_pytorch_2019,jax2018github}, as well as the availability of Automatic Differentiation in such packages \citep{paszke_automatic_2017,baydin_automatic_2017}. Particularly, deep learning algorithms offer attractive approximation capabilities for any function by mapping the input features to the output targets in a data-driven manner. A version of the Universal Approximation Theorem conclusively demonstrates that neural networks have the capability to accurately approximate a wide variety of nonlinear functions without any dimensionality constraints \citep{barron_universal_1993}. Additionally, multiple physics-informed neural network methods have been recently proposed \citep{cuomo_scientific_2022}. As a consequence there has been a marked increase in the number of publications associated with neural networks and wave propagation modeling. Figure \ref{dl-wave_propagation-publications} shows the number of document published associated to wave propagation modeling and machine learning. 
+
+\begin{figure*}
+\centering
+    \includegraphics[scale=1]{figs/publications_with_relative.pdf}
+    \caption{The growth of literature related to machine learning and wave propagation modeling. Number of publications according to Scopus between 2010 and 2023. The implemented query was: "machine learning" OR "deep learning" OR "neural networks" 
+AND "wave propagation" OR "wave equation" 
+AND (modeling OR modelling OR model OR simulation).}
+    \label{dl-wave_propagation-publications}
+\end{figure*}
+
+Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various engineering and scientific disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. Particularly, this review may be of help for researchers with interest into apply these emerging techniques in wave propagation modeling. Due to the extensive areas where wave equation is applied, our aim is to review the recent progress achieved in elastic wave propagation modeling by employing these emerging techniques, specially on geophysics, and the publication time-span studied for those applications was 2014-2024.
+
+This work provides a comprehensive analysis of the advancements made and their impact. While this area can be applied to a wide range of problems, our focus will be limited to the propagation of mechanical waves. The work is organized into the following sections: Section \ref{sec:fordward_inverse_modeling_mechanical_waves} reviews the fundamentals of mechanical wave propagation modeling. Furthermore, in Sections \ref{sec:tnm} and \ref{sec:dl_mwpm}, we identify existing standard and deep learning methods used to solve the wave equation and highlight their strengths and weaknesses in comparison to each other. Additionally, we examine the recent advances in mechanical wave propagation modeling achieved through these methods. Finally, in Section \ref{sec:final_remarks_and_perspectives}, we discuss possible challenges and opportunities.
+
+\section{Modeling of Mechanical Wave Propagation}\label{sec:fordward_inverse_modeling_mechanical_waves}
+\fancyhead[RO]{\textit{Modeling of Mechanical Wave Propagation}\, / \thepage} % Encabezado para páginas impares
+
+A dynamic model, such as the propagation of waves in a medium, describes how a system changes over time. This is different from a static model, which shows how a system is at equilibrium. Dynamic models typically use differential equations to describe how a system evolves. A general formulation of the governing equation of a physical problem can be:
+
+\begin{equation}
+D(\boldsymbol{u}(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde}
+\end{equation}
+
+\
+
+where $D$ denotes the differential operator acting on the solution to the differential equation $u(x,t)$ parameterized by $\lambda$, $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the initial condition by:
+
+\begin{equation}
+B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T] 
+\end{equation}
+
+\begin{equation}
+u(x, 0) = h(x, 0), \quad x \in \Omega
+\end{equation}
+
+\
+
+The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$.
+
+Two general approaches when mathematically modeling a system are the inverse and forward problems. The process of determining the causes of a set of observations is known as the inverse problem \citep{Tarantola}, aiming to infer, for example, the properties of a medium based on its reaction to mechanical wave propagation. Since it begins with the effects and then calculates the causes, it is the opposite of a forward problem, which determines the effects based on the causes. In most cases, the inverse problem is formulated by iteratively performing forward modeling to infer the causes that produce a desired effect, making it computationally complex. An schematic representation of the forward and inverse model using numerical methods is shown in Figure \ref{fig:forward_inverse}.
+
+\begin{figure*}[tb!]
+\includegraphics{figs/Forward_Inverse_Modeling_Waves.pdf}
+    \caption{Scheme of the forward and inverse problems encountered in solving partial differential equations (PDEs). In the forward scenario, the inputs $(x,\lambda)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through either standard numerical methods (SNM) or neural networks based methods (MLBM) to derive a solution $u$. Standard numerical methods such as: finite differences (FD), finite elements (FE), pseudo-spectral (PS), finite volumes (FV), and spectral elements (SE). Also, deep learning techniques include, for example, Physics Informed Neural Networks (PINNs), Neural Operator (NO), and Neural Networks (NN). In the case of the inverse problem, the objective is to determine the parameters, for example, the wave speed, $c$ starting from the solution $u$.}
+    \label{fig:forward_inverse}
+\end{figure*}
+
+Inverse problems are closely tied to simulation, and solving them is crucial for many real-world tasks. Moreover, some complex physical problems require determining the properties of a physical system governed by partial differential equations from observational data, rather than solving them directly to obtain a function that satisfies them \citep{galiounas_battery_2022, ren_seismicnet_2024,mccann_convolutional_2017}. The objective is to estimate a set of latent or unobserved parameters of a system based on real-world observations. Within the framework described by Equation \ref{eq:pde}, the task involves estimating $\lambda$ given $u$. Inversion can be exceedingly challenging since often requires numerous forward simulations to align the predictions of the physical model with the set of observations. 
+
+
+Wave propagation simulations are essential tools in many areas of geophysics...
+
+
+The differential equations of interest in this review are those that provide a mathematical description of mechanical wave propagation. We initially consider a continuous medium with a domain $\Omega$ and a boundary $\Gamma$. Denoting by $\mathbf{r}$ the position vector defined at time $t$ within the interval $(0, T)$, where $T > 0$ and $T \in \mathbb{R}$, we introduce:
+
+\[
+\begin{aligned}
+\hat{\Omega} &= \Omega \cup \Gamma, &\quad
+Q_T &= \Omega \times (0,T), &\quad
+\Sigma_T &= \Gamma \times (0,T).
+\end{aligned}
+\]
+
+\
+
+Here, $x_k$ for $k \in \{1, 2, 3\}$ are Cartesian coordinates and $t$ is time. The wave equation problem involves finding a function \( u : \Omega \to \mathbb{R} \) that satisfies the following equations.
+
+Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study seismic waves and in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear wave equation in a homogeneous medium can be expressed as \citep{Carcione2002}:
+
+\begin{equation}
+\frac{\partial^2 \boldsymbol{u}(\boldsymbol{x_i}, t)}{\partial t^2} - c^{2} \nabla^2 \boldsymbol{u}(\boldsymbol{x_i}, t) = f(\boldsymbol{x_i}, t) \ ,
+\label{acoustic}
+\end{equation}
+
+\
+
+where \( \boldsymbol{u}(\boldsymbol{x_i}, t) \) describes the pressure of the seismic waves generated, and \( f(x_i, t) \) is a source term that describes the strength and duration of the source. Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous isotropic medium, is the elastic wave equation \citep{moseley_fast_2018,lehmann_fourier_2023}. This equation can be expressed as 
+
+\begin{equation}
+\rho \frac{\partial^2 \boldsymbol{u}}{\partial t^2} = \nabla \lambda (\nabla \cdot \boldsymbol{u}) + \nabla \mu \left[\nabla \boldsymbol{u} + (\nabla \boldsymbol{u})^T\right] + (\lambda + 2\mu) \nabla (\nabla \cdot \boldsymbol{u}) - \mu \nabla \times \nabla \times \boldsymbol{u} \ ,
+\label{elastic}
+\end{equation}
+
+where $\rho$ is the material density, $\boldsymbol{u}$ is the displacement vector, and $\lambda, \mu$ are the Lamé parameters characterizing the material.
+
+\section{Standard Numerical Methods to Model Wave Equation}\label{sec:tnm}
+\fancyhead[RO]{\textit{Standard Numerical Methods}\, / \thepage} % Encabezado para páginas impares
+
+
+
+In the past decades various numerical methods have been proposed to solve physics systems by partial differential equations such as the wave equation. The finite-difference method is among the most popular to solve partial differential equations, and particularly the wave equation. A complete review of the finite-differences method applied to wave propagation can be found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators involving differences between adjacent grid points. The finite difference method suits for tackling issues related to simple geometric structures. In contrast, the finite element method offers more grid flexibility, facilitating the handling of intricate geometric boundaries.
+
+In wave propagation simulations, the partial differential equations are typically discretized on a staggered grid \citep{madariaga_dynamics_1976,Virieux1986}. This approach facilitates the resolution of the rupture propagation problem. Particularly an approach was proposed in the work of \citeauthoryear{Zhou2021} a finite-difference method with variable-length temporal and spatial operators was proposed to increase the stability and efficiency of the standard method.
+
+\citeauthoryear{liu_simulation_2023} combined a standard staggered-grid, finite-difference approach and the perfectly matched layer absorbing boundary to solve 3D first-order velocity-stress equations of acoustoelasticity to simulate wave propagating.
+
+Finite-element methods are suitable for dealing with intricate shapes and diverse materials because they can use irregular grids. They permit flexibility in size, shape, and approximation order. Nevertheless, a drawback is their high demand for computing power. This methodology involves the transformation of the problem at hand into a system of linear equations utilizing the weak formulation of the pertinent differential equation. This transformation is facilitated by employing an interpolation basis comprised of polynomials defined over disjoint domains, commonly referred to as elements.
+
+Popular open-source software is available to apply numerical methods for solving the wave equation. FEniCS, proposed by \citeauthoryear{FEniCS}, offers a computing platform specifically designed for solving partial differential equations using the finite elements method. Specializing in seismic wave propagation and full waveform imaging, SPECFEM is widely used in simulations implemented in Fortran \citep{dimitri_komatitsch_2023_10415228,komatitsch_2024_10823181}. Similarly, but using finite differences, the modeling the fortran library SEISMIC\_CPML \citep{komatitsch_unsplit_2007} is also available. In general, these implementations of standard methods have enabled effective simulations of the wave equation. 
+
+A significant difficulty in using standard methods for wave propagation simulations is their computational cost. Their accuracy is achieved at the expense of the number of points in the grid. Modeling a complex domain can entail a huge amount of grid points, with the wavefield requiring iterative updates across the entire grid at each time step. Additionally, model evaluation and storage are significantly costly \citeauthoryear{saloma_computational_1993}, and their limited capacity to incorporate measured data into their predictions makes them less ideal for use in inverse problems.
+
+\section{Machine learning Methods to Model Mechanical Wave Propagation}\label{sec:dl_mwpm}
+\fancyhead[RO]{\textit{Machine learning Methods}\, / \thepage} % Encabezado para páginas impares
+
+The realm of machine learning has recently displayed promise in its capacity to approximate predictions of physical phenomena. These methods can grasp highly nonlinear physics and offer significantly quicker inference times compared to conventional simulations. Therefore, as an alternative to standard methods deep learning have been employed to apply their capability as universal function approximator \citep{hornik_approximation_1991}.
+
+Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural network with a single or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have shown potential in overcoming the limitations of multiple approaches in various fields such as computer vision, natural language processing, and genomics \citep{lecun_deep_2015,goodfellow_deep_2016}. The fundamental architecture of a neural network architecture is conformed by an input layer, an output layer, and an arbitrary number of hidden layers. Particularly, in a fully connected neural network, neurons in adjacent layers are connected with each other but neurons within a single layer share no connection (Figure \ref{deep_learning_subset_architecture}.B). Furthermore, neural networks methods have emerged as an attractive tool to augment and complement conventional numerical solvers of partial differential equations, thereby enabling the tackling of challenges across multiple dimensions, scales, and parameterization with the promise of efficiency and precision \citep{blechschmidt_three_2021}. 
+
+\begin{figure}
+\centering
+    \includegraphics[width=1.0\textwidth]{figs/Artificial_Intelligence_subsets.pdf}
+    \caption{Artificial Intelligence subsets. (A) Deep learning as a subset of machine learning and artificial intelligence and (B) basic architecture of artificial neural networks.}    
+    \label{deep_learning_subset_architecture}
+\end{figure}
+
+They essentially model the partial differential equation solution by a deep neural network and train the network’s parameters to approximate the solution. Data-driven neural networks methods are capable of directly learning the trajectory of a system of partial differential equations from available data \citep{li_neural_2020,li_fourier_2021}.
+
+One of the most popular types of deep neural networks is known as convolutional neural networks. A convolutional neural network convolves learned features with input data, and uses 2D convolutional layers, making this architecture well suited to processing 2D data, such as images.
+
+ All these approaches employ machine learning algorithms and others such as support vector machines, random forests, Gaussian processes have been also applied to model physical systems. However, they are implemented mainly as black-box tools. The constructed neural network can be thought of being ignorant of the mathematical description of the physical phenomenon. In order to overcome this limitation physics-informed neural networks architectures have been proposed. Where the activation and the loss functions are designed according to the context of the problem.
+
+There has been an increasing interest in leveraging physics-informed neural networks to solve forward and inverse problems where full or partial knowledge of the governing equations is known since the published works of \citeauthoryear{raissi_hidden_2018}, \citeauthoryear{raissi_numerical_2018} and \citeauthoryear{Raissi2019}. Although similar ideas for constraining neural networks using physical laws have been explored in previous studies \citep{lagaris_artificial_1998}. The general principle of physics-informed neural networks is to integrate deep neural networks and physical laws to learn the underlying consistent dynamics from small or zero labeled data \citep{karniadakis_physics-informed_2021}. As universal approximators, neural networks have the potential to represent any partial differential equation. This capability eliminates the need for the discretization step, thereby avoiding discretization-based physics errors as well. 
+
+
+\begin{figure}
+\centering
+    \includegraphics[width=1.0\textwidth]{figs/Escheme_PINN_waves.pdf}
+    \caption{Physics-informed neural networks scheme applied to the wave equation.}
+    \label{deep_learning_subset_architecture}
+\end{figure}
+
+Physics-informed neural networks aim to address physical systems governed by the equation
+
+$$
+u_{tt} - D[u(t, x); \lambda] = 0,
+$$
+
+\
+
+where \(x \in \mathbb{R}^D\) and \(t \in \mathbb{R}\). The expression \(N[u(t, x); \lambda]\) denotes an underlying differential operator that characterizes the physical system, parametrized by \(\lambda\). The function \(u(t, x)\) represents the system's solution. The loss function is of the general form 
+
+$$ L := \beta_{\text{pde}}L_{\text{pde}}(\sigma) + \beta_{\text{ic}}(\sigma) L_{\text{ic}} + \beta_{\text{bc}} L_{\text{bc}}(\sigma) ,$$
+
+where
+
+$$
+\begin{aligned}
+& \mathcal{L}_{pde}(\boldsymbol{\sigma})=\frac{1}{n_{pde}} \sum_{i=1}^{n_{pde}}\left|u_{tt} - \mathcal{D}\left[\hat{u}\left(t, \boldsymbol{x}_i ; \boldsymbol{\sigma}\right)\right]-f\left(t, \boldsymbol{x}_i\right)\right|^2, \\
+& \mathcal{L}_{bc}(\boldsymbol{\sigma})=\frac{1}{n_{bc}} \sum_{i=1}^{n_{bc}}\left|\hat{u}\left(t, \boldsymbol{x}_i ; \boldsymbol{\sigma}\right)-g\left(t, \boldsymbol{x}_i\right)\right|^2, \\
+& \mathcal{L}_{ic}(\boldsymbol{\sigma})=\frac{1}{n_{ic}} \sum_{i=1}^{n_{ic}}\left|\hat{u}\left(0, \boldsymbol{x}_i ; \boldsymbol{\sigma}\right)-h\left(t,\boldsymbol{x}_i\right)\right|^2,
+\end{aligned}
+$$
+
+\
+
+and \( L_{\text{pde}} \) represents the residuals of the PDEs, \( L_{\text{ic}} \) represents the error at the collocation points at the initial time point, and \( L_{\text{bc}} \) represents the error at the collocation points on the boundaries. The coefficients \(\beta_{\text{ic}}\) and \(\beta_{\text{bc}}\) are training hyper-parameters.
+
+\section{Applications}
+\fancyhead[RO]{\textit{Applications}\, / \thepage} % Encabezado para páginas impares
+
+This section presents the findings from a search focused on how machine learning have been used for modeling elastic wave propagation. The search was mainly conducted by following query was used on the Scopus website as an initial filter:
+
+\begin{verbatim}
+"machine learning" OR "deep learning" OR "neural networks" 
+AND "wave propagation" OR "wave equation" 
+AND (modeling OR modelling OR model OR simulation)
+\end{verbatim}
+
+The search aimed to find significant contributions and advancements in modeling elastic wave propagation using machine learning techniques over the past decade. Additionally, the it was complemented by Google Scholar using the same terms, time span, and language. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from both engines, which were then merged. Finally, since our focus was particularly on geophysical applications, we selected the works whose abstracts indicated relevance to this field. The total number of works that met these conditions was  (see Figure \ref{fig:Escheme_Systematic_Review}).
+
+\begin{figure*}
+    \includegraphics[width=1.0\textwidth]{figs/Escheme_Systematic_Review.pdf}
+\caption{Search flowchart and number of publications after each step. During the systematic review process, Scopus and Google Scholar were utilized with the relevant search terms (i), and the research was restricted to works in English and within the time frame of 2013-2024 (ii). The resulting lists were then sorted by relevance and limited to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a manual filter was applied by reading the titles and abstracts to ensure the publications were pertinent to our chosen field.}
+    \label{fig:Escheme_Systematic_Review}
+\end{figure*}
+
+%limited the results to articles in the field of earth and planetary sciences. This ensured that the studies were relevant to our research area.
+
+We analyzed different aspects in the selected articles, including the type of partial differential wave equation used, the number of dimensions considered, whether forward, inverse or both modeling approaches were performed, and the specific application within gephysics. The results of this analysis are shown in Figure  .
+
+The introduction of physics-informed neural networks has generated a large amount of work related. For example the work of \citeauthoryear{karimpouli_physics_2020} explores the application of deep learning in geosciences, specifically solving the 1-dimensional time-dependent seismic wave equation. Comparing Gaussian process and physics-informed neural networks, the research shows that these meshless methods, requiring smaller datasets, effectively incorporate physics laws, with the Gaussian process excelling in solution prediction and the neural network proving superior in velocity and density inversion. Their significant potential lies in addressing surrogate modeling and inverse analysis, striking a balance between accuracy and computational efficiency \citep{Song2022}. \citeauthoryear{rash_2022} took a similar approach, but extending to 2D heterogeneous acoustic media, showing that PINNs could invert for ellipsoidal and checkerboard velocity models given the seismic response from sources placed within these models.
+
+%\citep{alkhadhr_modeling_2021}
+
+
+In \citeauthoryear{moseley_physics-informed_2022}, physics-informed neural networks were successfully applied to the 2D acoustic wave equation, demonstrating satisfactory outcomes in forward wave propagation and full waveform inversions, despite the efficiency of standard methods. Additionally, physics-informed neural networks showcased efficient performance in solving the inverse problem. To train the model, the results of a finite difference model are used. Spatial and temporal coordinates are used as inputs and intra-inputs of the network and their respective wave field as output, which provides uniqueness to the solution. While restricting the solution obtained to the equation used. To test the model, 3 different speed models are used: homogeneous, layered and an irregular model of the Earth's subsoil.
+
+%En \citeauthoryear{moseley_physics-informed_2022}, se aplicaron con éxito redes neuronales basadas en la física a la ecuación de ondas acústicas 2D, demostrando resultados satisfactorios en la propagación directa de ondas y en las inversiones completas de formas de onda, a pesar de la eficiencia de los métodos tradicionales. Además, las redes neuronales basadas en la física mostraron un rendimiento eficiente para resolver el problema inverso.
+
+%Para entrenar el modelo se utilizan los resultados de un modelo en diferencias finitas. Coordenadas espaciales y temporales son usadas como entradas y intradas de la red y su respectivo campo de onda como salida, lo que aporta unicidad a la solución. Mientras que restringe la solución obtenida a la ecuación utilizada.
+
+%Para probar el modelo se utilizan diferentes 3 modelos de velocidad. (i) homogeneo, (ii) en capas y (iii) un modelo irregular del subsuelo terrestre.
+
+
+Similarly, in \citeauthoryear{ren_seismicnet_2024}, physics-informed neural networks were employed for modeling mechanical wave propagation in semi-infinite domains, showcasing their versatility in forward modeling for seismic wave propagation, without requiring labeled data. These studies collectively highlight the effectiveness of physics-informed neural networks across different wave propagation scenarios.
+
+%\citep{wu_helmholtz-equation_2023}
+
+%The order of differential operators can be effectively reduced by proper integration by-parts, which reduces the required regularity in the (nonlinear) solution space...
+
+%\section{Comparative Study}\label{sec:comparative_analysis}
+
+\section{Final remarks and future perspectives}\label{sec:final_remarks_and_perspectives}
+\fancyhead[RO]{\textit{Final remarks}\, / \thepage} % Encabezado para páginas impares
+
+\subsection{Challenges}
+
+One major drawback of these methods is the difficulty of transferring knowledge between different configurations. For example, when solving the wave equation, CNNs and PINNs are trained with a fixed velocity parameter and cannot predict anything for a different velocity value. One of the main challenges in numerically modeling mechanical is associated with the dimensional, given the computational complexity.
+
+Tackling complex high-dimensional systems comes with significant challenges. Despite this, machine learning-based algorithms offer promising prospects for solving partial differential equations, as indicated by studies such as the one by \citeauthoryear{blechschmidt_three_2021}. Most of the applications are implemented in one dimensional or two-dimensional domains. In \citeauthoryear{lehmann_fourier_2023} the Fourier Neural Operator method is applied to model sesimic waves.
+
+Emerging machine learning methods for solving partial differential equations can face difficulties in establishing fair comparison points with standard numerical methods. \citeauthor{mcgreivy_weak_2024} identified two common pitfalls. First, comparing the runtime of a less accurate machine learning method to a more accurate standard numerical method, whereas a fair approach would be to make the comparison under similar accuracy levels. Second, evaluating the standard numerical method that is not suitable for the partial differential equation being solved. These two criteria are essential for properly evaluating performance, but they are not always followed. 
+
+\subsection{Opportunities}
+
+Different extentions of the classical work where PINNs was originally proposed have emerged. \citeauthoryear{kharazmi_variational_2019} proposed variational physics-informed neural networks which instead trained physics-informed neural networks using the variational form of the underlying differential equations. A neural network is still used to approximate the solution of the differential equation, but it is combined with a set of analytical test functions to compute the residual of the variational form of the equation in its physics loss term. Furthermore, they used quadrature points to estimate the corresponding integrals in the variational loss, rather than random collocation points. They found that the variational physics-informed neural networks was able to solve differential equations including Poisson’s equation with similar or better accuracy to a physics-informed neural networks trained using the strong form, whilst requiring less collocation points to train. However, most of these extensions have not yet been applied to wave propagation modeling.
+
+Various open-source frameworks are available for solving partial differential equations using emerging machine learning methods. Python packages such as NeuroDiffEq \citep{chen2020neurodiffeq} and DeepXDE \citep{lu2021deepxde} facilitate the solving of both ordinary and partial differential equations using neural networks as function approximators. A similar implementation in the Julia programming language is NeuralPDE \citep{https://doi.org/10.48550/arxiv.2107.09443}. Additionally, PINNs-Torch \citep{bafghi_pinns-torch_2023} enables the application of Physics-Informed Neural Networks using PyTorch, offering improved performance compared to the original model.
+
+
+\subsection{Summary}
+
+It's important to notice that deep learning methods shouldn't be seen as substitutes for standard numerical techniques used in solving partial differential equations. These established methods have been refined over decades and often fulfill the robustness and computational efficiency criteria needed in real-world applications. Also, we focus this review on geophysical applications but the methods revised here can be implemented on other fields, whose physical system modeling require the use of the wave equation. 
+
+
+\bibliography{refs}
+
+\end{document}
+
