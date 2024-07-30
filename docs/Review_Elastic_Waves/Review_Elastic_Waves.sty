@@ -1,0 +1,83 @@
+% Geometry package for page layout
+\usepackage[body={17cm, 24cm}, headheight=1mm]{geometry}
+\geometry{
+  top=2cm,    % Top margin
+  bottom=2cm, % Bottom margin
+  left=2cm,   % Left margin
+  right=2cm   % Right margin
+}
+
+% Caption package for figure captions
+\usepackage[margin=1cm]{caption}
+\captionsetup[figure]{font={sf, small}, labelfont={normal, small, bf}, labelsep=period}
+
+
+% Packages for mathematical symbols and graphics
+\usepackage{amsmath} % For \boldsymbol
+\usepackage{amssymb} % For \mathbb
+\usepackage{graphicx} % For including graphics
+
+% Additional packages for color, boxes, headers, and floats
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{float} % For exact figure placement
+\usepackage{fontawesome}
+
+
+% Bibliography and citation settings
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\setcitestyle{square, numbers}
+
+% Definition of \iconbox command
+\newtcbox{\iconbox}[1][]{
+  nobeforeafter, tcbox raise base, 
+  boxrule=0.4pt, top=0pt, bottom=-1pt,
+  right=0.1pt, left=0.1pt, arc=1pt, boxsep=1pt,
+  fontupper={\tiny \sffamily}, before upper={\vphantom{dlg}},
+  colframe=white, colback=black!10!white, coltext=black, #1
+}
+
+% Packages for drawing lines and drop caps
+\usepackage{tikz} % For drawing lines
+\usepackage{lettrine} % For drop caps
+
+% Redefining citation commands with gray text
+\renewcommand{\citep}[2][]{\textcolor{gray}{(\citeauthor{#2}, \citeyear[#1]{#2})}}
+\renewcommand{\citeauthoryear}[2][]{\textcolor{gray}{\citeauthor{#2} (\textcolor{gray}{\citeyear[#1]{#2}})}}
+
+% Font settings
+\usepackage{fontspec}
+\setmainfont{newbask}[
+  Path = ./fonts/,
+  UprightFont = *n.ttf,
+  BoldItalicFont = *z.ttf,
+  BoldFont = *b.ttf,
+  ItalicFont = *i.ttf,
+  BoldFeatures = {SmallCapsFont = {nbaskervillecapbold}},
+  ItalicFeatures = {SmallCapsFont = {lmromancaps10-oblique-webfont}},
+  SmallCapsFont = {lmromancaps}
+]
+
+% Hyperref settings for clickable links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true,
+  citecolor    = blue,
+  linkcolor    = red,
+  urlcolor     = gray
+}
+
+% Fancyhdr settings for custom headers
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+
+% Header configuration
+\fancyhead[LE]{\thepage\, / \textit{Machine Learning Modeling of Elastic Waves}} % Even pages header
+\fancyhead[RO]{\textit{Introduction}\, / \thepage} % Odd pages header
+
+% Page numbering settings
+\pagenumbering{arabic} % Arabic page numbers
+\setcounter{page}{1} % Start page numbering at 1

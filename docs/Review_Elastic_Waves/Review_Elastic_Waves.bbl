@@ -1,0 +1,564 @@
+\begin{thebibliography}{55}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Seriani and Oliveira(2020)]{Seriani2020}
+G.~Seriani and S.~P. Oliveira.
+\newblock Numerical modeling of mechanical wave propagation, 9 2020.
+\newblock ISSN 18269850.
+
+\bibitem[Moczo et~al.(2007)Moczo, Robertsson, and Eisner]{Moczo}
+Peter Moczo, Johan~O.A. Robertsson, and Leo Eisner.
+\newblock The finite-difference time-domain method for modeling of seismic wave
+  propagation.
+\newblock In Ru-Shan Wu, Valerie Maupin, and Renata Dmowska, editors,
+  \emph{Advances in Wave Propagation in Heterogenous Earth}, volume~48 of
+  \emph{Advances in Geophysics}, pages 421--516. Elsevier, 2007.
+\newblock \doi{https://doi.org/10.1016/S0065-2687(06)48008-0}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0065268706480080}.
+
+\bibitem[Virieux et~al.(2011)Virieux, Calandra, and
+  Plessix]{virieux_review_2011}
+Jean Virieux, Henri Calandra, and René-Edouard Plessix.
+\newblock A review of the spectral, pseudo-spectral, finite-difference and
+  finite-element modelling techniques for geophysical imaging.
+\newblock \emph{Geophysical Prospecting}, 59\penalty0 (5):\penalty0 794--813,
+  2011.
+\newblock \doi{https://doi.org/10.1111/j.1365-2478.2011.00967.x}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2478.2011.00967.x}.
+
+\bibitem[Igel(2017)]{Igel2017}
+Heiner Igel.
+\newblock \emph{Computational seismology: a practical introduction}.
+\newblock Oxford University Press, 2017.
+
+\bibitem[Komatitsch and Tromp(1999)]{komatitsch_introduction_1999}
+Dimitri Komatitsch and Jeroen Tromp.
+\newblock Introduction to the spectral element method for three-dimensional
+  seismic wave propagation.
+\newblock \emph{Geophysical Journal International}, 139\penalty0 (3):\penalty0
+  806--822, December 1999.
+\newblock ISSN 0956-540X.
+\newblock \doi{10.1046/j.1365-246x.1999.00967.x}.
+\newblock URL \url{https://doi.org/10.1046/j.1365-246x.1999.00967.x}.
+
+\bibitem[Chaljub et~al.(2007)Chaljub, Komatitsch, Vilotte, Capdeville, Valette,
+  and Festa]{chaljub_spectral-element_2007}
+Emmanuel Chaljub, Dimitri Komatitsch, Jean-Pierre Vilotte, Yann Capdeville,
+  Bernard Valette, and Gaetano Festa.
+\newblock Spectral-element analysis in seismology.
+\newblock In Ru-Shan Wu, Valerie Maupin, and Renata Dmowska, editors,
+  \emph{Advances in {Geophysics}}, volume~48 of \emph{Advances in {Wave}
+  {Propagation} in {Heterogenous} {Earth}}, pages 365--419. Elsevier, January
+  2007.
+\newblock \doi{10.1016/S0065-2687(06)48007-9}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0065268706480079}.
+
+\bibitem[Abadi et~al.(2016)Abadi, Barham, Chen, Chen, Davis, Dean, Devin,
+  Ghemawat, Irving, Isard, Kudlur, Levenberg, Monga, Moore, Murray, Steiner,
+  Tucker, Vasudevan, Warden, Wicke, Yu, and Zheng]{abadi_tensorflow_2016}
+Martin Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey
+  Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard,
+  Manjunath Kudlur, Josh Levenberg, Rajat Monga, Sherry Moore, Derek~G. Murray,
+  Benoit Steiner, Paul Tucker, Vijay Vasudevan, Pete Warden, Martin Wicke, Yuan
+  Yu, and Xiaoqiang Zheng.
+\newblock \{{TensorFlow}\}: {A} {System} for \{{Large}-{Scale}\} {Machine}
+  {Learning}.
+\newblock pages 265--283, 2016.
+\newblock ISBN 978-1-931971-33-1.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi16/technical-sessions/presentation/abadi}.
+
+\bibitem[Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan,
+  Killeen, Lin, Gimelshein, Antiga, Desmaison, Kopf, Yang, DeVito, Raison,
+  Tejani, Chilamkurthy, Steiner, Fang, Bai, and Chintala]{paszke_pytorch_2019}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
+  Desmaison, Andreas Kopf, Edward Yang, Zachary DeVito, Martin Raison, Alykhan
+  Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and Soumith
+  Chintala.
+\newblock {PyTorch}: {An} {Imperative} {Style}, {High}-{Performance} {Deep}
+  {Learning} {Library}.
+\newblock In \emph{Advances in {Neural} {Information} {Processing} {Systems}},
+  volume~32. Curran Associates, Inc., 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html}.
+
+\bibitem[Bradbury et~al.(2018)Bradbury, Frostig, Hawkins, Johnson, Leary,
+  Maclaurin, Necula, Paszke, Vander{P}las, Wanderman-{M}ilne, and
+  Zhang]{jax2018github}
+James Bradbury, Roy Frostig, Peter Hawkins, Matthew~James Johnson, Chris Leary,
+  Dougal Maclaurin, George Necula, Adam Paszke, Jake Vander{P}las, Skye
+  Wanderman-{M}ilne, and Qiao Zhang.
+\newblock {JAX}: composable transformations of {P}ython+{N}um{P}y programs,
+  2018.
+\newblock URL \url{http://github.com/google/jax}.
+
+\bibitem[Paszke et~al.(2017)Paszke, Gross, Chintala, Chanan, Yang, DeVito, Lin,
+  Desmaison, Antiga, and Lerer]{paszke_automatic_2017}
+Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary
+  DeVito, Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer.
+\newblock Automatic differentiation in {PyTorch}.
+\newblock 2017.
+
+\bibitem[Baydin et~al.(2017)Baydin, Pearlmutter, Radul, and
+  Siskind]{baydin_automatic_2017}
+Atılım~Günes Baydin, Barak~A. Pearlmutter, Alexey~Andreyevich Radul, and
+  Jeffrey~Mark Siskind.
+\newblock Automatic differentiation in machine learning: a survey.
+\newblock \emph{The Journal of Machine Learning Research}, 18\penalty0
+  (1):\penalty0 5595--5637, January 2017.
+\newblock ISSN 1532-4435.
+
+\bibitem[Barron(1993)]{barron_universal_1993}
+A.R. Barron.
+\newblock Universal approximation bounds for superpositions of a sigmoidal
+  function.
+\newblock \emph{IEEE Transactions on Information Theory}, 39\penalty0
+  (3):\penalty0 930--945, May 1993.
+\newblock ISSN 1557-9654.
+\newblock \doi{10.1109/18.256500}.
+\newblock URL \url{https://ieeexplore.ieee.org/abstract/document/256500}.
+\newblock Conference Name: IEEE Transactions on Information Theory.
+
+\bibitem[Cuomo et~al.(2022)Cuomo, Di~Cola, Giampaolo, Rozza, Raissi, and
+  Piccialli]{cuomo_scientific_2022}
+Salvatore Cuomo, Vincenzo~Schiano Di~Cola, Fabio Giampaolo, Gianluigi Rozza,
+  Maziar Raissi, and Francesco Piccialli.
+\newblock Scientific {Machine} {Learning} {Through} {Physics}–{Informed}
+  {Neural} {Networks}: {Where} we are and {What}’s {Next}.
+\newblock \emph{Journal of Scientific Computing}, 92\penalty0 (3):\penalty0 88,
+  July 2022.
+\newblock ISSN 1573-7691.
+\newblock \doi{10.1007/s10915-022-01939-z}.
+\newblock URL \url{https://doi.org/10.1007/s10915-022-01939-z}.
+
+\bibitem[Vadyala et~al.(2022)Vadyala, Betgeri, Matthews, and
+  Matthews]{vadyala_review_2022}
+Shashank~Reddy Vadyala, Sai~Nethra Betgeri, John~C. Matthews, and Elizabeth
+  Matthews.
+\newblock A review of physics-based machine learning in civil engineering.
+\newblock \emph{Results in Engineering}, 13:\penalty0 100316, March 2022.
+\newblock ISSN 2590-1230.
+\newblock \doi{10.1016/j.rineng.2021.100316}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2590123021001171}.
+
+\bibitem[Deng et~al.(2023)Deng, Nguyen, Medjaher, Gogu, and
+  Morio]{deng_physics-informed_2023}
+Weikun Deng, Khanh T.~P. Nguyen, Kamal Medjaher, Christian Gogu, and Jérôme
+  Morio.
+\newblock Physics-informed machine learning in prognostics and health
+  management: {State} of the art and challenges.
+\newblock \emph{Applied Mathematical Modelling}, 124:\penalty0 325--352,
+  December 2023.
+\newblock ISSN 0307-904X.
+\newblock \doi{10.1016/j.apm.2023.07.011}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0307904X23003086}.
+
+\bibitem[Lino et~al.(2023)Lino, Fotiadis, Bharath, and
+  Cantwell]{lino_current_2023}
+Mario Lino, Stathi Fotiadis, Anil~A. Bharath, and Chris~D. Cantwell.
+\newblock Current and emerging deep-learning methods for the simulation of
+  fluid dynamics.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 479\penalty0 (2275):\penalty0 20230058, July 2023.
+\newblock \doi{10.1098/rspa.2023.0058}.
+\newblock URL
+  \url{https://royalsocietypublishing.org/doi/full/10.1098/rspa.2023.0058}.
+\newblock Publisher: Royal Society.
+
+\bibitem[Tarantola(2005)]{Tarantola}
+Albert Tarantola.
+\newblock \emph{Inverse Problem Theory and Methods for Model Parameter
+  Estimation}.
+\newblock Society for Industrial and Applied Mathematics, 2005.
+\newblock \doi{10.1137/1.9780898717921}.
+\newblock URL \url{https://epubs.siam.org/doi/abs/10.1137/1.9780898717921}.
+
+\bibitem[Galiounas et~al.(2022)Galiounas, Tranter, Owen, Robinson, Shearing,
+  and Brett]{galiounas_battery_2022}
+Elias Galiounas, Tom~G. Tranter, Rhodri~E. Owen, James~B. Robinson, Paul~R.
+  Shearing, and Dan J.~L. Brett.
+\newblock Battery state-of-charge estimation using machine learning analysis of
+  ultrasonic signatures.
+\newblock \emph{Energy and AI}, 10:\penalty0 100188, November 2022.
+\newblock ISSN 2666-5468.
+\newblock \doi{10.1016/j.egyai.2022.100188}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2666546822000374}.
+
+\bibitem[Ren et~al.(2024)Ren, Rao, Chen, Wang, Sun, and
+  Liu]{ren_seismicnet_2024}
+Pu~Ren, Chengping Rao, Su~Chen, Jian-Xun Wang, Hao Sun, and Yang Liu.
+\newblock {SeismicNet}: {Physics}-informed neural networks for seismic wave
+  modeling in semi-infinite domain.
+\newblock \emph{Computer Physics Communications}, 295:\penalty0 109010,
+  February 2024.
+\newblock ISSN 0010-4655.
+\newblock \doi{10.1016/j.cpc.2023.109010}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0010465523003557}.
+
+\bibitem[McCann et~al.(2017)McCann, Jin, and Unser]{mccann_convolutional_2017}
+Michael~T. McCann, Kyong~Hwan Jin, and Michael Unser.
+\newblock Convolutional {Neural} {Networks} for {Inverse} {Problems} in
+  {Imaging}: {A} {Review}.
+\newblock \emph{IEEE Signal Processing Magazine}, 34\penalty0 (6):\penalty0
+  85--95, November 2017.
+\newblock ISSN 1558-0792.
+\newblock \doi{10.1109/MSP.2017.2739299}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/8103129}.
+\newblock Conference Name: IEEE Signal Processing Magazine.
+
+\bibitem[Moseley(2022)]{moseley_physics-informed_2022}
+B.~Moseley.
+\newblock \emph{Physics-informed machine learning: from concepts to real-world
+  applications}.
+\newblock PhD thesis, University of Oxford, 2022.
+\newblock URL
+  \url{https://ora.ox.ac.uk/objects/uuid:b790477c-771f-4926-99c6-d2f9d248cb23}.
+
+\bibitem[Alkhadhr and Almekkawy(2023)]{alkhadhr_wave_2023}
+S.~Alkhadhr and M.~Almekkawy.
+\newblock Wave {Equation} {Modeling} via {Physics}-{Informed} {Neural}
+  {Networks}: {Models} of {Soft} and {Hard} {Constraints} for {Initial} and
+  {Boundary} {Conditions}.
+\newblock \emph{Sensors}, 23\penalty0 (5), 2023.
+\newblock ISSN 1424-8220.
+\newblock \doi{10.3390/s23052792}.
+
+\bibitem[Carcione(2002)]{Carcione2002}
+José Carcione.
+\newblock \emph{Wave Propagation in Anisotropic, Anelastic, Porous and
+  Electromagnetic Media}.
+\newblock 2002.
+
+\bibitem[Moseley et~al.(2018)Moseley, Markham, and
+  Nissen-Meyer]{moseley_fast_2018}
+Benjamin Moseley, Andrew Markham, and Tarje Nissen-Meyer.
+\newblock Fast approximate simulation of seismic waves with deep learning.
+\newblock July 2018.
+\newblock URL \url{http://arxiv.org/abs/1807.06873}.
+
+\bibitem[Lehmann et~al.(2023)Lehmann, Gatti, Bertin, and
+  Clouteau]{lehmann_fourier_2023}
+Fanny Lehmann, Filippo Gatti, Michaël Bertin, and Didier Clouteau.
+\newblock Fourier {Neural} {Operator} {Surrogate} {Model} to {Predict} {3D}
+  {Seismic} {Waves} {Propagation}.
+\newblock pages 297--310, 2023.
+\newblock \doi{10.7712/120223.10339.20362}.
+\newblock URL \url{http://arxiv.org/abs/2304.10242}.
+\newblock arXiv:2304.10242 [physics].
+
+\bibitem[Moczo et~al.(2014)Moczo, Kristek, and Gális]{Moczo2014}
+Peter Moczo, Jozef Kristek, and Martin Gális.
+\newblock \emph{The Finite-Difference Modelling of Earthquake Motions : Waves
+  and Ruptures}.
+\newblock 2014.
+\newblock ISBN 9781107028814.
+
+\bibitem[Madariaga(1976)]{madariaga_dynamics_1976}
+Raul Madariaga.
+\newblock Dynamics of an expanding circular fault.
+\newblock \emph{Bulletin of the Seismological Society of America}, 66\penalty0
+  (3):\penalty0 639--666, June 1976.
+\newblock ISSN 0037-1106.
+\newblock \doi{10.1785/BSSA0660030639}.
+\newblock URL \url{https://doi.org/10.1785/BSSA0660030639}.
+
+\bibitem[Virieux(1986)]{Virieux1986}
+Jean Virieux.
+\newblock p-sv wave propagation in heterogeneous media: Velocity-stress
+  finite-difference method, 1986.
+\newblock URL \url{http://library.seg.org/}.
+
+\bibitem[Zhou et~al.(2021)Zhou, Liu, and Wang]{Zhou2021}
+Hongyu Zhou, Yang Liu, and Jing Wang.
+\newblock Acoustic finite-difference modeling beyond conventi-onal
+  courant-friedrichs-lewy stability limit: Approach based on variable-length
+  temporal and spatial operators.
+\newblock \emph{Earthquake Science}, 34:\penalty0 123--236, 2021.
+\newblock \doi{10.29382/eqs-2021}.
+
+\bibitem[Liu et~al.(2023)Liu, Zhou, and Zeng]{liu_simulation_2023}
+Siqin Liu, Zhusheng Zhou, and Weizu Zeng.
+\newblock Simulation of {Elastic} {Wave} {Propagation} {Based} on {Meshless}
+  {Generalized} {Finite} {Difference} {Method} with {Uniform} {Random} {Nodes}
+  and {Damping} {Boundary} {Condition}.
+\newblock \emph{Applied Sciences (Switzerland)}, 13\penalty0 (3), February
+  2023.
+\newblock \doi{10.3390/app13031312}.
+\newblock Publisher: MDPI.
+
+\bibitem[Langtangen and Logg(2016)]{FEniCS}
+Hans~Petter Langtangen and Anders Logg.
+\newblock Solving pdes in python the fenics tutorial i, 2016.
+\newblock URL \url{http://www.springer.com/series/13548}.
+
+\bibitem[Komatitsch et~al.(2023)Komatitsch, Tromp, Gharti, Peter, Cano,
+  Bachmann, Bottero, Brissaud, Chow, Cristini, Cui, Gassmoeller, Gineste,
+  Halpaap, Heien, Labarta, Lefebvre, Goff, Loher, Liu, Liu, Liu, Liu, Luet,
+  Martin, Matzen, Modrak, Morency, Nagaso, Rosenkrantz, Rusmanugroho,
+  de~Andrade, Tape, Vilotte, Xie, and Zhang]{dimitri_komatitsch_2023_10415228}
+Dimitri Komatitsch, Jeroen Tromp, Hom~Nath Gharti, Daniel Peter, Eduardo~Valero
+  Cano, Etienne Bachmann, Alexis Bottero, Quentin Brissaud, Bryant Chow, Paul
+  Cristini, Congyue Cui, Rene Gassmoeller, Michael Gineste, Felix Halpaap, Eric
+  Heien, Jesus Labarta, Matthieu Lefebvre, Nicolas~Le Goff, Pieyre~Le Loher,
+  Qiancheng Liu, Qinya Liu, Youshan Liu, Zhaolun Liu, David Luet, Roland
+  Martin, Rene Matzen, Ryan Modrak, Christina Morency, Masaru Nagaso, Eric
+  Rosenkrantz, Herurisa Rusmanugroho, Elliott~Sales de~Andrade, Carl Tape,
+  Jean-Pierre Vilotte, Zhinan Xie, and Zhendong Zhang.
+\newblock Specfem/specfem2d: Specfem2d v8.1.0, December 2023.
+\newblock URL \url{https://doi.org/10.5281/zenodo.10415228}.
+
+\bibitem[Komatitsch et~al.(2024)Komatitsch, Tromp, Garg, Gharti, Nagaso, Oral,
+  Peter, Afanasiev, Almada, Ampuero, Bachmann, Bai, Basini, Beller, Bishop,
+  Bissey, Blitz, Bottero, Bozdag, Casarotti, Charles, Chen, Cristini, Durochat,
+  Galvez~Barron, Gassmoeller, Goeddeke, Grinberg, Gupta, Heien,
+  Hjoerleifsdottir, Karakostas, Kientz, Labarta, Le~Goff, Le~Loher, Lefebvre,
+  Liu, Liu, Luet, Luo, Maggi, Magnoni, Martin, Matzen, McBain, McRitchie,
+  Meschede, Messmer, Michea, Miller, Modrak, Monteiller, Morency, Nadh~Somala,
+  Nissen-Meyer, Pouget, Rietmann, Sales~de Andrade, Savage, Schuberth,
+  Sieminski, Smith, Strand, Tape, Valero~Cano, Videau, Vilotte, Weng, Xie,
+  Zhang, and Zhu]{komatitsch_2024_10823181}
+Dimitri Komatitsch, Jeroen Tromp, Rahul Garg, Hom~Nath Gharti, Masaru Nagaso,
+  Elif Oral, Daniel Peter, Michael Afanasiev, Rafael Almada, Jean-Paul Ampuero,
+  Etienne Bachmann, Kangchen Bai, Piero Basini, Stephen Beller, Jordan Bishop,
+  Francois Bissey, Celine Blitz, Alexis Bottero, Ebru Bozdag, Emanuele
+  Casarotti, Joseph Charles, Min Chen, Paul Cristini, Clement Durochat, Percy
+  Galvez~Barron, Rene Gassmoeller, Dominik Goeddeke, Leopold Grinberg, Aakash
+  Gupta, Eric Heien, Vala Hjoerleifsdottir, Foivos Karakostas, Sue Kientz,
+  Jesus Labarta, Nicolas Le~Goff, Pieyre Le~Loher, Matthieu Lefebvre, Qinya
+  Liu, Youshan Liu, David Luet, Yang Luo, Alessia Maggi, Federica Magnoni,
+  Roland Martin, Rene Matzen, G.~D. McBain, Dennis McRitchie, Matthias
+  Meschede, Peter Messmer, David Michea, David Miller, Ryan Modrak, Vadim
+  Monteiller, Christina Morency, Surendra Nadh~Somala, Tarje Nissen-Meyer,
+  Kevin Pouget, Max Rietmann, Elliott Sales~de Andrade, Brian Savage, Bernhard
+  Schuberth, Anne Sieminski, James Smith, Leif Strand, Carl Tape, Eduardo
+  Valero~Cano, Brice Videau, Jean-Pierre Vilotte, Huihui Weng, Zhinan Xie,
+  Chang-Hua Zhang, and Hejun Zhu.
+\newblock Specfem/specfem3d: Specfem3d v4.1.1, March 2024.
+\newblock URL \url{https://doi.org/10.5281/zenodo.10823181}.
+
+\bibitem[Komatitsch and Martin(2007)]{komatitsch_unsplit_2007}
+Dimitri Komatitsch and Roland Martin.
+\newblock An unsplit convolutional perfectly matched layer improved at grazing
+  incidence for the seismic wave equation.
+\newblock \emph{GEOPHYSICS}, 72\penalty0 (5):\penalty0 SM155--SM167, September
+  2007.
+\newblock ISSN 0016-8033.
+\newblock \doi{10.1190/1.2757586}.
+\newblock URL \url{https://library.seg.org/doi/10.1190/1.2757586}.
+\newblock Publisher: Society of Exploration Geophysicists.
+
+\bibitem[Saloma(1993)]{saloma_computational_1993}
+Caesar Saloma.
+\newblock Computational complexity and the observation of physical signals.
+\newblock \emph{Journal of Applied Physics}, 74\penalty0 (9):\penalty0
+  5314--5319, November 1993.
+\newblock ISSN 0021-8979.
+\newblock \doi{10.1063/1.354232}.
+\newblock URL \url{https://doi.org/10.1063/1.354232}.
+
+\bibitem[Hornik(1991)]{hornik_approximation_1991}
+Kurt Hornik.
+\newblock Approximation capabilities of multilayer feedforward networks.
+\newblock \emph{Neural Networks}, 4\penalty0 (2):\penalty0 251--257, January
+  1991.
+\newblock ISSN 0893-6080.
+\newblock \doi{10.1016/0893-6080(91)90009-T}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/089360809190009T}.
+
+\bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecun_deep_2015}
+Yann LeCun, Yoshua Bengio, and Geoffrey Hinton.
+\newblock Deep learning.
+\newblock \emph{Nature}, 521\penalty0 (7553):\penalty0 436--444, May 2015.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/nature14539}.
+\newblock URL \url{https://doi.org/10.1038/nature14539}.
+
+\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and
+  Courville]{goodfellow_deep_2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock \emph{Deep {Learning}}.
+\newblock MIT Press, November 2016.
+\newblock ISBN 978-0-262-33737-3.
+\newblock Google-Books-ID: omivDQAAQBAJ.
+
+\bibitem[Blechschmidt and Ernst(2021)]{blechschmidt_three_2021}
+Jan Blechschmidt and Oliver~G. Ernst.
+\newblock Three ways to solve partial differential equations with neural
+  networks — {A} review.
+\newblock \emph{GAMM-Mitteilungen}, 44\penalty0 (2):\penalty0 e202100006, 2021.
+\newblock ISSN 1522-2608.
+\newblock \doi{10.1002/gamm.202100006}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/gamm.202100006}.
+\newblock \_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1002/gamm.202100006.
+
+\bibitem[Li et~al.(2020)Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya,
+  Stuart, and Anandkumar]{li_neural_2020}
+Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik
+  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+\newblock Neural {Operator}: {Graph} {Kernel} {Network} for {Partial}
+  {Differential} {Equations}, March 2020.
+\newblock URL \url{http://arxiv.org/abs/2003.03485}.
+\newblock arXiv:2003.03485 [cs, math, stat].
+
+\bibitem[Li et~al.(2021)Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya,
+  Stuart, and Anandkumar]{li_fourier_2021}
+Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik
+  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+\newblock Fourier {Neural} {Operator} for {Parametric} {Partial} {Differential}
+  {Equations}, May 2021.
+\newblock URL \url{http://arxiv.org/abs/2010.08895}.
+\newblock arXiv:2010.08895 [cs, math].
+
+\bibitem[Raissi and Karniadakis(2018)]{raissi_hidden_2018}
+Maziar Raissi and George~Em Karniadakis.
+\newblock Hidden physics models: {Machine} learning of nonlinear partial
+  differential equations.
+\newblock \emph{Journal of Computational Physics}, 357:\penalty0 125--141,
+  March 2018.
+\newblock ISSN 0021-9991.
+\newblock \doi{10.1016/j.jcp.2017.11.039}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0021999117309014}.
+
+\bibitem[Raissi et~al.(2018)Raissi, Perdikaris, and
+  Karniadakis]{raissi_numerical_2018}
+Maziar Raissi, Paris Perdikaris, and George~Em Karniadakis.
+\newblock Numerical {Gaussian} {Processes} for {Time}-{Dependent} and
+  {Nonlinear} {Partial} {Differential} {Equations}.
+\newblock \emph{SIAM Journal on Scientific Computing}, 40\penalty0
+  (1):\penalty0 A172--A198, January 2018.
+\newblock ISSN 1064-8275.
+\newblock \doi{10.1137/17M1120762}.
+\newblock URL \url{https://epubs.siam.org/doi/abs/10.1137/17M1120762}.
+\newblock Publisher: Society for Industrial and Applied Mathematics.
+
+\bibitem[Raissi et~al.(2019)Raissi, Perdikaris, and Karniadakis]{Raissi2019}
+M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis.
+\newblock Physics-informed neural networks: A deep learning framework for
+  solving forward and inverse problems involving nonlinear partial differential
+  equations.
+\newblock \emph{Journal of Computational Physics}, 378:\penalty0 686--707, 2
+  2019.
+\newblock ISSN 0021-9991.
+\newblock \doi{10.1016/J.JCP.2018.10.045}.
+
+\bibitem[Lagaris et~al.(1998)Lagaris, Likas, and
+  Fotiadis]{lagaris_artificial_1998}
+I.E. Lagaris, A.~Likas, and D.I. Fotiadis.
+\newblock Artificial neural networks for solving ordinary and partial
+  differential equations.
+\newblock \emph{IEEE Transactions on Neural Networks}, 9\penalty0 (5):\penalty0
+  987--1000, September 1998.
+\newblock ISSN 1941-0093.
+\newblock \doi{10.1109/72.712178}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/712178}.
+\newblock Conference Name: IEEE Transactions on Neural Networks.
+
+\bibitem[Karniadakis et~al.(2021)Karniadakis, Kevrekidis, Lu, Perdikaris, Wang,
+  and Yang]{karniadakis_physics-informed_2021}
+George~Em Karniadakis, Ioannis~G. Kevrekidis, Lu~Lu, Paris Perdikaris, Sifan
+  Wang, and Liu Yang.
+\newblock Physics-informed machine learning.
+\newblock \emph{Nature Reviews Physics}, 3\penalty0 (6):\penalty0 422--440,
+  June 2021.
+\newblock ISSN 2522-5820.
+\newblock \doi{10.1038/s42254-021-00314-5}.
+\newblock URL \url{https://www.nature.com/articles/s42254-021-00314-5}.
+\newblock Number: 6 Publisher: Nature Publishing Group.
+
+\bibitem[McGreivy and Hakim(2024)]{mcgreivy_weak_2024}
+Nick McGreivy and Ammar Hakim.
+\newblock Weak baselines and reporting biases lead to overoptimism in machine
+  learning for fluid-related partial differential equations, July 2024.
+\newblock URL \url{http://arxiv.org/abs/2407.07218}.
+\newblock arXiv:2407.07218 [physics].
+
+\bibitem[Kharazmi et~al.(2019)Kharazmi, Zhang, and
+  Karniadakis]{kharazmi_variational_2019}
+E.~Kharazmi, Z.~Zhang, and G.~E. Karniadakis.
+\newblock Variational {Physics}-{Informed} {Neural} {Networks} {For} {Solving}
+  {Partial} {Differential} {Equations}, November 2019.
+\newblock URL \url{http://arxiv.org/abs/1912.00873}.
+\newblock arXiv:1912.00873 [physics, stat].
+
+\bibitem[Chen et~al.(2020)Chen, Sondak, Protopapas, Mattheakis, Liu, Agarwal,
+  and Di~Giovanni]{chen2020neurodiffeq}
+Feiyu Chen, David Sondak, Pavlos Protopapas, Marios Mattheakis, Shuheng Liu,
+  Devansh Agarwal, and Marco Di~Giovanni.
+\newblock Neurodiffeq: A python package for solving differential equations with
+  neural networks.
+\newblock \emph{Journal of Open Source Software}, 5\penalty0 (46):\penalty0
+  1931, 2020.
+
+\bibitem[Lu et~al.(2021)Lu, Meng, Mao, and Karniadakis]{lu2021deepxde}
+Lu~Lu, Xuhui Meng, Zhiping Mao, and George~Em Karniadakis.
+\newblock {DeepXDE}: A deep learning library for solving differential
+  equations.
+\newblock \emph{SIAM Review}, 63\penalty0 (1):\penalty0 208--228, 2021.
+\newblock \doi{10.1137/19M1274067}.
+
+\bibitem[Zubov et~al.(2021)Zubov, McCarthy, Ma, Calisto, Pagliarino, Azeglio,
+  Bottero, Luján, Sulzer, Bharambe, Vinchhi, Balakrishnan, Upadhyay, and
+  Rackauckas]{https://doi.org/10.48550/arxiv.2107.09443}
+Kirill Zubov, Zoe McCarthy, Yingbo Ma, Francesco Calisto, Valerio Pagliarino,
+  Simone Azeglio, Luca Bottero, Emmanuel Luján, Valentin Sulzer, Ashutosh
+  Bharambe, Nand Vinchhi, Kaushik Balakrishnan, Devesh Upadhyay, and Chris
+  Rackauckas.
+\newblock Neuralpde: Automating physics-informed neural networks (pinns) with
+  error approximations, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.09443}.
+
+\bibitem[Bafghi and Raissi(2023)]{bafghi_pinns-torch_2023}
+Reza~Akbarian Bafghi and Maziar Raissi.
+\newblock {PINNs}-{Torch}: {Enhancing} {Speed} and {Usability} of
+  {Physics}-{Informed} {Neural} {Networks} with {PyTorch}.
+\newblock October 2023.
+\newblock URL \url{https://openreview.net/forum?id=nl1ZzdHpab}.
+
+\bibitem[Karimpouli and Tahmasebi(2020)]{karimpouli_physics_2020}
+Sadegh Karimpouli and Pejman Tahmasebi.
+\newblock Physics informed machine learning: {Seismic} wave equation.
+\newblock \emph{Geoscience Frontiers}, 11\penalty0 (6):\penalty0 1993--2001,
+  November 2020.
+\newblock ISSN 1674-9871.
+\newblock \doi{10.1016/j.gsf.2020.07.007}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S1674987120301717}.
+
+\bibitem[Song and Alkhalifah(2022)]{Song2022}
+Chao Song and Tariq~A. Alkhalifah.
+\newblock Wavefield reconstruction inversion via physics-informed neural
+  networks.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 60, 2022.
+\newblock ISSN 15580644.
+\newblock \doi{10.1109/TGRS.2021.3123122}.
+
+\bibitem[Rasht-Behesht et~al.(2022)Rasht-Behesht, Huber, Shukla, and
+  Karniadakis]{rash_2022}
+Majid Rasht-Behesht, Christian Huber, Khemraj Shukla, and George~Em
+  Karniadakis.
+\newblock Physics-{Informed} {Neural} {Networks} ({PINNs}) for {Wave}
+  {Propagation} and {Full} {Waveform} {Inversions}.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 127\penalty0
+  (5):\penalty0 e2021JB023120, 2022.
+\newblock ISSN 2169-9356.
+\newblock \doi{10.1029/2021JB023120}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023120}.
+
+\end{thebibliography}

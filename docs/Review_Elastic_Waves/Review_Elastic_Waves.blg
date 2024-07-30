@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Review_Elastic_Waves.aux
+The style file: unsrtnat.bst
+Database file #1: refs.bib
+Warning--entry type for "jax2018github" isn't style-file defined
+--line 1053 of file refs.bib
+Warning--entry type for "dimitri_komatitsch_2023_10415228" isn't style-file defined
+--line 1107 of file refs.bib
+Warning--entry type for "komatitsch_2024_10823181" isn't style-file defined
+--line 1153 of file refs.bib
+Warning--empty booktitle in abadi_tensorflow_2016
+Warning--empty journal in paszke_automatic_2017
+Warning--empty publisher in Carcione2002
+Warning--empty journal in moseley_fast_2018
+Warning--empty booktitle in lehmann_fourier_2023
+Warning--empty publisher in Moczo2014
+Warning--empty booktitle in bafghi_pinns-torch_2023
+You've used 55 entries,
+            2481 wiz_defined-function locations,
+            984 strings with 21992 characters,
+and the built_in function-call counts, 26918 in all, are:
+= -- 2003
+> -- 2185
+< -- 27
++ -- 788
+- -- 678
+* -- 2562
+:= -- 4681
+add.period$ -- 273
+call.type$ -- 55
+change.case$ -- 104
+chr.to.int$ -- 55
+cite$ -- 62
+duplicate$ -- 1036
+empty$ -- 1950
+format.name$ -- 755
+if$ -- 5447
+int.to.chr$ -- 1
+int.to.str$ -- 56
+missing$ -- 48
+newline$ -- 388
+num.names$ -- 169
+pop$ -- 404
+preamble$ -- 1
+purify$ -- 55
+quote$ -- 0
+skip$ -- 601
+stack$ -- 0
+substring$ -- 891
+swap$ -- 183
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 370
+warning$ -- 7
+while$ -- 165
+width$ -- 0
+write$ -- 911
+(There were 10 warnings)
