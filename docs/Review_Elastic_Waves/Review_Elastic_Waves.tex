@@ -1,4 +1,4 @@
-% -----------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------
 % File: Review_Elastic_Waves.tex
 % Purpose: Literature review of recent advances in modeling elastic wave 
 % propagation using machine learning-based methods
@@ -6,8 +6,7 @@
 % Email: orincon@eafit.edu.co
 % Creation date: 2024-03-15
 % Version: 1.0
-% Notes: Any additional relevant notes about the document
-% -----------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------
 \documentclass[11pt,twoside]{article}
 %------------------------------------------------------------------------------------------------------------------------
 % Import the style file
@@ -114,7 +113,7 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
 \end{tcolorbox} 
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for Introduction
+% Section - Introduction
 %------------------------------------------------------------------------------------------------------------------------ 
 \section*{Introduction}
 %------------------------------------------------------------------------------------------------------------------------
@@ -169,9 +168,9 @@ advances in mechanical wave propagation modeling achieved through these methods.
 \ref{sec:final_remarks_and_perspectives}, we discuss possible challenges and opportunities.
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for 1 - Modeling of Wave Propagation Applied to Computational Seismology
+% Section - 1 - Modeling of Wave Propagation Applied to Computational Seismology
 %------------------------------------------------------------------------------------------------------------------------
-\section{Modeling of Wave Propagation Applied to Computational Seismology}\label{sec:modeling_wave_propagation}
+\section{Modeling of Wave Propagation}\label{sec:modeling_wave_propagation}
 \fancyhead[RO]{\textit{Modeling of Wave Propagation}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
@@ -182,9 +181,7 @@ system evolves. A general formulation of the governing equation of a physical pr
 \begin{equation}
 D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde}
 \end{equation}
-
-where 
-
+ 
 where $D$ denotes the differential operator acting on the solution to the differential equation $u(x,t)$ parameterized 
 by $\lambda$ and $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. 
 Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the initial 
@@ -194,13 +191,14 @@ condition by:
 B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T] 
 \end{equation}
 
+and
+
 \begin{equation}
 u(x, 0) = h(x, 0), \quad x \in \Omega
 \end{equation}
 
-The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$.
-
-Two general approaches when mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
+The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches when 
+mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
 of a set of observations is known as the inverse problem \citep{Tarantola}, aiming to infer, for example, the properties of a medium 
 based on its reaction to mechanical wave propagation. Since it begins with the effects and then calculates the causes, it is the 
 opposite of a forward problem, which determines the effects based on the causes. In most cases, the inverse problem is formulated 
@@ -208,9 +206,9 @@ by iteratively performing forward modeling to infer the causes that produce a de
 An schematic representation of the forward and inverse model using numerical methods is shown in Figure \ref{fig:forward_inverse}.
 
 \begin{figure}[H]
-\includegraphics{figs/Forward_Inverse_Modeling_Waves.pdf}
+\includegraphics{figs/forward_inverse_modeling_waves.pdf}
     \caption{Scheme of the forward and inverse problems encountered in solving partial differential equations (PDEs). In the forward 
-    scenario, the inputs $(x,\lambda)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through 
+    scenario, the inputs $(x,t;\lambda)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through 
     either standard numerical methods (SNM) or neural networks based methods (MLBM) to derive a solution $u$. Standard numerical 
     methods such as: finite differences (FD), finite elements (FE), pseudo-spectral (PS), finite volumes (FV), and spectral 
     elements (SE). Also, deep learning techniques include, for example, Physics Informed Neural Networks (PINNs), Neural Operator 
@@ -243,7 +241,9 @@ seismic waves, for the case of a heterogeneous isotropic medium, is the elastic 
 This equation can be expressed as 
 
 \begin{equation}
-\rho \frac{\partial^2 \boldsymbol{u}}{\partial t^2} = \nabla \lambda (\nabla \cdot \boldsymbol{u}) + \nabla \mu \left[\nabla \boldsymbol{u} + (\nabla \boldsymbol{u})^T\right] + (\lambda + 2\mu) \nabla (\nabla \cdot \boldsymbol{u}) - \mu \nabla \times \nabla \times \boldsymbol{u} \ ,
+\rho \frac{\partial^2 \boldsymbol{u}}{\partial t^2} = \nabla \lambda (\nabla \cdot \boldsymbol{u}) + 
+\nabla \mu \left[\nabla \boldsymbol{u} + (\nabla \boldsymbol{u})^T\right] + (\lambda + 2\mu) \nabla (\nabla \cdot \boldsymbol{u})
+ - \mu \nabla \times \nabla \times \boldsymbol{u} \ ,
 \label{elastic}
 \end{equation}
 
@@ -251,9 +251,9 @@ where $\rho$ is the material density, $\boldsymbol{u}$ is the displacement vecto
 characterizing the material.
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for 2 - Standard Numerical Methods to Model Wave Equation
+% Section - 2 - Standard Numerical Methods 
 %------------------------------------------------------------------------------------------------------------------------
-\section{Standard Numerical Methods to Model Wave Equation}\label{sec:tnm}
+\section{Standard Numerical Methods}\label{sec:tnm}
 \fancyhead[RO]{\textit{Standard Numerical Methods}\, / \thepage}
 %------------------------------------------------------------------------------------------------------------------------
 
@@ -292,9 +292,9 @@ significantly costly \citeauthoryear{saloma_computational_1993}, and their limit
 predictions makes them less ideal for use in inverse problems.
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for Machine learning Methods to solve differential equations
+% Section - 3 - Machine learning Methods 
 %------------------------------------------------------------------------------------------------------------------------
-\section{Machine learning Methods to solve differential equations}\label{sec:dl_mwpm}
+\section{Machine learning Methods}\label{sec:machine_learning_methods}
 \fancyhead[RO]{\textit{Machine learning Methods}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
@@ -315,7 +315,7 @@ of efficiency and precision \citep{blechschmidt_three_2021}.
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=1.0\textwidth]{figs/Artificial_Intelligence_subsets.pdf}
+    \includegraphics[width=1.0\textwidth]{figs/artificial_intelligence_subsets.pdf}
     \caption{Artificial Intelligence subsets. (A) Deep learning as a subset of machine learning and artificial intelligence and (B) basic 
     architecture of artificial neural networks.}    
     \label{deep_learning_subset_architecture}
@@ -414,21 +414,21 @@ is NeuralPDE \citep{https://doi.org/10.48550/arxiv.2107.09443}. Additionally, PI
 application of Physics-Informed Neural Networks using PyTorch, offering improved performance compared to the original model.
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for Applications
+% Section - 4 - Applications
 %------------------------------------------------------------------------------------------------------------------------
 \section{Applications}
-\fancyhead[RO]{\textit{Applications}\, / \thepage} % Encabezado para páginas impares
+\fancyhead[RO]{\textit{Applications}\, / \thepage}  
 %------------------------------------------------------------------------------------------------------------------------
 
 This section presents a systematic review of the literature on the application of machine learning methods to model 
-elastic wave propagation. We addressed two research questions:
-
-\begin{enumerate}
-    \item How have machine learning methods been used to model elastic wave propagation, and what are the main applications within geophysics?
-    \item In which cases have machine learning methods been more efficient than standard numerical methods in terms of computational time and accuracy?
-\end{enumerate} 
-
-Therefore, initially, our search focused on how machine learning has been used for modeling elastic wave propagation. 
+elastic wave propagation. We addressed the following research question: In which computational seismilogy applications 
+have machine learning methods been an adecuate alternative to standard numerical methods in terms of 
+computational time and accuracy?
+ 
+In order to answer this question, we conducted a systematic review of the literature. The search was conducted on 
+the Scopus and Google Scholar databases. A search strategy was implemented to identify relevant publications that 
+permit a comparison between machine learning methods and standard numerical methods in the context of wave propagation. 
+Therefore, initially, our search focused on how machine learning has been used for modeling wave propagation. 
 The search was primarily conducted using the following query on the Scopus website as an initial filter:
 
 \noindent\begin{verbatim}
@@ -437,11 +437,11 @@ The search was primarily conducted using the following query on the Scopus websi
 (modeling OR modelling OR model OR simulation)
 \end{verbatim}    
 
-The search aimed to find significant contributions and advancements in modeling elastic wave propagation using machine learning techniques 
-over the past decade (2014-2024) and limited to English as the language of publication, the search was conducted on the Scopus database. 
+The search aimed to find significant contributions and advancements in modeling wave propagation using machine learning techniques 
+over the past decade (2014-2024) and limited to English as the language of publication on the Scopus database. 
 Additionally, the it was complemented by Google Scholar using the same terms, time span, and language. The resulting 
-list was then sorted by relevance, with the analysis limited to the first 50 results from both engines, which were then merged 
-and duplicates removed. The final list was then manually filtered by reading the titles and abstracts. Relevance to the field of
+list was then sorted by relevance, with the analysis limited to the first 50 results from both databases, which were then merged 
+and duplicated works removed. The final list was then manually filtered by reading the titles and abstracts. Relevance to the field of
 choosen field was considered as criterion for inclusion. Adicionally the list was restricted to works that evidence a comparative
 analysis between machine learning methods and standard numerical methods in the abstract. The flowchart and total number of 
 works that met these conditions was  (see Figure \ref{fig:Escheme_Systematic_Review}). 
@@ -480,7 +480,7 @@ in semi-infinite domains, showcasing their versatility in forward modeling for s
 These studies collectively highlight the effectiveness of physics-informed neural networks across different wave propagation scenarios.
 
 %--------------------------------------------------------------------------------------------------
-% Section for Conclusions
+% Section - Conclusions
 %--------------------------------------------------------------------------------------------------
 \section{Conclusions}\label{sec:final_remarks_and_perspectives}
 
