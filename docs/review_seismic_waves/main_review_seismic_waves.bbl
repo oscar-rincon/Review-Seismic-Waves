@@ -1,4 +1,4 @@
-\begin{thebibliography}{55}
+\begin{thebibliography}{57}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -139,6 +139,18 @@ Salvatore Cuomo, Vincenzo~Schiano Di~Cola, Fabio Giampaolo, Gianluigi Rozza,
 \newblock \doi{10.1007/s10915-022-01939-z}.
 \newblock URL \url{https://doi.org/10.1007/s10915-022-01939-z}.
 
+\bibitem[Karniadakis et~al.(2021)Karniadakis, Kevrekidis, Lu, Perdikaris, Wang,
+  and Yang]{karniadakis_physics-informed_2021}
+George~Em Karniadakis, Ioannis~G. Kevrekidis, Lu~Lu, Paris Perdikaris, Sifan
+  Wang, and Liu Yang.
+\newblock Physics-informed machine learning.
+\newblock \emph{Nature Reviews Physics}, 3\penalty0 (6):\penalty0 422--440,
+  June 2021.
+\newblock ISSN 2522-5820.
+\newblock \doi{10.1038/s42254-021-00314-5}.
+\newblock URL \url{https://www.nature.com/articles/s42254-021-00314-5}.
+\newblock Number: 6 Publisher: Nature Publishing Group.
+
 \bibitem[Vadyala et~al.(2022)Vadyala, Betgeri, Matthews, and
   Matthews]{vadyala_review_2022}
 Shashank~Reddy Vadyala, Sai~Nethra Betgeri, John~C. Matthews, and Elizabeth
@@ -174,6 +186,18 @@ Mario Lino, Stathi Fotiadis, Anil~A. Bharath, and Chris~D. Cantwell.
 \newblock URL
   \url{https://royalsocietypublishing.org/doi/full/10.1098/rspa.2023.0058}.
 \newblock Publisher: Royal Society.
+
+\bibitem[JingBo et~al.(2023)JingBo, Cai, and PengFei]{jingbo_research_2023}
+Z.~O.~U. JingBo, L.~I.~U. Cai, and Zhao PengFei.
+\newblock Research progress of physics-informed neural network in seismic wave
+  modeling.
+\newblock \emph{Progress in Geophysics}, 38\penalty0 (1):\penalty0 430--448,
+  February 2023.
+\newblock ISSN 1004-2903.
+\newblock \doi{10.6038/pg2023GG0142}.
+\newblock URL
+  \url{http://www.progeophys.cn//en/article/doi/10.6038/pg2023GG0142}.
+\newblock Publisher: Progress in Geophysics.
 
 \bibitem[Tarantola(2005)]{Tarantola}
 Albert Tarantola.
@@ -302,6 +326,16 @@ Siqin Liu, Zhusheng Zhou, and Weizu Zeng.
 Hans~Petter Langtangen and Anders Logg.
 \newblock Solving pdes in python the fenics tutorial i, 2016.
 \newblock URL \url{http://www.springer.com/series/13548}.
+
+\bibitem[Sander(2020)]{sander_dune_2020}
+Oliver Sander.
+\newblock \emph{{DUNE} — {The} {Distributed} and {Unified} {Numerics}
+  {Environment}}, volume 140 of \emph{Lecture {Notes} in {Computational}
+  {Science} and {Engineering}}.
+\newblock Springer International Publishing, Cham, 2020.
+\newblock ISBN 978-3-030-59701-6 978-3-030-59702-3.
+\newblock \doi{10.1007/978-3-030-59702-3}.
+\newblock URL \url{http://link.springer.com/10.1007/978-3-030-59702-3}.
 
 \bibitem[Komatitsch et~al.(2023)Komatitsch, Tromp, Gharti, Peter, Cano,
   Bachmann, Bottero, Brissaud, Chow, Cristini, Cui, Gassmoeller, Gineste,
@@ -468,18 +502,6 @@ I.E. Lagaris, A.~Likas, and D.I. Fotiadis.
 \newblock \doi{10.1109/72.712178}.
 \newblock URL \url{https://ieeexplore.ieee.org/document/712178}.
 \newblock Conference Name: IEEE Transactions on Neural Networks.
-
-\bibitem[Karniadakis et~al.(2021)Karniadakis, Kevrekidis, Lu, Perdikaris, Wang,
-  and Yang]{karniadakis_physics-informed_2021}
-George~Em Karniadakis, Ioannis~G. Kevrekidis, Lu~Lu, Paris Perdikaris, Sifan
-  Wang, and Liu Yang.
-\newblock Physics-informed machine learning.
-\newblock \emph{Nature Reviews Physics}, 3\penalty0 (6):\penalty0 422--440,
-  June 2021.
-\newblock ISSN 2522-5820.
-\newblock \doi{10.1038/s42254-021-00314-5}.
-\newblock URL \url{https://www.nature.com/articles/s42254-021-00314-5}.
-\newblock Number: 6 Publisher: Nature Publishing Group.
 
 \bibitem[McGreivy and Hakim(2024)]{mcgreivy_weak_2024}
 Nick McGreivy and Ammar Hakim.

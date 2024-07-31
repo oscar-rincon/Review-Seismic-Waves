@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 17:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -987,15 +987,12 @@ Overfull \hbox (8.53592pt too wide) in paragraph at lines 53--54
 Package lettrine.sty Info: Targeted height = 19.23006pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 19.0908pt (W);
-(lettrine.sty)             reported on input line 124.
+(lettrine.sty)             reported on input line 131.
 [1
 
 ]
 File: figs/publications_absolute_relative.pdf Graphic file (type pdf)
 <use figs/publications_absolute_relative.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1009,9 +1006,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 File: figs/forward_inverse_modeling_waves.pdf Graphic file (type pdf)
 <use figs/forward_inverse_modeling_waves.pdf>
 
-Overfull \hbox (48.08435pt too wide) in paragraph at lines 213--220
+Overfull \hbox (48.08435pt too wide) in paragraph at lines 225--232
 [][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1022,7 +1022,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [3]
-Overfull \hbox (9.37473pt too wide) in paragraph at lines 269--271
+Overfull \hbox (9.37473pt too wide) in paragraph at lines 281--283
 []\TU/newbask(0)/m/n/10.95 where $\OML/cmm/m/it/10.95 ^^Q$ \TU/newbask(0)/m/n/1
 0.95 is the viscosity coefficient. Anisotropic Wave Equation describe propagati
 on in anisotropic
@@ -1037,9 +1037,6 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [4]
-Underfull \vbox (badness 2799) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1063,9 +1060,6 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 [6]
 File: figs/scheme_pinns_waves.pdf Graphic file (type pdf)
 <use figs/scheme_pinns_waves.pdf>
-
-Underfull \vbox (badness 7151) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1122,20 +1116,6 @@ Underfull \hbox (badness 1033) in paragraph at lines 132--141
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 222--228
-[]\TU/newbask(0)/m/n/10.95 B. Moseley.  \TU/newbask(0)/m/it/10.95 Physics-infor
-med machine learning: from concepts to real-world applications\TU/newbask(0)/m/
-n/10.95 .
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 222--228
-\TU/newbask(0)/m/n/10.95 PhD thesis, University of Oxford, 2022.  URL [][]$[][]
-[][][] [] [] [] [][][] [] [][] [] [][] [] [][] [] [][][][][][][] [] [][][][] []
-
- []
-
-
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1144,6 +1124,19 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [12]
+Underfull \hbox (badness 7326) in paragraph at lines 246--252
+[]\TU/newbask(0)/m/n/10.95 B. Moseley.  \TU/newbask(0)/m/it/10.95 Physics-infor
+med machine learning: from concepts to real-world applications\TU/newbask(0)/m/
+n/10.95 .
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 246--252
+\TU/newbask(0)/m/n/10.95 PhD thesis, University of Oxford, 2022.  URL [][]$[][]
+[][][] [] [] [] [][][] [] [][] [] [][] [] [][] [] [][][][][][][] [] [][][][] []
+
+ []
+
 Missing character: There is no ́ (U+0301) in font [./fonts/newbaskn.ttf]/OT:lan
 guage=dflt;mapping=tex-text;!
 
@@ -1190,10 +1183,10 @@ ed.
 (rerunfilecheck)             Checksum: 100E1459AFC46ED0F7D6976248D675CC;741.
  ) 
 Here is how much of TeX's memory you used:
- 29167 strings out of 476191
- 590966 string characters out of 5812072
- 926443 words of memory out of 5000000
- 49414 multiletter control sequences out of 15000+600000
+ 29176 strings out of 476191
+ 591184 string characters out of 5812072
+ 926585 words of memory out of 5000000
+ 49423 multiletter control sequences out of 15000+600000
  480593 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,105p,973b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
