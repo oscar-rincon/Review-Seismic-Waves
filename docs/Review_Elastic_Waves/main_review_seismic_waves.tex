@@ -1,7 +1,9 @@
 %------------------------------------------------------------------------------------------------------------------------
-% File: Review_Elastic_Waves.tex
-% Purpose: Literature review of recent advances in modeling elastic wave 
-% propagation using machine learning-based methods
+% A Review of Recent Progress in Seismic Waves Propagation Modeling Using Machine Learning Based Methods
+%------------------------------------------------------------------------------------------------------------------------
+% File: main_review_seismic_waves.tex
+% Purpose: Literature review of recent advances in modeling seismic waves propagation using machine   
+% learning-based methods
 % Author: oscar-rincon
 % Email: orincon@eafit.edu.co
 % Creation date: 2024-03-15
@@ -11,7 +13,7 @@
 %------------------------------------------------------------------------------------------------------------------------
 % Import the style file
 %------------------------------------------------------------------------------------------------------------------------
-\usepackage{Review_Elastic_Waves}
+\usepackage{review_seismic_waves}
 %------------------------------------------------------------------------------------------------------------------------
 % Document starts here
 %------------------------------------------------------------------------------------------------------------------------
@@ -30,15 +32,15 @@
 % Add vertical space adjustment
 \vspace{-2mm} 
 % Create a minipage for the title
-\begin{minipage}{10cm}
+\begin{minipage}{9.5cm}
     \begin{center}
         % Title of the document
-        \textbf{\large A Review of Recent Progress in Elastic Waves Propagation Modeling Using 
+        \textbf{\large A Review of Recent Progress in Seismic Waves Propagation Modeling Using 
         Machine Learning Based Methods}  
     \end{center}                 
 \end{minipage} 
 % Create a minipage for the first logo
-\begin{minipage}{3.3cm}
+\begin{minipage}{3.1cm}
     \begin{center}
         % Include the first logo with specific width
         \hspace{-0.2cm}\includegraphics[width=2.8cm]{figs/format/logo_EAFIT.pdf}
@@ -104,8 +106,8 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
         has been developed. Standard numerical modeling methods demonstrate notable accuracy. However, their computational cost can be  
         significant. Alternative methods based on machine learning have recently emerged, showing an adequate balance between computational  
         cost and accuracy when applied to wave propagation problems. In this work, we present a review of machine learning methods that 
-        have been developed and used to model elastic wave propagation, with special emphasis on geophysical applications. We discuss the 
-        fundamentals of mechanical wave propagation modeling, standard numerical methods, and the recent advances achieved through machine 
+        have been developed and used to model wave propagation, with special emphasis on seismology. We discuss the 
+        fundamentals of wave propagation modeling, standard numerical methods, and the recent advances achieved through machine 
         learning methods. We also discuss the challenges and opportunities that these methods present for future research in the field of 
         wave propagation modeling.
     \end{abstract}
@@ -116,6 +118,7 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
 % Section - Introduction
 %------------------------------------------------------------------------------------------------------------------------ 
 \section*{Introduction}
+\fancyhead[RO]{\textit{Introduction}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
 \lettrine{W}{ }ave propagation is a physical phenomenon governed by partial differential equations, which hold significant importance 
@@ -156,16 +159,17 @@ number of document published associated to wave propagation modeling and machine
 Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various engineering and scientific 
 disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. Particularly, this review may be of help for 
 researchers with interest into apply these emerging techniques in wave propagation modeling. Due to the extensive areas where wave equation 
-is applied, our aim is to review the recent progress achieved in elastic wave propagation modeling by employing these emerging techniques, 
+is applied, our aim is to review the recent progress achieved in wave propagation modeling by employing these emerging techniques, 
 specially on geophysics, and the publication time-span studied for those applications was 2014-2024.
 
 This work provides a comprehensive analysis of the advancements made and their impact. While this area can be applied to a wide range of 
 problems, our focus will be limited to the propagation of mechanical waves. The work is organized into the following sections: 
-Section \ref{sec:fordward_inverse_modeling_mechanical_waves} reviews the fundamentals of mechanical wave propagation modeling. 
-Furthermore, in Sections \ref{sec:tnm} and \ref{sec:dl_mwpm}, we identify existing standard and deep learning methods used to solve 
-the wave equation and highlight their strengths and weaknesses in comparison to each other. Additionally, we examine the recent 
-advances in mechanical wave propagation modeling achieved through these methods. Finally, in Section 
-\ref{sec:final_remarks_and_perspectives}, we discuss possible challenges and opportunities.
+Section \ref{sec:modeling_wave_propagation} describes general aspects about wave propagation modeling. Furthermore, in 
+Sections \ref{sec:standard_numerical_methods} and \ref{sec:machine_learning_methods}, we identify existing standard and machine 
+learning methods used to solve the diferential equations and particularly the wave equation. Then, in Section 
+\ref{sec:applications} we systematically review the recent advances in wave propagation modeling achieved through these 
+emerging methods and identify when they can be an alternative to traditional numerical methods in terms of computational 
+time and accuracy. 
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation Applied to Computational Seismology
@@ -178,24 +182,24 @@ A dynamic model, such as the propagation of waves in a medium, describes how a s
 static model, which shows how a system is at equilibrium. Dynamic models typically use differential equations to describe how a 
 system evolves. A general formulation of the governing equation of a physical problem can be:
 
-\begin{equation}
+\begin{equation*}
 D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde}
-\end{equation}
+\end{equation*}
  
 where $D$ denotes the differential operator acting on the solution to the differential equation $u(x,t)$ parameterized 
 by $\lambda$ and $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. 
 Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the initial 
 condition by:
 
-\begin{equation}
+\begin{equation*}
 B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T] 
-\end{equation}
+\end{equation*}
 
 and
 
-\begin{equation}
+\begin{equation*}
 u(x, 0) = h(x, 0), \quad x \in \Omega
-\end{equation}
+\end{equation*}
 
 The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches when 
 mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
@@ -208,7 +212,7 @@ An schematic representation of the forward and inverse model using numerical met
 \begin{figure}[H]
 \includegraphics{figs/forward_inverse_modeling_waves.pdf}
     \caption{Scheme of the forward and inverse problems encountered in solving partial differential equations (PDEs). In the forward 
-    scenario, the inputs $(x,t;\lambda)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through 
+    scenario, the inputs $(x,t;c)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through 
     either standard numerical methods (SNM) or neural networks based methods (MLBM) to derive a solution $u$. Standard numerical 
     methods such as: finite differences (FD), finite elements (FE), pseudo-spectral (PS), finite volumes (FV), and spectral 
     elements (SE). Also, deep learning techniques include, for example, Physics Informed Neural Networks (PINNs), Neural Operator 
@@ -225,52 +229,85 @@ unobserved parameters of a system based on real-world observations. Within the f
 the task involves estimating $\lambda$ given $u$. Inversion can be exceedingly challenging since often requires numerous forward 
 simulations to align the predictions of the physical model with the set of observations. 
 
-Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study seismic 
-waves and in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear wave equation in a 
-homogeneous medium can be expressed as \citep{Carcione2002}:
+Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study seismic waves and 
+in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear wave equation in a homogeneous 
+medium can be expressed as \citep{Carcione2002}:
 
-\begin{equation}
-\frac{\partial^2 \boldsymbol{u}(\boldsymbol{x_i}, t)}{\partial t^2} - c^{2} \nabla^2 \boldsymbol{u}(\boldsymbol{x_i}, t) =
- f(\boldsymbol{x_i}, t) \ ,
+\begin{equation*}
+\frac{\partial^2 u(x_i, t)}{\partial t^2} - c^{2} \nabla^2 u(x_i, t) = f(x_i, t) \ ,
 \label{acoustic}
-\end{equation}
+\end{equation*}
 
-where \( \boldsymbol{u}(\boldsymbol{x_i}, t) \) describes the pressure of the seismic waves generated, and \( f(x_i, t) \) is a 
-source term that describes the strength and duration of the source. Another common expression used to describe the propagation of 
-seismic waves, for the case of a heterogeneous isotropic medium, is the elastic wave equation \citep{moseley_fast_2018,lehmann_fourier_2023}. 
-This equation can be expressed as 
+where \( u(x_i, t) \) describes the pressure of the generated seismic waves, and \( f(x_i, t) \) is a source term that describes the strength 
+and duration of the source.
 
-\begin{equation}
-\rho \frac{\partial^2 \boldsymbol{u}}{\partial t^2} = \nabla \lambda (\nabla \cdot \boldsymbol{u}) + 
-\nabla \mu \left[\nabla \boldsymbol{u} + (\nabla \boldsymbol{u})^T\right] + (\lambda + 2\mu) \nabla (\nabla \cdot \boldsymbol{u})
- - \mu \nabla \times \nabla \times \boldsymbol{u} \ ,
+Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous isotropic medium, is the 
+elastic wave equation \citep{moseley_fast_2018, lehmann_fourier_2023}. This equation can be expressed as:
+
+\begin{equation*}
+\rho \frac{\partial^2 u}{\partial t^2} = \nabla (\lambda (\nabla \cdot u)) + \nabla \mu \left[\nabla u + (\nabla u)^T\right] 
++ (\lambda + 2\mu) \nabla (\nabla \cdot u) - \mu \nabla \times (\nabla \times u) \ ,
 \label{elastic}
-\end{equation}
+\end{equation*}
 
-where $\rho$ is the material density, $\boldsymbol{u}$ is the displacement vector, and $\lambda, \mu$ are the Lamé parameters 
-characterizing the material.
+where $\rho$ is the material density, $u$ is the displacement vector, and $\lambda$, $\mu$ are the Lamé parameters 
+characterizing the material. These equations are fundamental for modeling the propagation of seismic waves in 
+elastic media. The acoustic wave equation is a simplification that assumes the waves are longitudinal and the 
+medium is homogeneous and isotropic. In contrast, the elastic wave equation accounts for the heterogeneous 
+and anisotropic properties of the medium, allowing for the modeling of both longitudinal and transverse waves.
+
+Besides the acoustic and elastic equations, there are other important variants of the wave equation used in different contexts of 
+computational seismology. Viscoelastic Wave Equation is a variant tha incorporates damping effects due to the viscosity of 
+the medium. It is useful for modeling wave attenuation in real geological media that exhibit viscoelastic behavior.
+
+\begin{equation*}
+\rho \frac{\partial^2 u}{\partial t^2} = \nabla (\lambda (\nabla \cdot u)) + \nabla \mu \left[\nabla u + (\nabla u)^T\right] 
++ (\lambda + 2\mu) \nabla (\nabla \cdot u) - \mu \nabla \times (\nabla \times u) - \eta \frac{\partial u}{\partial t} \ ,
+\label{viscoelastic}
+\end{equation*}
+    
+where $\eta$ is the viscosity coefficient. Anisotropic Wave Equation describe propagation in anisotropic media, 
+the elastic properties vary with direction. The wave equation is modified to include additional terms representing this anisotropy.
+
+\begin{equation*}
+\rho \frac{\partial^2 u}{\partial t^2} = \nabla \cdot \sigma + f \ ,
+\label{anisotropic}
+\end{equation*}
+    
+where $\sigma$ is the anisotropic stress tensor and $f$ is a source term. Nonlinear Wave Equation are considered 
+in situations where wave amplitudes are very large, linear approximations are insufficient, and nonlinear terms 
+must be considered in the wave equation.
+
+\begin{equation*}
+\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u + \beta \frac{\partial u^2}{\partial x^2} = f(x_i, t) \ ,
+\label{nonlinear}
+\end{equation*}
+    
+where $\beta$ is a nonlinearity coefficient. These variants allow for more precise and realistic modeling 
+of seismic wave propagation in different types of media and  under various conditions. The choice of the 
+appropriate wave equation depends on the characteristics of the medium and the seismic phenomenon being studied.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 2 - Standard Numerical Methods 
 %------------------------------------------------------------------------------------------------------------------------
-\section{Standard Numerical Methods}\label{sec:tnm}
+\section{Standard Numerical Methods}\label{sec:standard_numerical_methods}
 \fancyhead[RO]{\textit{Standard Numerical Methods}\, / \thepage}
 %------------------------------------------------------------------------------------------------------------------------
 
 In the past decades various numerical methods have been proposed to solve physics systems by partial differential equations such as the 
 wave equation. The finite-difference method is among the most popular to solve partial differential equations, and particularly the wave 
-equation. A complete review of the finite-differences method applied to wave propagation can be found the \citeauthoryear{Moczo2014}. 
-Partial derivatives are approximated by discrete operators involving differences between adjacent grid points. The finite difference 
-method suits for tackling issues related to simple geometric structures. In contrast, the finite element method offers more grid 
-flexibility, facilitating the handling of intricate geometric boundaries.
+equation. This possibly associated with its simplicity and efficiency. A complete review of the finite-differences method applied 
+to wave propagation can be found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators 
+involving differences between adjacent grid points. The finite difference method suits for tackling issues related to simple 
+geometric structures. In contrast, the finite element method offers more grid flexibility, facilitating the handling of intricate 
+geometric boundaries.
 
 In wave propagation simulations, the partial differential equations are typically discretized on a staggered grid 
 \citep{madariaga_dynamics_1976,Virieux1986}. This approach facilitates the resolution of the rupture propagation problem. Particularly 
 an approach was proposed in the work of \citeauthoryear{Zhou2021} a finite-difference method with variable-length temporal and spatial 
-operators was proposed to increase the stability and efficiency of the standard method.
-
-\citeauthoryear{liu_simulation_2023} combined a standard staggered-grid, finite-difference approach and the perfectly matched layer 
-absorbing boundary to solve 3D first-order velocity-stress equations of acoustoelasticity to simulate wave propagating.
+operators was proposed to increase the stability and efficiency of the standard method. Also, \citeauthoryear{liu_simulation_2023} 
+combined a standard staggered-grid, finite-difference approach and the perfectly matched layer absorbing boundary to solve 3D 
+first-order velocity-stress equations of acoustoelasticity to simulate wave propagating.
 
 Finite-element methods are suitable for dealing with intricate shapes and diverse materials because they can use irregular grids. They 
 permit flexibility in size, shape, and approximation order. Nevertheless, a drawback is their high demand for computing power. This 
@@ -298,10 +335,10 @@ predictions makes them less ideal for use in inverse problems.
 \fancyhead[RO]{\textit{Machine learning Methods}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
-The realm of machine learning has recently displayed promise in its capacity to approximate predictions of physical phenomena. These methods 
-can grasp highly nonlinear physics and offer significantly quicker inference times compared to conventional simulations. Therefore, as an 
-alternative to standard methods deep learning have been employed to apply their capability as universal function approximator 
-\citep{hornik_approximation_1991}.
+The realm of machine learning has recently displayed promise in its capacity to approximate predictions of physical phenomena. 
+These methods can grasp highly nonlinear physics and offer significantly quicker inference times compared to conventional 
+simulations. Therefore, as an alternative to standard methods deep learning have been employed to apply their capability as 
+universal function approximator \citep{hornik_approximation_1991}.
 
 Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural network with a single 
 or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have shown potential in overcoming the limitations 
@@ -379,10 +416,6 @@ and \( L_{\text{pde}} \) represents the residuals of the PDEs, \( L_{\text{ic}} 
 initial time point, and \( L_{\text{bc}} \) represents the error at the collocation points on the boundaries. The coefficients 
 \(\beta_{\text{ic}}\) and \(\beta_{\text{bc}}\) are training hyper-parameters.
 
-%------------------------------------------------------------------------------------------------------------------------
-%\subsection{Challenges}
-%------------------------------------------------------------------------------------------------------------------------
-
 One major drawback of these methods is the difficulty of transferring knowledge between different configurations. For example, when solving 
 the wave equation, CNNs and PINNs are trained with a fixed velocity parameter and cannot predict anything for a different velocity value. 
 One of the main challenges in numerically modeling mechanical is associated with the dimensional, given the computational complexity.
@@ -397,11 +430,7 @@ with standard numerical methods. \citeauthor{mcgreivy_weak_2024} identified two 
 accurate machine learning method to a more accurate standard numerical method, whereas a fair approach would be to make the comparison under 
 similar accuracy levels. Second, evaluating the standard numerical method that is not suitable for the partial differential equation being 
 solved. These two criteria are essential for properly evaluating performance, but they are not always followed. 
-
-%------------------------------------------------------------------------------------------------------------------------
-%\subsection{Opportunities}
-%------------------------------------------------------------------------------------------------------------------------
-
+ 
 Different extentions of the classical work where PINNs was originally proposed have emerged. \citeauthoryear{kharazmi_variational_2019} 
 proposed variational physics-informed neural networks which instead trained physics-informed neural networks using the variational form of the 
 underlying differential equations. A neural network is still used to approximate the solution of the differential equation, but it is combined 
@@ -420,12 +449,12 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 4 - Applications
 %------------------------------------------------------------------------------------------------------------------------
-\section{Applications}
+\section{Applications}\label{sec:applications}
 \fancyhead[RO]{\textit{Applications}\, / \thepage}  
 %------------------------------------------------------------------------------------------------------------------------
 
 This section presents a systematic review of the literature on the application of machine learning methods to model 
-elastic wave propagation. We addressed the following research question: In which computational seismilogy applications 
+wave propagation. We addressed the following research question: In which computational seismilogy applications 
 have machine learning methods been an adecuate alternative to standard numerical methods in terms of 
 computational time and accuracy?
  
@@ -488,7 +517,7 @@ These studies collectively highlight the effectiveness of physics-informed neura
 %--------------------------------------------------------------------------------------------------
 % Section - Conclusions
 %--------------------------------------------------------------------------------------------------
-\section{Conclusions}\label{sec:final_remarks_and_perspectives}
+\section{Conclusions}\label{sec:coclusions}
 
 % Customize the header for this section
 \fancyhead[RO]{\textit{Conclusions}\, / \thepage}

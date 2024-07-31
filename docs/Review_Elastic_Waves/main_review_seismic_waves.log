@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 14:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Review_Elastic_Waves.tex
-(./Review_Elastic_Waves.tex
+**main_review_seismic_waves.tex
+(./main_review_seismic_waves.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -23,7 +23,7 @@ File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(./Review_Elastic_Waves.sty
+(./review_seismic_waves.sty
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -52,11 +52,11 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 
 Package geometry Warning: Over-specification in `h'-direction.
-    `width' (483.69684pt) is ignored.
+    `width' (614.295pt) is ignored.
 
 
 Package geometry Warning: Over-specification in `v'-direction.
-    `height' (682.86613pt) is ignored.
+    `height' (794.96999pt) is ignored.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
@@ -814,38 +814,38 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 71.
 )
-(./Review_Elastic_Waves.aux
+(./main_review_seismic_waves.aux
 
 LaTeX Warning: Label `deep_learning_subset_architecture' multiply defined.
 
 )
-\openout1 = `Review_Elastic_Waves.aux'.
+\openout1 = `main_review_seismic_waves.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+0.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -855,15 +855,15 @@ LaTeX Font Info:    ... okay on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=500.484pt
-* \textheight=681.15898pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-43.20975pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-27.84526pt
 * \headheight=2.84526pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -891,59 +891,59 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 18.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 18.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 18.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 18.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 18.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 18.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 18.
-LaTeX Font Info:    Redeclaring math accent \check on input line 18.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 18.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 18.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 18.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 18.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 18.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
+LaTeX Font Info:    Redeclaring math accent \check on input line 20.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 18.
+(Font)              `operators' in the math version `normal' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/newbask(0)/m/n on input line 18.
+(Font)                  OT1/cmr/m/n --> TU/newbask(0)/m/n on input line 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 18.
+(Font)              `operators' in the math version `bold' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/newbask(0)/m/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> TU/newbask(0)/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/newbask(0)/m/n --> TU/newbask(0)/m/n on input line 1
-8.
+(Font)                  TU/newbask(0)/m/n --> TU/newbask(0)/m/n on input line 2
+0.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/newbask(0)/m/it on input line 18.
+(Font)                  OT1/cmr/m/it --> TU/newbask(0)/m/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/newbask(0)/b/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> TU/newbask(0)/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 18.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/newbask(0)/m/n --> TU/newbask(0)/b/n on input line 1
-8.
+(Font)                  TU/newbask(0)/m/n --> TU/newbask(0)/b/n on input line 2
+0.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/newbask(0)/b/it on input line 18.
+(Font)                  OT1/cmr/bx/it --> TU/newbask(0)/b/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 18.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 18.
-Package hyperref Info: Link coloring ON on input line 18.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 20.
+Package hyperref Info: Link coloring ON on input line 20.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -955,21 +955,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count338
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
 
-(./Review_Elastic_Waves.out) (./Review_Elastic_Waves.out)
+(./main_review_seismic_waves.out) (./main_review_seismic_waves.out)
 \@outlinefile=\write5
-\openout5 = `Review_Elastic_Waves.out'.
+\openout5 = `main_review_seismic_waves.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -980,26 +980,22 @@ File: figs/format/logo_EAFIT.pdf Graphic file (type pdf)
 File: figs/format/logo_grupo.pdf Graphic file (type pdf)
 <use figs/format/logo_grupo.pdf>
 
-Overfull \hbox (8.53592pt too wide) in paragraph at lines 51--52
+Overfull \hbox (8.53592pt too wide) in paragraph at lines 53--54
  [] 
  []
 
 Package lettrine.sty Info: Targeted height = 19.23006pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 19.0908pt (W);
-(lettrine.sty)             reported on input line 121.
+(lettrine.sty)             reported on input line 124.
 [1
 
 ]
 File: figs/publications_absolute_relative.pdf Graphic file (type pdf)
 <use figs/publications_absolute_relative.pdf>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `sec:fordward_inverse_modeling_mechanical_waves' on pa
-ge 2 undefined on input line 164.
-
-
-LaTeX Warning: Reference `sec:dl_mwpm' on page 2 undefined on input line 165.
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1013,7 +1009,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 File: figs/forward_inverse_modeling_waves.pdf Graphic file (type pdf)
 <use figs/forward_inverse_modeling_waves.pdf>
 
-Overfull \hbox (17.35538pt too wide) in paragraph at lines 209--216
+Overfull \hbox (48.08435pt too wide) in paragraph at lines 213--220
 [][] 
  []
 
@@ -1026,6 +1022,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [3]
+Overfull \hbox (9.37473pt too wide) in paragraph at lines 269--271
+[]\TU/newbask(0)/m/n/10.95 where $\OML/cmm/m/it/10.95 ^^Q$ \TU/newbask(0)/m/n/1
+0.95 is the viscosity coefficient. Anisotropic Wave Equation describe propagati
+on in anisotropic
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1035,6 +1037,18 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [4]
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[5]
 File: figs/artificial_intelligence_subsets.pdf Graphic file (type pdf)
 <use figs/artificial_intelligence_subsets.pdf>
 
@@ -1046,23 +1060,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[5]
+[6]
 File: figs/scheme_pinns_waves.pdf Graphic file (type pdf)
 <use figs/scheme_pinns_waves.pdf>
 
+Underfull \vbox (badness 7151) has occurred while \output is active []
 
-Package fancyhdr Warning: \headheight is too small (2.84526pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
-
-[6]
-Overfull \hbox (9.60637pt too wide) in paragraph at lines 405--413
-[]\TU/newbask(0)/m/n/10.95 Different extentions of the classical work where PIN
-Ns was originally proposed have emerged. [][][]Kharazmi
- []
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1073,6 +1076,15 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [7]
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[8]
 File: figs/scheme_systematic_review.pdf Graphic file (type pdf)
 <use figs/scheme_systematic_review.pdf>
 
@@ -1084,21 +1096,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[8] (./Review_Elastic_Waves.bbl
-
-Package fancyhdr Warning: \headheight is too small (2.84526pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
-
-[9]
-Underfull \hbox (badness 1226) in paragraph at lines 81--92
-\TU/newbask(0)/m/n/10.95 Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, 
-Alban Desmaison, Andreas Kopf, Ed-
- []
-
+[9] (./main_review_seismic_waves.bbl
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1108,18 +1106,43 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [10]
-Underfull \hbox (badness 4279) in paragraph at lines 222--228
+Underfull \hbox (badness 1033) in paragraph at lines 132--141
+\TU/newbask(0)/m/n/10.95 ISSN 1573-7691.  doi: $[][] [] [][][][] [] [][][][][][
+][][][][][][][][][][][][][][][]$.  URL [][]$[][][][][] [] [] [] [][][] [] [][][
+] [] [][] [] [][][][] []
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[11]
+Underfull \hbox (badness 7326) in paragraph at lines 222--228
 []\TU/newbask(0)/m/n/10.95 B. Moseley.  \TU/newbask(0)/m/it/10.95 Physics-infor
 med machine learning: from concepts to real-world applications\TU/newbask(0)/m/
-n/10.95 .  PhD
+n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--228
-\TU/newbask(0)/m/n/10.95 thesis, University of Oxford, 2022.  URL [][]$[][][][]
-[] [] [] [] [][][] [] [][] [] [][] [] [][] [] [][][][][][][] [] [][][][] []
+Underfull \hbox (badness 2213) in paragraph at lines 222--228
+\TU/newbask(0)/m/n/10.95 PhD thesis, University of Oxford, 2022.  URL [][]$[][]
+[][][] [] [] [] [][][] [] [][] [] [][] [] [][] [] [][][][][][][] [] [][][][] []
+
  []
 
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[12]
 Missing character: There is no ́ (U+0301) in font [./fonts/newbaskn.ttf]/OT:lan
 guage=dflt;mapping=tex-text;!
 
@@ -1130,7 +1153,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[11]
+[13]
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1139,7 +1162,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[12]
+[14])
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1148,32 +1171,21 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[13])
-
-Package fancyhdr Warning: \headheight is too small (2.84526pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
-
-[14] (./Review_Elastic_Waves.aux)
-
-LaTeX Warning: There were undefined references.
-
+[15] (./main_review_seismic_waves.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Review_Elastic_Waves.out' has not changed.
+Package rerunfilecheck Info: File `main_review_seismic_waves.out' has not chang
+ed.
 (rerunfilecheck)             Checksum: 100E1459AFC46ED0F7D6976248D675CC;741.
  ) 
 Here is how much of TeX's memory you used:
- 29164 strings out of 476191
- 590843 string characters out of 5812072
- 927261 words of memory out of 5000000
- 49412 multiletter control sequences out of 15000+600000
+ 29167 strings out of 476191
+ 590966 string characters out of 5812072
+ 925443 words of memory out of 5000000
+ 49414 multiletter control sequences out of 15000+600000
  480593 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,14n,105p,975b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,14n,105p,973b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Review_Elastic_Waves.pdf (14 pages).
+Output written on main_review_seismic_waves.pdf (15 pages).
