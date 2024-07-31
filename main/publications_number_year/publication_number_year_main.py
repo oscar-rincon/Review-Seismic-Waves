@@ -53,8 +53,8 @@ height_in_inches = 50 / 25.4
 plt.figure(figsize=(width_in_inches, height_in_inches))
 
 # Trazado de datos absolutos
-plt.plot(data_waves['YEAR'], data_waves['WORKS'], linestyle='-', color='gray')
-plt.ylabel('Absolute')
+plt.plot(data_waves['YEAR'], data_waves['WORKS'], linestyle='-', color='blue')
+plt.ylabel('Absolute', color='blue')
 
 # Configuración del eje principal
 ax = plt.gca()
@@ -64,6 +64,12 @@ ax.yaxis.set_major_locator(MaxNLocator(nbins=6))  # Asegurar 4 marcas principale
 ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
 ax.ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
 
+# Configurar el color del eje izquierdo y los ticks
+ax.tick_params(axis='y', colors='blue')
+ax.tick_params(axis='y', which='minor', colors='blue')
+ax.yaxis.label.set_color('blue')
+ax.spines['left'].set_color('blue')
+
 # Configuración de los años seleccionados en el eje x
 selected_years = [2010, 2013, 2016, 2019, 2022]
 plt.xticks(selected_years)
@@ -71,15 +77,16 @@ plt.xlabel('Year')
 
 # Trazado de datos relativos en un eje secundario
 ax2 = ax.twinx()
-ax2.plot(data_relative['YEAR'], data_relative['WORKS'], linestyle='--', color='blue', label='Relative')
+ax2.plot(data_relative['YEAR'], data_relative['WORKS'], linestyle='--', color='red', label='Relative')
 ax2.yaxis.set_minor_locator(AutoMinorLocator(n=2))
 ax2.yaxis.set_major_locator(MaxNLocator(nbins=5))  # Asegurar 4 marcas principales en el eje y secundario
 ax2.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
 ax2.ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
-ax2.set_ylabel('Relative', color='blue')
-ax2.tick_params(axis='y', colors='blue')
-ax2.tick_params(axis='y', which='minor', colors='blue')  # Configurar ticks menores en azul
-ax2.spines['right'].set_color('blue')
+ax2.set_ylabel('Relative', color='red')
+ax2.tick_params(axis='y', colors='red')
+ax2.tick_params(axis='y', which='minor', colors='red')
+ax2.spines['right'].set_color('red')
+ax2.spines['left'].set_color('blue')
 
 # Ocultar la espina superior en ambos ejes
 ax.spines['top'].set_visible(False)

@@ -1,10 +1,18 @@
+% -----------------------------------------------------------------------------
+% File: Review_Elastic_Waves.tex
+% Purpose: Literature review of recent advances in modeling elastic wave 
+% propagation using machine learning-based methods
+% Author: oscar-rincon
+% Email: orincon@eafit.edu.co
+% Creation date: 2024-03-15
+% Version: 1.0
+% Notes: Any additional relevant notes about the document
+% -----------------------------------------------------------------------------
 \documentclass[11pt,twoside]{article}
-
 %------------------------------------------------------------------------------------------------------------------------
 % Import the style file
 %------------------------------------------------------------------------------------------------------------------------
 \usepackage{Review_Elastic_Waves}
-
 %------------------------------------------------------------------------------------------------------------------------
 % Document starts here
 %------------------------------------------------------------------------------------------------------------------------
@@ -139,7 +147,7 @@ number of document published associated to wave propagation modeling and machine
 
 \begin{figure}[H]
 \centering
-    \includegraphics[scale=1]{figs/publications_with_relative.pdf}
+    \includegraphics[scale=1]{figs/publications_absolute_relative.pdf}
     \caption{The growth of literature related to machine learning and wave propagation modeling. Number of publications according 
     to Scopus between 2010 and 2023. The implemented query was: "machine learning" OR "deep learning" OR "neural networks" AND 
     "wave propagation" OR "wave equation" AND (modeling OR modelling OR model OR simulation).}
@@ -160,21 +168,25 @@ the wave equation and highlight their strengths and weaknesses in comparison to 
 advances in mechanical wave propagation modeling achieved through these methods. Finally, in Section 
 \ref{sec:final_remarks_and_perspectives}, we discuss possible challenges and opportunities.
 
-\section{Modeling of Mechanical Wave Propagation}\label{sec:fordward_inverse_modeling_mechanical_waves}
-\fancyhead[RO]{\textit{Modeling of Mechanical Wave Propagation}\, / \thepage} 
+%------------------------------------------------------------------------------------------------------------------------
+% Section for 1 - Modeling of Wave Propagation Applied to Computational Seismology
+%------------------------------------------------------------------------------------------------------------------------
+\section{Modeling of Wave Propagation Applied to Computational Seismology}\label{sec:modeling_wave_propagation}
+\fancyhead[RO]{\textit{Modeling of Wave Propagation}\, / \thepage} 
+%------------------------------------------------------------------------------------------------------------------------
 
 A dynamic model, such as the propagation of waves in a medium, describes how a system changes over time. This is different from a 
 static model, which shows how a system is at equilibrium. Dynamic models typically use differential equations to describe how a 
 system evolves. A general formulation of the governing equation of a physical problem can be:
 
 \begin{equation}
-D(\boldsymbol{u}(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde}
+D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde}
 \end{equation}
 
-\
+where 
 
 where $D$ denotes the differential operator acting on the solution to the differential equation $u(x,t)$ parameterized 
-by $\lambda$, $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. 
+by $\lambda$ and $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. 
 Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the initial 
 condition by:
 
@@ -185,8 +197,6 @@ B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T]
 \begin{equation}
 u(x, 0) = h(x, 0), \quad x \in \Omega
 \end{equation}
-
-\
 
 The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$.
 
@@ -217,26 +227,6 @@ unobserved parameters of a system based on real-world observations. Within the f
 the task involves estimating $\lambda$ given $u$. Inversion can be exceedingly challenging since often requires numerous forward 
 simulations to align the predictions of the physical model with the set of observations. 
 
-
-% Wave propagation simulations are essential tools in many areas of geophysics...
-
-% The differential equations of interest in this review are those that provide a mathematical description of mechanical wave 
-% propagation. We initially consider a continuous medium with a domain $\Omega$ and a boundary $\Gamma$. Denoting by $\mathbf{r}$ the 
-% position vector defined at time $t$ within the interval $(0, T)$, where $T > 0$ and $T \in \mathbb{R}$, we introduce:
-
-% \[
-% \begin{aligned}
-% \hat{\Omega} &= \Omega \cup \Gamma, &\quad
-% Q_T &= \Omega \times (0,T), &\quad
-% \Sigma_T &= \Gamma \times (0,T).
-% \end{aligned}
-% \]
-
-% \
-
-% Here, $x_k$ for $k \in \{1, 2, 3\}$ are Cartesian coordinates and $t$ is time. The wave equation problem involves finding a 
-% function \( u : \Omega \to \mathbb{R} \) that satisfies the following equations.
-
 Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study seismic 
 waves and in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear wave equation in a 
 homogeneous medium can be expressed as \citep{Carcione2002}:
@@ -261,7 +251,7 @@ where $\rho$ is the material density, $\boldsymbol{u}$ is the displacement vecto
 characterizing the material.
 
 %------------------------------------------------------------------------------------------------------------------------
-% Section for Standard Numerical Methods to Model Wave Equation
+% Section for 2 - Standard Numerical Methods to Model Wave Equation
 %------------------------------------------------------------------------------------------------------------------------
 \section{Standard Numerical Methods to Model Wave Equation}\label{sec:tnm}
 \fancyhead[RO]{\textit{Standard Numerical Methods}\, / \thepage}
