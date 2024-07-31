@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  30 JUL 2024 16:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  30 JUL 2024 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1064,11 +1064,6 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [8] (./Review_Elastic_Waves.bbl
-Underfull \hbox (badness 1226) in paragraph at lines 81--92
-\TU/newbask(0)/m/n/10.95 Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, 
-Alban Desmaison, Andreas Kopf, Ed-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1078,6 +1073,11 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [9]
+Underfull \hbox (badness 1226) in paragraph at lines 81--92
+\TU/newbask(0)/m/n/10.95 Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, 
+Alban Desmaison, Andreas Kopf, Ed-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1118,7 +1118,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[12])
+[12]
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1127,12 +1127,16 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[13] (./Review_Elastic_Waves.aux
+[13])
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-)
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[14] (./Review_Elastic_Waves.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1140,12 +1144,12 @@ Package rerunfilecheck Info: File `Review_Elastic_Waves.out' has not changed.
 (rerunfilecheck)             Checksum: 778D500787B98A0E2FEBEA02ADCF7545;1327.
  ) 
 Here is how much of TeX's memory you used:
- 28773 strings out of 476191
- 584519 string characters out of 5812072
- 920815 words of memory out of 5000000
- 49023 multiletter control sequences out of 15000+600000
- 480609 words of font info for 111 fonts, out of 8000000 for 9000
+ 28771 strings out of 476191
+ 584441 string characters out of 5812072
+ 919815 words of memory out of 5000000
+ 49022 multiletter control sequences out of 15000+600000
+ 480601 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,105p,973b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Review_Elastic_Waves.pdf (13 pages).
+Output written on Review_Elastic_Waves.pdf (14 pages).
