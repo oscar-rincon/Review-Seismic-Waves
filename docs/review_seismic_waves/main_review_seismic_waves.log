@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 16:34
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  31 JUL 2024 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,12 +1106,6 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [10]
-Underfull \hbox (badness 1033) in paragraph at lines 132--141
-\TU/newbask(0)/m/n/10.95 ISSN 1573-7691.  doi: $[][] [] [][][][] [] [][][][][][
-][][][][][][][][][][][][][][][]$.  URL [][]$[][][][][] [] [] [] [][][] [] [][][
-] [] [][] [] [][][][] []
- []
-
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1121,6 +1115,13 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [11]
+Underfull \hbox (badness 1033) in paragraph at lines 132--141
+\TU/newbask(0)/m/n/10.95 ISSN 1573-7691.  doi: $[][] [] [][][][] [] [][][][][][
+][][][][][][][][][][][][][][][]$.  URL [][]$[][][][][] [] [] [] [][][] [] [][][
+] [] [][] [] [][][][] []
+ []
+
+
 Underfull \hbox (badness 7326) in paragraph at lines 222--228
 []\TU/newbask(0)/m/n/10.95 B. Moseley.  \TU/newbask(0)/m/it/10.95 Physics-infor
 med machine learning: from concepts to real-world applications\TU/newbask(0)/m/
@@ -1162,7 +1163,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[14])
+[14]
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1171,7 +1172,16 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[15] (./main_review_seismic_waves.aux)
+[15])
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[16] (./main_review_seismic_waves.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1182,10 +1192,10 @@ ed.
 Here is how much of TeX's memory you used:
  29167 strings out of 476191
  590966 string characters out of 5812072
- 925443 words of memory out of 5000000
+ 926443 words of memory out of 5000000
  49414 multiletter control sequences out of 15000+600000
  480593 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,105p,973b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main_review_seismic_waves.pdf (15 pages).
+Output written on main_review_seismic_waves.pdf (16 pages).

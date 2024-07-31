@@ -80,8 +80,8 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
 % Associated document repository link
 %------------------------------------------------------------------------------------------------------------------------
 
-{\noindent\footnotesize{\href{https://github.com/oscar-rincon/review-elastic-waves}
-{\textcolor{gray}{\faGithubSquare} https://github.com/oscar-rincon/review-elastic-waves}}}
+{\noindent\footnotesize{\href{https://github.com/oscar-rincon/review-seismic-waves}
+{\textcolor{gray}{\faGithubSquare} https://github.com/oscar-rincon/review-seismic-waves}}}
 
 \end{tcolorbox}
 
@@ -453,10 +453,10 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 \fancyhead[RO]{\textit{Applications}\, / \thepage}  
 %------------------------------------------------------------------------------------------------------------------------
 
-This section presents a systematic review of the literature on the application of machine learning methods to model 
-wave propagation. We addressed the following research question: In which computational seismilogy applications 
-have machine learning methods been an adecuate alternative to standard numerical methods in terms of 
-computational time and accuracy?
+This section provides a systematic review of the literature on applying machine learning methods to model 
+wave propagation. We aimed to answer the following research question: In which computational seismology applications 
+have machine learning methods demonstrated superior or comparable performance to standard numerical methods in terms 
+of computational time and accuracy?
  
 In order to answer this question, we conducted a systematic review of the literature. The search was conducted on 
 the Scopus and Google Scholar databases. A search strategy was implemented to identify relevant publications that 
@@ -472,14 +472,15 @@ The search was primarily conducted using the following query on the Scopus websi
     \end{BVerbatim}
 \end{center}   
 
-The search aimed to find significant contributions and advancements in modeling wave propagation using machine learning techniques 
-over the past decade (2014-2024) and limited to English as the language of publication on the Scopus database. 
-Additionally, the it was complemented by Google Scholar using the same terms, time span, and language. The resulting 
-list was then sorted by relevance, with the analysis limited to the first 50 results from both databases, which were then merged 
-and duplicated works removed. The final list was then manually filtered by reading the titles and abstracts. Relevance to the field of
-choosen field was considered as criterion for inclusion. Adicionally the list was restricted to works that evidence a comparative
-analysis between machine learning methods and standard numerical methods in the abstract. The flowchart and total number of 
-works that met these conditions was  (see Figure \ref{fig:Escheme_Systematic_Review}). 
+The search aimed to find significant contributions and advancements in modeling wave propagation using machine
+ learning techniques over the past decade (2014-2024), limited to English-language publications in the Scopus 
+ database. Additionally, the search was complemented by Google Scholar using the same terms, time interval, and 
+ language. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from 
+ both databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
+ reading the titles and abstracts, with relevance to the chosen field as the inclusion criterion. Additionally, 
+ the list was restricted to works that provided a comparative analysis between machine learning methods and 
+ standard numerical methods in the abstract. The flowchart and total number of works that met these conditions 
+ are shown in Figure \ref{fig:scheme_systematic_review}.
 
 \begin{figure}[H]
     \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
@@ -487,12 +488,15 @@ works that met these conditions was  (see Figure \ref{fig:Escheme_Systematic_Rev
 utilized with the relevant search terms (i), and the research was restricted to works in English and within the time frame of 2013-2024 (ii). 
 The resulting lists were then sorted by relevance and limited to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a 
 manual filter was applied by reading the titles and abstracts to ensure the publications were pertinent to our chosen field.}
-    \label{fig:Escheme_Systematic_Review}
+    \label{fig:scheme_systematic_review}
 \end{figure}
 
-We analyzed different aspects in the selected articles, including the type of partial differential wave equation used, the number of dimensions 
-considered, whether forward, inverse or both modeling approaches were performed, and the specific application within gephysics. The results 
-of this analysis are shown in Figure  .
+We identified 92 articles that passed the manual filtering process. From these, we extracted relevant information to address 
+the research question. The articles were classified based on several criteria: the type of partial differential wave equation 
+employed, the number of spatial dimensions considered, whether forward modeling, inverse modeling, or both approaches were 
+utilized, and the specific application within computational seismology. This classification allowed us to systematically 
+analyze the advancements and contributions of machine learning methods in various aspects of wave propagation modeling.
+
 
 The introduction of physics-informed neural networks has generated a large amount of work related. For example the work of 
 \citeauthoryear{karimpouli_physics_2020} explores the application of deep learning in geosciences, specifically solving the 1-dimensional 
@@ -517,7 +521,7 @@ These studies collectively highlight the effectiveness of physics-informed neura
 %--------------------------------------------------------------------------------------------------
 % Section - Conclusions
 %--------------------------------------------------------------------------------------------------
-\section{Conclusions}\label{sec:coclusions}
+\section{Conclusions}\label{sec:conclusions}
 
 % Customize the header for this section
 \fancyhead[RO]{\textit{Conclusions}\, / \thepage}
