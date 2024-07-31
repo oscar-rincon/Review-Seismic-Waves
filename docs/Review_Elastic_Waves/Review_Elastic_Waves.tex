@@ -345,7 +345,7 @@ as well.
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=1.0\textwidth]{figs/Escheme_PINN_waves.pdf}
+    \includegraphics[width=1.0\textwidth]{figs/scheme_pinns_waves.pdf}
     \caption{Physics-informed neural networks scheme applied to the wave equation.}
     \label{deep_learning_subset_architecture}
 \end{figure}
@@ -379,7 +379,9 @@ and \( L_{\text{pde}} \) represents the residuals of the PDEs, \( L_{\text{ic}} 
 initial time point, and \( L_{\text{bc}} \) represents the error at the collocation points on the boundaries. The coefficients 
 \(\beta_{\text{ic}}\) and \(\beta_{\text{bc}}\) are training hyper-parameters.
 
-\subsection{Challenges}
+%------------------------------------------------------------------------------------------------------------------------
+%\subsection{Challenges}
+%------------------------------------------------------------------------------------------------------------------------
 
 One major drawback of these methods is the difficulty of transferring knowledge between different configurations. For example, when solving 
 the wave equation, CNNs and PINNs are trained with a fixed velocity parameter and cannot predict anything for a different velocity value. 
@@ -396,7 +398,9 @@ accurate machine learning method to a more accurate standard numerical method, w
 similar accuracy levels. Second, evaluating the standard numerical method that is not suitable for the partial differential equation being 
 solved. These two criteria are essential for properly evaluating performance, but they are not always followed. 
 
-\subsection{Opportunities}
+%------------------------------------------------------------------------------------------------------------------------
+%\subsection{Opportunities}
+%------------------------------------------------------------------------------------------------------------------------
 
 Different extentions of the classical work where PINNs was originally proposed have emerged. \citeauthoryear{kharazmi_variational_2019} 
 proposed variational physics-informed neural networks which instead trained physics-informed neural networks using the variational form of the 
@@ -431,11 +435,13 @@ permit a comparison between machine learning methods and standard numerical meth
 Therefore, initially, our search focused on how machine learning has been used for modeling wave propagation. 
 The search was primarily conducted using the following query on the Scopus website as an initial filter:
 
-\noindent\begin{verbatim}
-"machine learning" OR "deep learning" OR "neural networks" AND 
-"wave propagation" OR "wave equation" AND 
-(modeling OR modelling OR model OR simulation)
-\end{verbatim}    
+\begin{center}
+    \begin{BVerbatim}
+    "machine learning" OR "deep learning" OR "neural networks" 
+    AND "wave propagation" OR "wave equation" AND 
+    (modeling OR modelling OR model OR simulation)
+    \end{BVerbatim}
+\end{center}   
 
 The search aimed to find significant contributions and advancements in modeling wave propagation using machine learning techniques 
 over the past decade (2014-2024) and limited to English as the language of publication on the Scopus database. 
@@ -447,7 +453,7 @@ analysis between machine learning methods and standard numerical methods in the 
 works that met these conditions was  (see Figure \ref{fig:Escheme_Systematic_Review}). 
 
 \begin{figure}[H]
-    \includegraphics[width=1.0\textwidth]{figs/Escheme_Systematic_Review.pdf}
+    \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
 \caption{Search flowchart and number of publications after each step. During the systematic review process, Scopus and Google Scholar were 
 utilized with the relevant search terms (i), and the research was restricted to works in English and within the time frame of 2013-2024 (ii). 
 The resulting lists were then sorted by relevance and limited to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a 
