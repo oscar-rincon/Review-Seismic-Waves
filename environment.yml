@@ -1,4 +1,4 @@
-name: review-elastic-waves-env
+name: review-seismic-waves-env
 channels:
   - conda-forge
   - defaults
