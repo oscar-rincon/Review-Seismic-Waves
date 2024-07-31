@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct  9 20:11:57 2017
+Created on Mon Jul 31 20:11:57 2024
 
 @author: oscar-rincon
 """
@@ -20,20 +20,32 @@ utilities_dir = os.path.join(current_dir, '../../utils')
 sys.path.insert(0, utilities_dir)
 from plotting import *  # Importar utilidades de trazado personalizadas
 
-# Preparación de datos
-data = {
-    'YEAR': [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010],
-    'WORKS': [5009, 4124, 2975, 2084, 1538, 1076, 856, 647, 531, 520, 478, 401, 384, 351]
+# Leer los archivos CSV, especificando que el delimitador es una coma y saltar las primeras líneas
+df_waves = pd.read_csv('Scopus-50-Analyze-Year-Waves.csv', skiprows=6, delimiter=',')
+df_total = pd.read_csv('Scopus-50-Analyze-Year-Total.csv', skiprows=6, delimiter=',')
+
+# Extraer los datos de las columnas
+years_waves = df_waves.iloc[:, 0].tolist()
+works_waves = df_waves.iloc[:, 1].tolist()
+years_total = df_total.iloc[:, 0].tolist()
+works_total = df_total.iloc[:, 1].tolist()
+
+# Crear diccionarios de datos
+data_waves = {
+    'YEAR': years_waves,
+    'WORKS': works_waves
 }
 
-new_data = {
-    'YEAR': [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010],
-    'RELATIVE_WORKS': [4160202, 4106360, 4040051, 3773670, 3580432, 3351082, 3234051, 3117389, 2989939, 2970369, 2935032, 2800621, 2663823, 2505650]
+data_total = {
+    'YEAR': years_total,
+    'WORKS': works_total
 }
 
-df = pd.DataFrame(data)
-df_new = pd.DataFrame(new_data)
-df_new['RELATIVE_PERCENT'] = (df['WORKS'] / df_new['RELATIVE_WORKS'])
+# Crear diccionario de datos relativos
+data_relative = {
+    'YEAR': data_waves['YEAR'],
+    'WORKS': np.array(data_waves['WORKS']) / np.array(data_total['WORKS'])
+}
 
 # Configuración de la figura
 width_in_inches = 75 / 25.4
@@ -41,7 +53,7 @@ height_in_inches = 50 / 25.4
 plt.figure(figsize=(width_in_inches, height_in_inches))
 
 # Trazado de datos absolutos
-plt.step(df['YEAR'], df['WORKS'], linestyle='-', color='gray')
+plt.plot(data_waves['YEAR'], data_waves['WORKS'], linestyle='-', color='gray')
 plt.ylabel('Absolute')
 
 # Configuración del eje principal
@@ -50,7 +62,7 @@ ax.xaxis.set_minor_locator(AutoMinorLocator(n=2))
 ax.yaxis.set_minor_locator(AutoMinorLocator(n=2))
 ax.yaxis.set_major_locator(MaxNLocator(nbins=6))  # Asegurar 4 marcas principales en el eje y
 ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
-ax.ticklabel_format(axis='y', style='sci', scilimits=(0,0))
+ax.ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
 
 # Configuración de los años seleccionados en el eje x
 selected_years = [2010, 2013, 2016, 2019, 2022]
@@ -59,14 +71,15 @@ plt.xlabel('Year')
 
 # Trazado de datos relativos en un eje secundario
 ax2 = ax.twinx()
-ax2.step(df_new['YEAR'], df_new['RELATIVE_PERCENT'], linestyle='--', color='blue', label='Relative')
-ax2.set_ylabel('Relative', color='blue')
-ax2.tick_params(axis='y', colors='blue')
-ax2.spines['right'].set_color('blue')
+ax2.plot(data_relative['YEAR'], data_relative['WORKS'], linestyle='--', color='blue', label='Relative')
 ax2.yaxis.set_minor_locator(AutoMinorLocator(n=2))
 ax2.yaxis.set_major_locator(MaxNLocator(nbins=5))  # Asegurar 4 marcas principales en el eje y secundario
 ax2.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
-ax2.ticklabel_format(axis='y', style='sci', scilimits=(0,0))
+ax2.ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
+ax2.set_ylabel('Relative', color='blue')
+ax2.tick_params(axis='y', colors='blue')
+ax2.tick_params(axis='y', which='minor', colors='blue')  # Configurar ticks menores en azul
+ax2.spines['right'].set_color('blue')
 
 # Ocultar la espina superior en ambos ejes
 ax.spines['top'].set_visible(False)
@@ -74,5 +87,5 @@ ax2.spines['top'].set_visible(False)
 
 # Ajustar el diseño y guardar la figura
 plt.tight_layout()
-plt.savefig('publications_with_relative.pdf')
+plt.savefig('publications_absolute_relative.pdf')
 plt.show()
