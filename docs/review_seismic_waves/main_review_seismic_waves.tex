@@ -1,9 +1,7 @@
 %------------------------------------------------------------------------------------------------------------------------
-% A Review of Recent Progress in Seismic Waves Propagation Modeling Using Machine Learning Based Methods
-%------------------------------------------------------------------------------------------------------------------------
-% File: main_review_seismic_waves.tex
-% Purpose: Literature review of recent advances in modeling seismic waves propagation using machine   
+% Literature review of recent advances in modeling seismic waves propagation using machine   
 % learning-based methods
+%------------------------------------------------------------------------------------------------------------------------
 % Author: oscar-rincon
 % Email: orincon@eafit.edu.co
 % Creation date: 2024-03-15
@@ -140,7 +138,7 @@ In the context of mathematical modeling, the primary objective is to ensure that
 are computationally efficient without sacrificing accuracy to capture the physical details inherent to the 
 system. However, standard numerical methods often encounter difficulties when addressing complex problems such as irregular 
 geometries, material changes, and mixed boundary conditions. Therefore, the computational demand associated with many common 
-models in computational mechanics has increased the development of innovative strategies.
+models in computer sciences and engineering has increased the development of innovative strategies.
 
 Research conducted with the use of machine learning has considerably grown in the late 2010s, owing to advancements in hardware, such 
 as graphic processing units and data storage technologies and the growth of available data. Additionally, the discovery of better training 
@@ -173,11 +171,6 @@ in terms of computational time and accuracy when applied to solve differential e
 \citep{grossmann_can_2023,mcgreivy_weak_2024}. Therefore the aim of this review is to provide insights into the potential
 of machine learning methods for wave propagation modeling and their impact on computational seismology.
 
-This review may be of help for researchers with interest into apply these emerging techniques in wave 
-propagation modeling. Due to the extensive areas where wave equation is applied, our aim is to review the 
-recent progress achieved in wave propagation modeling by employing these emerging techniques, 
-specially on computational seismology, and the publication time interval studied for those applications was 2014-2024.
-
 This work provides a comprehensive analysis of the advancements made and their impact. While this area can be applied to a 
 wide range of problems, our focus will be limited to the propagation of seismic waves. The work is organized into the 
 following sections: Section \ref{sec:modeling_wave_propagation} describes general aspects about wave propagation modeling. 
@@ -185,7 +178,10 @@ Furthermore, in Sections \ref{sec:standard_numerical_methods} and \ref{sec:machi
 existing standard and machine learning methods used to solve the diferential equations and particularly the wave 
 equation. Then, in Section \ref{sec:applications} we systematically review the recent advances in wave propagation modeling 
 achieved through these emerging methods and identify when they can be an alternative to traditional numerical methods in 
-terms of computational time and accuracy. 
+terms of computational time and accuracy. This review may be of help for researchers with interest into apply these 
+emerging techniques in wave propagation modeling. Due to the extensive areas where wave equation is applied, our 
+aim is to review the recent progress achieved in wave propagation modeling by employing these emerging techniques, 
+specially on computational seismology, and the publication time interval studied for those applications was 2014-2024.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation Applied to Computational Seismology
@@ -220,14 +216,14 @@ u(x, 0) = h(x, 0), \quad x \in \Omega
 The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches when 
 mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
 of a set of observations is known as the inverse problem \citep{Tarantola}, aiming to infer, for example, the properties of a medium 
-based on its reaction to mechanical wave propagation. Since it begins with the effects and then calculates the causes, it is the 
+based on its reaction to wave propagation. Since it begins with the effects and then calculates the causes, it is the 
 opposite of a forward problem, which determines the effects based on the causes. In most cases, the inverse problem is formulated 
 by iteratively performing forward modeling to infer the causes that produce a desired effect, making it computationally complex. 
 An schematic representation of the forward and inverse model using numerical methods is shown in Figure \ref{fig:forward_inverse}.
 
 \begin{figure}[h]
 \includegraphics{figs/forward_inverse_modeling_waves.pdf}
-    \caption{Scheme of the forward and inverse problems encountered in solving partial differential equations (PDEs). In the forward 
+    \caption{Scheme of the forward and inverse problems encountered in solving partial differential equations. In the forward 
     scenario, the inputs $(x,t;c)$ are employed to characterize a model across PDEs. Subsequently, the PDEs are resolved through 
     either standard numerical methods (SNM) or neural networks based methods (MLBM) to derive a solution $u$. Standard numerical 
     methods such as: finite differences (FD), finite elements (FE), pseudo-spectral (PS), finite volumes (FV), and spectral 
@@ -245,20 +241,21 @@ unobserved parameters of a system based on real-world observations. Within the f
 the task involves estimating $\lambda$ given $u$. Inversion can be exceedingly challenging since often requires numerous forward 
 simulations to align the predictions of the physical model with the set of observations. 
 
-Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study seismic waves and 
-in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear wave equation in a homogeneous 
-medium can be expressed as \citep{Carcione2002}:
+Despite being the most elementary among mechanical wave equations, the scalar (acoustic) wave equation is widely used to study 
+seismic waves and in medical applications \citep{moseley_physics-informed_2022, alkhadhr_wave_2023}. The second-order linear 
+wave equation in a homogeneous medium can be expressed as \citep{Carcione2002}:
 
 \begin{equation*}
 \frac{\partial^2 u(x_i, t)}{\partial t^2} - c^{2} \nabla^2 u(x_i, t) = f(x_i, t) \ ,
 \label{acoustic}
 \end{equation*}
 
-where \( u(x_i, t) \) describes the pressure of the generated seismic waves, and \( f(x_i, t) \) is a source term that describes the strength 
-and duration of the source.
+where \( u(x_i, t) \) describes the pressure of the generated seismic waves, and \( f(x_i, t) \) is a source term that 
+describes the strength and duration of the source.
 
-Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous isotropic medium, is the 
-elastic wave equation \citep{moseley_fast_2018, lehmann_fourier_2023}. This equation can be expressed as:
+Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous 
+isotropic medium, is the elastic wave equation \citep{moseley_fast_2018, lehmann_fourier_2023}. This equation can 
+be expressed as:
 
 \begin{equation*}
 \rho \frac{\partial^2 u}{\partial t^2} = \nabla (\lambda (\nabla \cdot u)) + \nabla \mu \left[\nabla u + (\nabla u)^T\right] 
@@ -310,13 +307,13 @@ appropriate wave equation depends on the characteristics of the medium and the s
 \fancyhead[RO]{\textit{Standard Numerical Methods}\, / \thepage}
 %------------------------------------------------------------------------------------------------------------------------
 
-In the past decades various numerical methods have been proposed to solve physics systems by partial differential equations such as the 
-wave equation. The finite-difference method is among the most popular to solve partial differential equations, and particularly the wave 
-equation. This possibly associated with its simplicity and efficiency. A complete review of the finite-differences method applied 
-to wave propagation can be found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators 
-involving differences between adjacent grid points. The finite difference method suits for tackling issues related to simple 
-geometric structures. In contrast, the finite element method offers more grid flexibility, facilitating the handling of intricate 
-geometric boundaries.
+In the past decades various numerical methods have been proposed to solve physics systems by partial differential 
+equations such as the wave equation. The finite-difference method is among the most popular to solve partial differential 
+equations, and particularly the wave equation. This possibly associated with its simplicity and efficiency. A complete 
+review of the finite-differences method applied to wave propagation can be found the \citeauthoryear{Moczo2014}. Partial 
+derivatives are approximated by discrete operators involving differences between adjacent grid points. The finite 
+difference method suits for tackling issues related to simple geometric structures. In contrast, other methods such as
+the finite element offers more grid flexibility, facilitating the handling of intricate geometric boundaries.
 
 In wave propagation simulations, the partial differential equations are typically discretized on a staggered grid 
 \citep{madariaga_dynamics_1976,Virieux1986}. This approach facilitates the resolution of the rupture propagation problem. Particularly 
@@ -335,8 +332,8 @@ Open-source software is available for applying numerical methods to solve the wa
 \citep{FEniCS,sander_dune_2020}, offer computing frameworks designed for solving partial differential equations using the 
 finite element method. SPECFEM, which specializes in seismic wave propagation, is widely used 
 in simulations implemented in Fortran \citep{dimitri_komatitsch_2023_10415228,komatitsch_2024_10823181}. Similarly, 
-the Fortran library SEISMIC\_CPML \citep{komatitsch_unsplit_2007} uses finite differences for modeling. These 
-implementations of standard methods have enabled effective simulations of the wave equation.
+SEISMIC\_CPML \citep{komatitsch_unsplit_2007} uses finite differences for modeling. These implementations of 
+standard methods have enabled effective simulations of the wave equation.
 
 A significant difficulty in using standard methods for wave propagation simulations is their computational cost. Their accuracy is 
 achieved at the expense of the number of points in the grid. Modeling a complex domain can entail a huge amount of grid points, with 
@@ -351,22 +348,26 @@ predictions makes them less ideal for use in inverse problems.
 \fancyhead[RO]{\textit{Machine learning Methods}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
-The realm of machine learning has recently displayed promise in its capacity to approximate predictions of physical phenomena. 
-These methods can grasp highly nonlinear physics and offer significantly quicker inference times compared to conventional 
-simulations. Therefore, as an alternative to standard methods deep learning have been employed to apply their capability as 
-universal function approximator \citep{hornik_approximation_1991}.
+The field of machine learning has recently shown significant promise in approximating predictions of physical 
+phenomena. These methods are capable of capturing highly nonlinear physics and provide substantially faster inference 
+times compared to traditional simulations. Consequently, machine learning has been employed as an alternative to 
+conventional methods, leveraging its capability as a universal function approximator \citep{hornik_approximation_1991}.
+For example, support vector machines have been used to solve ordinary and partial differential equations. Although 
+this method was originally designed for classification tasks, an extention to the method that apply least square to 
+the objetive function has been proposed to solve differential equations \citep{mehrkanoon_approximate_2012}.
 
-Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural network with a single 
-or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have shown potential in overcoming the limitations 
-of multiple approaches in various fields such as computer vision, natural language processing, and genomics 
-\citep{lecun_deep_2015,goodfellow_deep_2016}. The fundamental architecture of a neural network architecture is conformed by an input 
-layer, an output layer, and an arbitrary number of hidden layers. Particularly, in a fully connected neural network, neurons in adjacent 
-layers are connected with each other but neurons within a single layer share no connection (Figure \ref{deep_learning_subset_architecture}.B). 
-Furthermore, neural networks methods have emerged as an attractive tool to augment and complement conventional numerical solvers of partial 
-differential equations, thereby enabling the tackling of challenges across multiple dimensions, scales, and parameterization with the promise 
-of efficiency and precision \citep{blechschmidt_three_2021}. 
+Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural network 
+with a single or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have shown potential 
+in overcoming the limitations of multiple approaches in various fields such as computer vision, natural language 
+processing, and genomics \citep{lecun_deep_2015,goodfellow_deep_2016}. The fundamental architecture of a neural network 
+architecture is conformed by an input layer, an output layer, and an arbitrary number of hidden layers. Particularly, 
+in a fully connected neural network, neurons in adjacent layers are connected with each other but neurons within a 
+single layer share no connection (Figure \ref{deep_learning_subset_architecture}.B). Furthermore, neural networks 
+methods have emerged as an attractive tool to augment and complement conventional numerical solvers of partial 
+differential equations, thereby enabling the tackling of challenges across multiple dimensions, scales, and 
+parameterization with the promise of efficiency and precision. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
     \includegraphics[width=1.0\textwidth]{figs/artificial_intelligence_subsets.pdf}
     \caption{Artificial Intelligence subsets. (A) Deep learning as a subset of machine learning and artificial intelligence and (B) basic 
@@ -396,7 +397,7 @@ data \citep{karniadakis_physics-informed_2021}. As universal approximators, neur
 differential equation. This capability eliminates the need for the discretization step, thereby avoiding discretization-based physics errors 
 as well. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
     \includegraphics[width=1.0\textwidth]{figs/scheme_pinns_waves.pdf}
     \caption{Physics-informed neural networks scheme applied to the wave equation.}
@@ -470,9 +471,9 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 %------------------------------------------------------------------------------------------------------------------------
 
 This section provides a systematic review of the literature on applying machine learning methods to model 
-wave propagation. We aimed to answer the following research question: In which computational seismology applications 
+wave propagation. We aimed to answer the following research question: \textit{In which computational seismology applications 
 have machine learning methods demonstrated superior or comparable performance to standard numerical methods in terms 
-of computational time and accuracy?
+of computational time and accuracy?}
  
 In order to answer this question, we conducted a systematic review of the literature. The search was conducted on 
 the Scopus and Google Scholar databases. A search strategy was implemented to identify relevant publications that 
@@ -498,7 +499,7 @@ The search aimed to find significant contributions and advancements in modeling 
  standard numerical methods in the abstract. The flowchart and total number of works that met these conditions 
  are shown in Figure \ref{fig:scheme_systematic_review}.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
 \caption{Search flowchart and number of publications after each step. During the systematic review process, Scopus and Google Scholar were 
 utilized with the relevant search terms (i), and the research was restricted to works in English and within the time frame of 2013-2024 (ii). 

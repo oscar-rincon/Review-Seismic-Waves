@@ -20,45 +20,45 @@ Warning--empty journal in moseley_fast_2018
 Warning--empty booktitle in lehmann_fourier_2023
 Warning--empty publisher in Moczo2014
 Warning--empty booktitle in bafghi_pinns-torch_2023
-You've used 58 entries,
+You've used 59 entries,
             2481 wiz_defined-function locations,
-            1010 strings with 22897 characters,
-and the built_in function-call counts, 28058 in all, are:
-= -- 2107
-> -- 2240
+            1020 strings with 23340 characters,
+and the built_in function-call counts, 28540 in all, are:
+= -- 2156
+> -- 2261
 < -- 29
-+ -- 810
-- -- 694
-* -- 2659
-:= -- 4869
-add.period$ -- 290
-call.type$ -- 58
-change.case$ -- 109
-chr.to.int$ -- 58
-cite$ -- 65
-duplicate$ -- 1089
-empty$ -- 2049
-format.name$ -- 774
-if$ -- 5687
++ -- 818
+- -- 700
+* -- 2705
+:= -- 4947
+add.period$ -- 297
+call.type$ -- 59
+change.case$ -- 111
+chr.to.int$ -- 59
+cite$ -- 66
+duplicate$ -- 1108
+empty$ -- 2089
+format.name$ -- 781
+if$ -- 5788
 int.to.chr$ -- 1
-int.to.str$ -- 59
-missing$ -- 51
-newline$ -- 411
-num.names$ -- 178
-pop$ -- 426
+int.to.str$ -- 60
+missing$ -- 52
+newline$ -- 420
+num.names$ -- 181
+pop$ -- 429
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 59
 quote$ -- 0
-skip$ -- 629
+skip$ -- 638
 stack$ -- 0
-substring$ -- 922
-swap$ -- 193
+substring$ -- 955
+swap$ -- 196
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 388
+type$ -- 395
 warning$ -- 7
-while$ -- 173
+while$ -- 177
 width$ -- 0
-write$ -- 966
+write$ -- 987
 (There was 1 error message)
