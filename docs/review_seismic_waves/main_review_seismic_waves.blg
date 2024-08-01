@@ -2,6 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_review_seismic_waves.aux
 The style file: unsrtnat.bst
+Illegal, another \bibstyle command---line 4 of file main_review_seismic_waves.aux
+ : \bibstyle
+ :          {unsrtnat}
+I'm skipping whatever remains of this command
 Database file #1: refs.bib
 Warning--entry type for "jax2018github" isn't style-file defined
 --line 1053 of file refs.bib
@@ -20,45 +24,45 @@ Warning--empty journal in moseley_fast_2018
 Warning--empty booktitle in lehmann_fourier_2023
 Warning--empty publisher in Moczo2014
 Warning--empty booktitle in bafghi_pinns-torch_2023
-You've used 59 entries,
+You've used 61 entries,
             2481 wiz_defined-function locations,
-            1020 strings with 23340 characters,
-and the built_in function-call counts, 28540 in all, are:
-= -- 2156
-> -- 2261
-< -- 29
-+ -- 818
-- -- 700
-* -- 2705
-:= -- 4947
-add.period$ -- 297
-call.type$ -- 59
-change.case$ -- 111
-chr.to.int$ -- 59
-cite$ -- 66
-duplicate$ -- 1108
-empty$ -- 2089
-format.name$ -- 781
-if$ -- 5788
+            1036 strings with 23803 characters,
+and the built_in function-call counts, 29252 in all, are:
+= -- 2227
+> -- 2283
+< -- 31
++ -- 828
+- -- 706
+* -- 2754
+:= -- 5062
+add.period$ -- 308
+call.type$ -- 61
+change.case$ -- 114
+chr.to.int$ -- 61
+cite$ -- 68
+duplicate$ -- 1146
+empty$ -- 2156
+format.name$ -- 791
+if$ -- 5941
 int.to.chr$ -- 1
-int.to.str$ -- 60
-missing$ -- 52
-newline$ -- 420
-num.names$ -- 181
-pop$ -- 429
+int.to.str$ -- 62
+missing$ -- 55
+newline$ -- 435
+num.names$ -- 187
+pop$ -- 443
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 61
 quote$ -- 0
-skip$ -- 638
+skip$ -- 658
 stack$ -- 0
-substring$ -- 955
-swap$ -- 196
+substring$ -- 984
+swap$ -- 202
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 395
+type$ -- 406
 warning$ -- 7
-while$ -- 177
+while$ -- 183
 width$ -- 0
-write$ -- 987
-(There was 1 error message)
+write$ -- 1022
+(There were 2 error messages)

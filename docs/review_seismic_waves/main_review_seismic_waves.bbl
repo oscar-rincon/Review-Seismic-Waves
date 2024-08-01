@@ -1,4 +1,4 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{61}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -298,6 +298,14 @@ Fanny Lehmann, Filippo Gatti, Michaël Bertin, and Didier Clouteau.
 \newblock URL \url{http://arxiv.org/abs/2304.10242}.
 \newblock arXiv:2304.10242 [physics].
 
+\bibitem[Durran(2013)]{durran_numerical_2013}
+Dale~R. Durran.
+\newblock \emph{Numerical {Methods} for {Wave} {Equations} in {Geophysical}
+  {Fluid} {Dynamics}}.
+\newblock Springer Science \& Business Media, March 2013.
+\newblock ISBN 978-1-4757-3081-4.
+\newblock Google-Books-ID: JioBCAAAQBAJ.
+
 \bibitem[Moczo et~al.(2014)Moczo, Kristek, and Gális]{Moczo2014}
 Peter Moczo, Jozef Kristek, and Martin Gális.
 \newblock \emph{The Finite-Difference Modelling of Earthquake Motions : Waves
@@ -440,6 +448,16 @@ Siamak Mehrkanoon, Tillmann Falck, and Johan A.~K. Suykens.
 \newblock URL \url{https://ieeexplore.ieee.org/abstract/document/6224185}.
 \newblock Conference Name: IEEE Transactions on Neural Networks and Learning
   Systems.
+
+\bibitem[Mehrkanoon and Suykens(2015)]{mehrkanoon_learning_2015}
+Siamak Mehrkanoon and Johan A.~K. Suykens.
+\newblock Learning solutions to partial differential equations using
+  {LS}-{SVM}.
+\newblock \emph{Neurocomputing}, 159:\penalty0 105--116, July 2015.
+\newblock ISSN 0925-2312.
+\newblock \doi{10.1016/j.neucom.2015.02.013}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0925231215001629}.
 
 \bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecun_deep_2015}
 Yann LeCun, Yoshua Bengio, and Geoffrey Hinton.

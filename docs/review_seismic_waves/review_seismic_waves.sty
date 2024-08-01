@@ -24,6 +24,7 @@
 \usepackage{float} % For exact figure placement
 \usepackage{fontawesome}
 \usepackage{fancyvrb} % This package helps to use \Verbatim
+\usepackage{academicons}
 
 
 % Bibliography and citation settings
@@ -65,8 +66,8 @@
 \usepackage{hyperref}
 \hypersetup{
   colorlinks   = true,
-  citecolor    = blue,
-  linkcolor    = red,
+  citecolor    = [rgb]{0.0, 0.0, 0.5}, % Darker blue
+  linkcolor    = [rgb]{0.5, 0.0, 0.0}, % Darker red
   urlcolor     = gray
 }
 
@@ -93,8 +94,11 @@
 \raggedbottom
 
 \AtBeginDocument{
-    \setlength{\abovedisplayskip}{-4pt plus 2pt minus 2pt}
-    \setlength{\belowdisplayskip}{5pt plus 3pt minus 2pt}
-    \setlength{\abovedisplayshortskip}{-5pt plus 2pt minus 2pt}
-    \setlength{\belowdisplayshortskip}{5pt plus 3pt minus 2pt}
+    \setlength{\abovedisplayskip}{-1pt plus -1pt minus -1pt}
+    \setlength{\belowdisplayskip}{10pt plus 3pt minus 1pt}
+    \setlength{\abovedisplayshortskip}{-1pt plus -1pt minus -1pt}
+    \setlength{\belowdisplayshortskip}{10pt plus 3pt minus 1pt}
 }
+
+\bibliographystyle{unsrtnat}
+\setcitestyle{square,numbers}

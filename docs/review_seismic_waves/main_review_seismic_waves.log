@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  1 AUG 2024 14:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  1 AUG 2024 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -541,6 +541,9 @@ Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 \FV@StepNumber=\count310
 \FV@OutFile=\write4
 )
+(/usr/share/texlive/texmf-dist/tex/latex/academicons/academicons.sty
+Package: academicons 2021/11/26 v1.9.1 Academicons Icons
+)
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip61
@@ -812,7 +815,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip63
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 71.
+Package hyperref Info: Option `colorlinks' set `true' on input line 72.
 )
 (./main_review_seismic_waves.aux
 
@@ -984,11 +987,15 @@ Overfull \hbox (8.53592pt too wide) in paragraph at lines 51--52
  [] 
  []
 
+LaTeX Font Info:    Trying to load font information for TU+academicons on input
+ line 64.
+(/usr/share/texlive/texmf-dist/tex/latex/academicons/tuacademicons.fd)
+Missing character: There is no   (U+0020) in font [academicons.ttf]:!
 Package lettrine.sty Info: Targeted height = 19.23006pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 19.0908pt (\leavevmode{\color {gra
 y}W});
-(lettrine.sty)             reported on input line 129.
+(lettrine.sty)             reported on input line 131.
 [1
 
 ]
@@ -1007,7 +1014,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 File: figs/forward_inverse_modeling_waves.pdf Graphic file (type pdf)
 <use figs/forward_inverse_modeling_waves.pdf>
 
-Overfull \hbox (48.08435pt too wide) in paragraph at lines 225--232
+Overfull \hbox (48.08435pt too wide) in paragraph at lines 231--238
 [][] 
  []
 
@@ -1023,7 +1030,16 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [3]
-Overfull \hbox (9.37473pt too wide) in paragraph at lines 282--284
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[4]
+Overfull \hbox (9.37473pt too wide) in paragraph at lines 289--292
 []\TU/newbask(0)/m/n/10.95 where $\OML/cmm/m/it/10.95 ^^Q$ \TU/newbask(0)/m/n/1
 0.95 is the viscosity coefficient. Anisotropic Wave Equation describe propagati
 on in anisotropic
@@ -1037,18 +1053,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[4]
-
-Package fancyhdr Warning: \headheight is too small (2.84526pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
-
 [5]
 File: figs/artificial_intelligence_subsets.pdf Graphic file (type pdf)
 <use figs/artificial_intelligence_subsets.pdf>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1061,6 +1071,9 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 [6]
 File: figs/scheme_pinns_waves.pdf Graphic file (type pdf)
 <use figs/scheme_pinns_waves.pdf>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
@@ -1080,9 +1093,13 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [8]
+Overfull \hbox (4.15321pt too wide) in paragraph at lines 468--476
+[][][]\TU/newbask(0)/m/n/10.95 Kharazmi et al.[][][] ([][][]2019[][][][])[] pro
+posed variational physics-informed neural networks which instead trained
+ []
+
 File: figs/scheme_systematic_review.pdf Graphic file (type pdf)
 <use figs/scheme_systematic_review.pdf>
-
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1091,7 +1108,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[9] (./main_review_seismic_waves.bbl
+[9]
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1101,6 +1118,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [10]
+Overfull \hbox (1.20404pt too wide) in paragraph at lines 561--573
+\TU/newbask(0)/m/n/10.95 In this review, we have discussed the advancements in 
+wave propagation modeling achieved through
+ []
+
+(./main_review_seismic_waves.bbl
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1110,12 +1133,6 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [11]
-Underfull \hbox (badness 1033) in paragraph at lines 132--141
-\TU/newbask(0)/m/n/10.95 ISSN 1573-7691.  doi: $[][] [] [][][][] [] [][][][][][
-][][][][][][][][][][][][][][][]$.  URL [][]$[][][][][] [] [] [] [][][] [] [][][
-] [] [][] [] [][][][] []
- []
-
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1125,21 +1142,12 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [12]
-Underfull \hbox (badness 7326) in paragraph at lines 262--268
+Underfull \hbox (badness 2326) in paragraph at lines 262--268
 []\TU/newbask(0)/m/n/10.95 B. Moseley.  \TU/newbask(0)/m/it/10.95 Physics-infor
 med machine learning: from concepts to real-world applications\TU/newbask(0)/m/
 n/10.95 .
  []
 
-
-Underfull \hbox (badness 2213) in paragraph at lines 262--268
-\TU/newbask(0)/m/n/10.95 PhD thesis, University of Oxford, 2022.  URL [][]$[][]
-[][][] [] [] [] [][][] [] [][] [] [][] [] [][] [] [][][][][][][] [] [][][][] []
-
- []
-
-Missing character: There is no ́ (U+0301) in font [./fonts/newbaskn.ttf]/OT:lan
-guage=dflt;mapping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1149,6 +1157,8 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [13]
+Missing character: There is no ́ (U+0301) in font [./fonts/newbaskn.ttf]/OT:lan
+guage=dflt;mapping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1166,7 +1176,31 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[15])
+[15]
+Underfull \hbox (badness 6625) in paragraph at lines 542--552
+[]\TU/newbask(0)/m/n/10.95 Jan Blechschmidt and Oliver G. Ernst.  Three ways to
+ solve partial differen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--552
+\TU/newbask(0)/m/n/10.95 tial equations with neural networks — A review.  \TU/n
+ewbask(0)/m/it/10.95 GAMM-Mitteilungen\TU/newbask(0)/m/n/10.95 , 44(2):
+ []
+
+
+Underfull \hbox (badness 4595) in paragraph at lines 542--552
+\TU/newbask(0)/m/n/10.95 e202100006, 2021.  ISSN 1522-2608.  doi: $[][] [] [][]
+[][] [] [][][][] [] [][][][][][][][][]$.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--552
+[][]$[][][][][] [] [] [] [][][][][][][][][][][][][] [] [][][][][] [] [][][] [] 
+[][][] [] [][][] [] [][] [] [][][][] [] [][][][] [] [][][][][][][][][]$[][]\TU/
+newbask(0)/m/n/10.95 .  _eprint:
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (2.84526pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1175,7 +1209,16 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
-[16] (./main_review_seismic_waves.aux)
+[16])
+
+Package fancyhdr Warning: \headheight is too small (2.84526pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
+
+[17] (./main_review_seismic_waves.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1184,12 +1227,12 @@ ed.
 (rerunfilecheck)             Checksum: 100E1459AFC46ED0F7D6976248D675CC;741.
  ) 
 Here is how much of TeX's memory you used:
- 29182 strings out of 476191
- 591367 string characters out of 5812072
- 927087 words of memory out of 5000000
- 49429 multiletter control sequences out of 15000+600000
+ 29460 strings out of 476191
+ 596170 string characters out of 5812072
+ 930655 words of memory out of 5000000
+ 49699 multiletter control sequences out of 15000+600000
  480593 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,14n,105p,966b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,14n,105p,966b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main_review_seismic_waves.pdf (16 pages).
+Output written on main_review_seismic_waves.pdf (17 pages).
