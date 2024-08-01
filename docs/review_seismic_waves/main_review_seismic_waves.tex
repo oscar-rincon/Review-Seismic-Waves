@@ -128,7 +128,7 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
 \fancyhead[RO]{\textit{Introduction}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
-\lettrine{W}{ }ave propagation is a physical phenomenon governed by partial differential equations, which hold significant 
+\lettrine{\textcolor{gray}{W}}{ }ave propagation is a physical phenomenon governed by partial differential equations, which hold significant 
 importance across various applied sciences and engineering fields. However, analytical solutions are not always available 
 in many practical situations and numerical methods are usually required to approximate the exact solutions. Consequently, 
 these methods have been applied to solve the partial differential equations \citep{Seriani2020}.
@@ -158,30 +158,34 @@ and machine learning.
 
 \begin{figure}[H]
 \centering
-    \includegraphics[scale=1]{figs/publications_absolute_relative.pdf}
+    \includegraphics[width=0.5\textwidth]{figs/publications_absolute_relative.pdf}
     \caption{The growth of literature related to machine learning and wave propagation modeling. Number of publications according 
     to Scopus between 2010 and 2023. The implemented query was: "machine learning" OR "deep learning" OR "neural networks" AND 
     "wave propagation" OR "wave equation" AND (modeling OR modelling OR model OR simulation) AND (PUBYEAR > 2009 AND PUBYEAR < 2024).}
     \label{fig:publications_absolute_relative}
 \end{figure}
 
-Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various engineering and scientific 
-disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. Also emphasis has been placed on the application of
-neural networks in the field of computational seismology \citep{jingbo_research_2023}.
- 
+Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various engineering 
+and scientific disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. Also emphasis has been 
+placed on the application of neural networks in the field of computational seismology \citep{jingbo_research_2023}. However, 
+there is uncertainty about  whether machine learning methods can outperform or be comparable to standard numerical methods 
+in terms of computational time and accuracy when applied to solve differential equations 
+\citep{grossmann_can_2023,mcgreivy_weak_2024}. Therefore the aim of this review is to provide insights into the potential
+of machine learning methods for wave propagation modeling and their impact on computational seismology.
+
 This review may be of help for researchers with interest into apply these emerging techniques in wave 
 propagation modeling. Due to the extensive areas where wave equation is applied, our aim is to review the 
 recent progress achieved in wave propagation modeling by employing these emerging techniques, 
 specially on computational seismology, and the publication time interval studied for those applications was 2014-2024.
 
-This work provides a comprehensive analysis of the advancements made and their impact. While this area can be applied to a wide range of 
-problems, our focus will be limited to the propagation of seismic waves. The work is organized into the following sections: 
-Section \ref{sec:modeling_wave_propagation} describes general aspects about wave propagation modeling. Furthermore, in 
-Sections \ref{sec:standard_numerical_methods} and \ref{sec:machine_learning_methods}, we identify existing standard and machine 
-learning methods used to solve the diferential equations and particularly the wave equation. Then, in Section 
-\ref{sec:applications} we systematically review the recent advances in wave propagation modeling achieved through these 
-emerging methods and identify when they can be an alternative to traditional numerical methods in terms of computational 
-time and accuracy. 
+This work provides a comprehensive analysis of the advancements made and their impact. While this area can be applied to a 
+wide range of problems, our focus will be limited to the propagation of seismic waves. The work is organized into the 
+following sections: Section \ref{sec:modeling_wave_propagation} describes general aspects about wave propagation modeling. 
+Furthermore, in Sections \ref{sec:standard_numerical_methods} and \ref{sec:machine_learning_methods}, we identify 
+existing standard and machine learning methods used to solve the diferential equations and particularly the wave 
+equation. Then, in Section \ref{sec:applications} we systematically review the recent advances in wave propagation modeling 
+achieved through these emerging methods and identify when they can be an alternative to traditional numerical methods in 
+terms of computational time and accuracy. 
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation Applied to Computational Seismology

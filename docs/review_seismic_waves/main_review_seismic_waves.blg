@@ -9,6 +9,10 @@ Warning--entry type for "dimitri_komatitsch_2023_10415228" isn't style-file defi
 --line 1107 of file refs.bib
 Warning--entry type for "komatitsch_2024_10823181" isn't style-file defined
 --line 1153 of file refs.bib
+Repeated entry---line 1362 of file refs.bib
+ : @misc{mcgreivy_weak_2024
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--empty booktitle in abadi_tensorflow_2016
 Warning--empty journal in paszke_automatic_2017
 Warning--empty publisher in Carcione2002
@@ -16,45 +20,45 @@ Warning--empty journal in moseley_fast_2018
 Warning--empty booktitle in lehmann_fourier_2023
 Warning--empty publisher in Moczo2014
 Warning--empty booktitle in bafghi_pinns-torch_2023
-You've used 57 entries,
+You've used 58 entries,
             2481 wiz_defined-function locations,
-            1004 strings with 22617 characters,
-and the built_in function-call counts, 27703 in all, are:
-= -- 2081
-> -- 2213
+            1010 strings with 22897 characters,
+and the built_in function-call counts, 28058 in all, are:
+= -- 2107
+> -- 2240
 < -- 29
-+ -- 800
-- -- 686
-* -- 2630
-:= -- 4810
-add.period$ -- 286
-call.type$ -- 57
-change.case$ -- 107
-chr.to.int$ -- 57
-cite$ -- 64
-duplicate$ -- 1075
-empty$ -- 2019
-format.name$ -- 765
-if$ -- 5613
++ -- 810
+- -- 694
+* -- 2659
+:= -- 4869
+add.period$ -- 290
+call.type$ -- 58
+change.case$ -- 109
+chr.to.int$ -- 58
+cite$ -- 65
+duplicate$ -- 1089
+empty$ -- 2049
+format.name$ -- 774
+if$ -- 5687
 int.to.chr$ -- 1
-int.to.str$ -- 58
+int.to.str$ -- 59
 missing$ -- 51
-newline$ -- 405
-num.names$ -- 175
-pop$ -- 414
+newline$ -- 411
+num.names$ -- 178
+pop$ -- 426
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 58
 quote$ -- 0
-skip$ -- 620
+skip$ -- 629
 stack$ -- 0
-substring$ -- 920
-swap$ -- 190
+substring$ -- 922
+swap$ -- 193
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 381
+type$ -- 388
 warning$ -- 7
-while$ -- 171
+while$ -- 173
 width$ -- 0
-write$ -- 952
-(There were 10 warnings)
+write$ -- 966
+(There was 1 error message)

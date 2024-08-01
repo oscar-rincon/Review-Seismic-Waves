@@ -1,4 +1,4 @@
-\begin{thebibliography}{57}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -198,6 +198,22 @@ Z.~O.~U. JingBo, L.~I.~U. Cai, and Zhao PengFei.
 \newblock URL
   \url{http://www.progeophys.cn//en/article/doi/10.6038/pg2023GG0142}.
 \newblock Publisher: Progress in Geophysics.
+
+\bibitem[Grossmann et~al.(2023)Grossmann, Komorowska, Latz, and
+  Schönlieb]{grossmann_can_2023}
+Tamara~G. Grossmann, Urszula~Julia Komorowska, Jonas Latz, and Carola-Bibiane
+  Schönlieb.
+\newblock Can {Physics}-{Informed} {Neural} {Networks} beat the {Finite}
+  {Element} {Method}?, February 2023.
+\newblock URL \url{http://arxiv.org/abs/2302.04107}.
+\newblock arXiv:2302.04107 [cs, math].
+
+\bibitem[McGreivy and Hakim(2024)]{mcgreivy_weak_2024}
+Nick McGreivy and Ammar Hakim.
+\newblock Weak baselines and reporting biases lead to overoptimism in machine
+  learning for fluid-related partial differential equations, July 2024.
+\newblock URL \url{http://arxiv.org/abs/2407.07218}.
+\newblock arXiv:2407.07218 [physics].
 
 \bibitem[Tarantola(2005)]{Tarantola}
 Albert Tarantola.
@@ -502,13 +518,6 @@ I.E. Lagaris, A.~Likas, and D.I. Fotiadis.
 \newblock \doi{10.1109/72.712178}.
 \newblock URL \url{https://ieeexplore.ieee.org/document/712178}.
 \newblock Conference Name: IEEE Transactions on Neural Networks.
-
-\bibitem[McGreivy and Hakim(2024)]{mcgreivy_weak_2024}
-Nick McGreivy and Ammar Hakim.
-\newblock Weak baselines and reporting biases lead to overoptimism in machine
-  learning for fluid-related partial differential equations, July 2024.
-\newblock URL \url{http://arxiv.org/abs/2407.07218}.
-\newblock arXiv:2407.07218 [physics].
 
 \bibitem[Kharazmi et~al.(2019)Kharazmi, Zhang, and
   Karniadakis]{kharazmi_variational_2019}
