@@ -106,12 +106,12 @@ Medellín, Colombia - \textsuperscript{\textcolor[rgb]{0.5, 0.0, 0.0}{2}} Applie
          significant development in scientific computation. Standard numerical modeling methods have demonstrated 
          notable accuracy; however, their computational cost can be substantial. Recently, alternative methods based 
          on machine learning (ML) have emerged, offering a promising balance between computational cost and accuracy 
-        when applied to wave propagation problems.In this work, we present a review of methods developed and used 
+        when applied to wave propagation problems. In this work, we present a review of methods developed and used 
         to model wave propagation, with a special emphasis on computational seismology. We discuss the fundamentals 
         of wave propagation modeling, standard numerical methods, and recent advances in solving differential 
         equations through these approaches. We then conduct a systematic review of the literature to identify 
         applications where these methods, either standalone or in hybrid approaches with standard numerical methods, 
-        have demonstrated superior or comparable performance in terms of computational time and accuracy. The results 
+        have demonstrated superior or comparable efficiency in terms of computational time. The results 
         of this review provide insights into the potential of machine learning techniques for wave propagation 
         modeling and their impact on computational seismology.        
     \end{abstract}
@@ -168,9 +168,15 @@ and machine learning.
 Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various 
 engineering and scientific disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. 
 Also emphasis has been placed on the application of neural networks in the field of computational seismology 
-\citep{jingbo_research_2023}. However, there is uncertainty about  whether machine learning methods can be used 
+\citep{jingbo_research_2023}. However, there is uncertainty about whether machine learning methods can be used 
 to outperform or be comparable to standard numerical methods in terms of computational time and accuracy when 
-applied to solve differential equations \citep{grossmann_can_2023,mcgreivy_weak_2024}. Therefore the aim of this 
+applied to solve differential equations \citep{grossmann_can_2023,mcgreivy_weak_2024}. Although in principle,
+machine learning methods have the potential to learn a surrogate model able to approximate the solution of
+a partial differential equation, some methods can be more efficient than others according to the problem
+being solved.
+
+
+Therefore the aim of this 
 review is to provide insights into the potential of machine learning methods for wave propagation modeling and 
 their impact on computational seismology.
 
