@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  1 AUG 2024 18:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  1 AUG 2024 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,7 +995,7 @@ Package lettrine.sty Info: Targeted height = 19.23006pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 19.0908pt (\leavevmode{\color {gra
 y}W});
-(lettrine.sty)             reported on input line 131.
+(lettrine.sty)             reported on input line 130.
 [1
 
 ]
@@ -1014,7 +1014,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 File: figs/forward_inverse_modeling_waves.pdf Graphic file (type pdf)
 <use figs/forward_inverse_modeling_waves.pdf>
 
-Overfull \hbox (48.08435pt too wide) in paragraph at lines 231--238
+Overfull \hbox (48.08435pt too wide) in paragraph at lines 230--237
 [][] 
  []
 
@@ -1039,7 +1039,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [4]
-Overfull \hbox (9.37473pt too wide) in paragraph at lines 289--292
+Overfull \hbox (9.37473pt too wide) in paragraph at lines 288--291
 []\TU/newbask(0)/m/n/10.95 where $\OML/cmm/m/it/10.95 ^^Q$ \TU/newbask(0)/m/n/1
 0.95 is the viscosity coefficient. Anisotropic Wave Equation describe propagati
 on in anisotropic
@@ -1093,7 +1093,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [8]
-Overfull \hbox (4.15321pt too wide) in paragraph at lines 468--476
+Overfull \hbox (4.15321pt too wide) in paragraph at lines 467--475
 [][][]\TU/newbask(0)/m/n/10.95 Kharazmi et al.[][][] ([][][]2019[][][][])[] pro
 posed variational physics-informed neural networks which instead trained
  []
@@ -1118,7 +1118,7 @@ Package fancyhdr Warning: \headheight is too small (2.84526pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.75473pt}.
 
 [10]
-Overfull \hbox (1.20404pt too wide) in paragraph at lines 561--573
+Overfull \hbox (1.20404pt too wide) in paragraph at lines 560--572
 \TU/newbask(0)/m/n/10.95 In this review, we have discussed the advancements in 
 wave propagation modeling achieved through
  []
@@ -1229,7 +1229,7 @@ ed.
 Here is how much of TeX's memory you used:
  29460 strings out of 476191
  596170 string characters out of 5812072
- 930655 words of memory out of 5000000
+ 929655 words of memory out of 5000000
  49699 multiletter control sequences out of 15000+600000
  480593 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
