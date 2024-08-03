@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1722628512 "/home/oscar-rincon/review-seismic-waves/docs/review_seismic_waves/main_review_seismic_waves.tex" "main_review_seismic_waves.pdf" "main_review_seismic_waves" 1722628512
+["pdflatex"] 1722709320 "/home/oscar-rincon/review-seismic-waves/docs/review_seismic_waves/main_review_seismic_waves.tex" "main_review_seismic_waves.pdf" "main_review_seismic_waves" 1722709320
   "/etc/texmf/web2c/texmf.cnf" 1719419595 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oscar-rincon/review-seismic-waves/docs/review_seismic_waves/main_review_seismic_waves.tex" 1722628511 43569 05f131c63bb8a28a4ecd511f32c17d2a ""
+  "/home/oscar-rincon/review-seismic-waves/docs/review_seismic_waves/main_review_seismic_waves.tex" 1722709319 43558 8f58b1708913646693d255697b9629f3 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
@@ -114,8 +114,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1719420916 2801904 3f9e511831a2b35c8396e533586e5424 ""
-  "main_review_seismic_waves.aux" 1722628512 32 3985256e7290058c681f74d7a3565a19 ""
-  "main_review_seismic_waves.tex" 1722628511 43569 05f131c63bb8a28a4ecd511f32c17d2a ""
+  "main_review_seismic_waves.aux" 1722709320 32 3985256e7290058c681f74d7a3565a19 ""
+  "main_review_seismic_waves.tex" 1722709319 43558 8f58b1708913646693d255697b9629f3 ""
   "review_seismic_waves.sty" 1722554690 3064 544105fbc56981b57bafdb9c81725ce6 ""
   (generated)
   "main_review_seismic_waves.log"

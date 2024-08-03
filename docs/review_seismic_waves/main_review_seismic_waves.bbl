@@ -1,4 +1,4 @@
-\begin{thebibliography}{61}
+\begin{thebibliography}{62}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -298,14 +298,6 @@ Fanny Lehmann, Filippo Gatti, Michaël Bertin, and Didier Clouteau.
 \newblock URL \url{http://arxiv.org/abs/2304.10242}.
 \newblock arXiv:2304.10242 [physics].
 
-\bibitem[Durran(2013)]{durran_numerical_2013}
-Dale~R. Durran.
-\newblock \emph{Numerical {Methods} for {Wave} {Equations} in {Geophysical}
-  {Fluid} {Dynamics}}.
-\newblock Springer Science \& Business Media, March 2013.
-\newblock ISBN 978-1-4757-3081-4.
-\newblock Google-Books-ID: JioBCAAAQBAJ.
-
 \bibitem[Moczo et~al.(2014)Moczo, Kristek, and Gális]{Moczo2014}
 Peter Moczo, Jozef Kristek, and Martin Gális.
 \newblock \emph{The Finite-Difference Modelling of Earthquake Motions : Waves
@@ -591,6 +583,29 @@ Reza~Akbarian Bafghi and Maziar Raissi.
   {Physics}-{Informed} {Neural} {Networks} with {PyTorch}.
 \newblock October 2023.
 \newblock URL \url{https://openreview.net/forum?id=nl1ZzdHpab}.
+
+\bibitem[Haghighat et~al.(2021)Haghighat, Raissi, Moure, Gomez, and
+  Juanes]{haghighat_physics-informed_2021}
+Ehsan Haghighat, Maziar Raissi, Adrian Moure, Hector Gomez, and Ruben Juanes.
+\newblock A physics-informed deep learning framework for inversion and
+  surrogate modeling in solid mechanics.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
+  379:\penalty0 113741, June 2021.
+\newblock ISSN 0045-7825.
+\newblock \doi{10.1016/j.cma.2021.113741}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0045782521000773}.
+
+\bibitem[Raissi et~al.(2020)Raissi, Yazdani, and
+  Karniadakis]{raissi_hidden_2020}
+Maziar Raissi, Alireza Yazdani, and George~Em Karniadakis.
+\newblock Hidden fluid mechanics: {Learning} velocity and pressure fields from
+  flow visualizations.
+\newblock \emph{Science}, 367\penalty0 (6481):\penalty0 1026--1030, February
+  2020.
+\newblock \doi{10.1126/science.aaw4741}.
+\newblock URL \url{https://www.science.org/doi/full/10.1126/science.aaw4741}.
+\newblock Publisher: American Association for the Advancement of Science.
 
 \bibitem[Karimpouli and Tahmasebi(2020)]{karimpouli_physics_2020}
 Sadegh Karimpouli and Pejman Tahmasebi.

@@ -109,14 +109,14 @@ Medellín, Colombia - \textsuperscript{\textcolor[rgb]{0.5, 0.0, 0.0}{2}} Applie
         when applied to wave propagation problems. In this work, we present a review of methods developed and used 
         to model wave propagation, with a special emphasis on computational seismology. We discuss the fundamentals 
         of wave propagation modeling, standard numerical methods, and recent advances in solving differential 
-        equations through these approaches. We then conduct a systematic review of the literature to identify 
+        equations through these approaches. We conduct a systematic review of the literature to identify 
         applications where these methods, either standalone or in hybrid approaches with standard numerical methods, 
-        have demonstrated superior or comparable efficiency in terms of computational time. The results 
-        of this review provide insights into the potential of machine learning techniques for wave propagation 
-        modeling and their impact on computational seismology.        
+        have demonstrated efficiency in terms of computational time. The results of this review provide insights 
+        into the potential of machine learning techniques for wave propagation modeling and their impact on 
+        computational seismology.        
     \end{abstract}
 
-    \keywords{wave propagation, machine learning, neural networks, partial differential equations, computational seismology.}   
+    \keywords{wave propagation, numerical methods, machine learning, partial differential equations, computational seismology.}   
 
 \end{tcolorbox} 
 
@@ -138,9 +138,10 @@ finite-difference, finite-element and spectral-element methods \citep{Moczo, vir
 komatitsch_introduction_1999,chaljub_spectral-element_2007}. In these approaches, the spatial coordinates are discretized. 
 In the context of mathematical modeling, the primary objective is to ensure that the solution methods 
 are computationally efficient without sacrificing accuracy to capture the physical details inherent to the 
-system. However, standard numerical methods often encounter difficulties when addressing complex problems such as irregular 
-geometries, material changes, and mixed boundary conditions. Therefore, the computational demand associated with many common 
-models in computer sciences and engineering has increased the development of innovative strategies.
+system. However, standard numerical methods often encounter difficulties when addressing complex problems 
+such as irregular geometries, material changes, and mixed boundary conditions. Therefore, the computational 
+demand associated with many common models in computer sciences and engineering has increased the development 
+of innovative strategies.
 
 Research conducted with the use of machine learning has considerably grown in the late 2010s, owing to advancements 
 in hardware, such as graphic processing units and data storage technologies and the growth of available data. 
@@ -152,8 +153,8 @@ mapping the input features to the output targets in a data-driven manner. A vers
 Theorem conclusively demonstrates that neural networks have the capability to accurately approximate a wide 
 variety of nonlinear functions without any dimensionality constraints \citep{barron_universal_1993}. Therefore 
 computational scientists have explored the potential of machine learning to model physical systems governed 
-by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. As a 
-and machine learning. 
+by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. 
+
 
 \begin{figure}[H]
 \centering
@@ -165,20 +166,18 @@ and machine learning.
     \label{fig:publications_absolute_relative}
 \end{figure}
 
+
 Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various 
 engineering and scientific disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. 
 Also emphasis has been placed on the application of neural networks in the field of computational seismology 
-\citep{jingbo_research_2023}. However, there is uncertainty about whether machine learning methods can be used 
-to outperform or be comparable to standard numerical methods in terms of computational time and accuracy when 
-applied to solve differential equations \citep{grossmann_can_2023,mcgreivy_weak_2024}. Although in principle,
-machine learning methods have the potential to learn a surrogate model able to approximate the solution of
-a partial differential equation, some methods can be more efficient than others according to the problem
-being solved.
-
-
-Therefore the aim of this 
-review is to provide insights into the potential of machine learning methods for wave propagation modeling and 
-their impact on computational seismology.
+\citep{jingbo_research_2023}. However, there is uncertainty about in which cases machine learning methods can
+be an appropriate alternative to standard numerical methods to solve partial differential equations. 
+\citep{grossmann_can_2023,mcgreivy_weak_2024}. Although in principle, machine learning methods have the 
+potential to learn a surrogate model able to approximate the solution of a partial differential equation, some 
+methods can be more efficient than others according to the problem being solved. This is particularly relevant 
+in the context of computational seismology, where the complexity of the domain phenomena can be challenging to 
+model. Therefore the aim of this review is to provide insights into the potential of machine learning methods 
+for wave propagation modeling and their impact on computational seismology.
 
 This work provides a comprehensive analysis of the advancements made in partial differential equations modeling 
 through machine learning and their impact. While this area can be applied to a wide range of problems, our focus 
@@ -189,10 +188,9 @@ existing standard and machine learning methods used to solve the diferential equ
 on the wave equation. Then, in Section \ref{sec:applications} we systematically review the recent advances in wave 
 propagation modeling achieved through these emerging methods and identify when they can be an alternative to 
 traditional numerical methods or in an hibrid way when they can improve the solver performance in terms of 
-computational time and accuracy. This review may be of help for researchers with interest into apply these emerging 
-techniques in wave propagation modeling. Due to the extensive areas where wave equation is applied, our aim is to 
-review the recent progress achieved in wave propagation modeling by employing these emerging techniques, specially 
-on computational seismology, and the publication time interval studied for those applications was 2014-2024.
+computational time. This review may be of help for researchers with interest into apply 
+these emerging techniques in wave propagation modeling. Due to the extensive areas where machine learning is 
+applied, our aim is to identified the potential of these methods in computational seismology.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation
@@ -211,8 +209,8 @@ D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T]\label{eq:pde
  
 where $D$ denotes the differential operator acting on the solution to the differential equation $u(x,t)$ parameterized 
 by $\lambda$ and $f(x, t)$ is a source term. While, $\Omega$ and $\partial\Omega$ denote the spatial domain and its boundary. 
-Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the initial 
-condition by:
+Equation \ref{eq:pde} can be used to model different systems. We denote the corresponding boundary conditions and the 
+initial condition by:
 
 \begin{equation*}
 B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T] 
@@ -224,8 +222,8 @@ and
 u(x, 0) = h(x, 0), \quad x \in \Omega
 \end{equation*}
 
-The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches when 
-mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
+The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches 
+when mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
 of a set of observations is known as the inverse problem \citep{Tarantola}, aiming to infer, for example, the properties of a 
 medium based on its reaction to wave propagation. Since it begins with the effects and then calculates the causes, it is the 
 opposite of a forward problem, which determines the effects based on the causes. In most cases, the inverse problem is formulated 
@@ -244,9 +242,9 @@ An schematic representation of the forward and inverse model using numerical met
     \label{fig:forward_inverse}
 \end{figure}
 
-Inverse problems are closely tied to simulation, and solving them is crucial for many real-world tasks. Moreover, some complex physical 
-problems require determining the properties of a physical system governed by partial differential equations from observational data, 
-rather than solving them directly to obtain a function that satisfies them 
+Inverse problems are closely tied to simulation, and solving them is crucial for many real-world tasks. Moreover, some complex 
+physical problems require determining the properties of a physical system governed by partial differential equations from 
+observational data, rather than solving them directly to obtain a function that satisfies them 
 \citep{galiounas_battery_2022, ren_seismicnet_2024,mccann_convolutional_2017}. The objective is to estimate a set of latent or 
 unobserved parameters of a system based on real-world observations. Within the framework described by Equation \ref{eq:pde}, 
 the task involves estimating $\lambda$ given $u$. Inversion can be exceedingly challenging since often requires numerous forward 
@@ -310,7 +308,7 @@ must be considered in the wave equation.
 \end{equation*}
     
 where $\beta$ is a nonlinearity coefficient. These variants allow for more precise and realistic modeling 
-of seismic wave propagation in different types of media and  under various conditions. The choice of the 
+of seismic wave propagation in different types of media and under various conditions. The choice of the 
 appropriate wave equation depends on the characteristics of the medium and the seismic phenomenon being studied. 
 Tradicionally, the wave equation and its applications to computational seismology have been solved using standard 
 numerical methods \citep{Igel2017}.
@@ -323,7 +321,7 @@ numerical methods \citep{Igel2017}.
 %------------------------------------------------------------------------------------------------------------------------
 
 In the past decades various numerical methods have been proposed to solve physics systems by partial differential 
-equations such as the wave equation \citep{durran_numerical_2013}. The finite-difference method is among the most 
+equations such as the wave equation. The finite-difference method is among the most 
 popular to solve partial differential equations, and particularly the wave equation. This possibly associated with 
 its simplicity and efficiency. A complete review of the finite-differences method applied to wave propagation can be 
 found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators involving differences 
@@ -378,16 +376,16 @@ this method was originally designed for classification tasks, an extention to th
 the objetive function has been proposed to solve differential equations \citep{mehrkanoon_approximate_2012,
 mehrkanoon_learning_2015}.
 
-Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural network 
-with a single or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have shown potential 
-in overcoming the limitations of multiple approaches in various fields such as computer vision, natural language 
-processing, and genomics \citep{lecun_deep_2015,goodfellow_deep_2016}. The fundamental architecture of a neural network 
-architecture is conformed by an input layer, an output layer, and an arbitrary number of hidden layers. Particularly, 
-in a fully connected neural network, neurons in adjacent layers are connected with each other but neurons within a 
-single layer share no connection (Figure \ref{deep_learning_subset_architecture}.B). Furthermore, neural networks 
-methods have emerged as an attractive tool to augment and complement conventional numerical solvers of partial 
-differential equations, thereby enabling the tackling of challenges across multiple dimensions, scales, and 
-parameterization with the promise of efficiency and precision. 
+Neural network based methods are a subset of machine learning, whose models are composed of an artificial neural 
+network with a single or multiple processing layers (Figure \ref{deep_learning_subset_architecture}.A). It have 
+shown potential in overcoming the limitations of multiple approaches in various fields such as computer vision, 
+natural language processing, and genomics \citep{lecun_deep_2015,goodfellow_deep_2016}. The fundamental architecture 
+of a neural network architecture is conformed by an input layer, an output layer, and an arbitrary number of hidden 
+layers. Particularly, in a fully connected neural network, neurons in adjacent layers are connected with each other 
+but neurons within a single layer share no connection (Figure \ref{deep_learning_subset_architecture}.B). Furthermore, 
+neural networks methods have emerged as an attractive tool to augment and complement conventional numerical solvers 
+of partial differential equations, thereby enabling the tackling of challenges across multiple dimensions, scales, 
+and parameterization with the promise of efficiency and precision. 
 
 \begin{figure}[h]
 \centering
@@ -397,27 +395,32 @@ parameterization with the promise of efficiency and precision.
     \label{deep_learning_subset_architecture}
 \end{figure}
 
-They essentially model the partial differential equation solution by a deep neural network and train the network’s parameters to approximate 
-the solution. Data-driven neural networks methods are capable of directly learning the trajectory of a system of partial differential 
-equations from available data \citep{li_neural_2020,li_fourier_2021}.
+They essentially model the partial differential equation solution by a deep neural network and train the 
+network’s parameters to approximate the solution. Data-driven neural networks methods are capable of directly 
+learning the trajectory of a system of partial differential equations from available data 
+\citep{li_neural_2020,li_fourier_2021}.
 
-One of the most popular types of deep neural networks is known as convolutional neural networks. A convolutional neural network convolves 
-learned features with input data, and uses 2D convolutional layers, making this architecture well suited to processing 2D data, such as images.
+One of the most popular types of deep neural networks is known as convolutional neural networks. A 
+convolutional neural network convolves learned features with input data, and uses 2D convolutional 
+layers, making this architecture well suited to processing 2D data, such as images.
 
-All these approaches employ machine learning algorithms and others such as support vector machines, random forests, Gaussian processes have 
-been also applied to model physical systems. However, they are implemented mainly as black-box tools. The constructed neural network can be 
-thought of being ignorant of the mathematical description of the physical phenomenon. In order to overcome this limitation physics-informed 
-neural networks architectures have been proposed. Where the activation and the loss functions are designed according to the context of the 
-problem.
+All these approaches employ machine learning algorithms and others such as support vector machines, 
+random forests, Gaussian processes have been also applied to model physical systems. However, they 
+are implemented mainly as black-box tools. The constructed neural network can be thought of being 
+ignorant of the mathematical description of the physical phenomenon. In order to overcome this 
+limitation physics-informed neural networks architectures have been proposed. Where the activation 
+and the loss functions are designed according to the context of the problem.
 
-There has been an increasing interest in leveraging physics-informed neural networks to solve forward and inverse problems where full or 
-partial knowledge of the governing equations is known since the published works of \citeauthoryear{raissi_hidden_2018}, 
-\citeauthoryear{raissi_numerical_2018} and \citeauthoryear{Raissi2019}. Although similar ideas for constraining neural networks using 
-physical laws have been explored in previous studies \citep{lagaris_artificial_1998}. The general principle of physics-informed neural 
-networks is to integrate deep neural networks and physical laws to learn the underlying consistent dynamics from small or zero labeled 
-data \citep{karniadakis_physics-informed_2021}. As universal approximators, neural networks have the potential to represent any partial 
-differential equation. This capability eliminates the need for the discretization step, thereby avoiding discretization-based physics errors 
-as well. 
+There has been an increasing interest in leveraging physics-informed neural networks to solve forward and 
+inverse problems where full or partial knowledge of the governing equations is known since the published 
+works of \citeauthoryear{raissi_hidden_2018}, \citeauthoryear{raissi_numerical_2018} and 
+\citeauthoryear{Raissi2019}. Although similar ideas for constraining neural networks using physical 
+laws have been explored in previous studies \citep{lagaris_artificial_1998}. The general principle of 
+physics-informed neural networks is to integrate deep neural networks and physical laws to learn the 
+underlying consistent dynamics from small or zero labeled data \citep{karniadakis_physics-informed_2021}. 
+As universal approximators, neural networks have the potential to represent any partial differential 
+equation. This capability eliminates the need for the discretization step, thereby avoiding 
+discretization-based physics errors as well. 
 
 \begin{figure}[h]
 \centering
@@ -432,11 +435,12 @@ $$
 u_{tt} - D[u(t, x); \lambda] = 0,
 $$
 
-where \(x \in \mathbb{R}^D\) and \(t \in \mathbb{R}\). The expression \(N[u(t, x); \lambda]\) denotes an underlying differential operator 
-that characterizes the physical system, parametrized by \(\lambda\). The function \(u(t, x)\) represents the system's solution. The loss 
-function is of the general form 
+where \(x \in \mathbb{R}^D\) and \(t \in \mathbb{R}\). The expression \(N[u(t, x); \lambda]\) denotes 
+an underlying differential operator that characterizes the physical system, parametrized by \(\lambda\). 
+The function \(u(t, x)\) represents the system's solution. The loss function is of the general form 
 
-$$ L := \beta_{\text{pde}}L_{\text{pde}}(\sigma) + \beta_{\text{ic}}(\sigma) L_{\text{ic}} + \beta_{\text{bc}} L_{\text{bc}}(\sigma) ,$$
+$$ L := \beta_{\text{pde}}L_{\text{pde}}(\sigma) + \beta_{\text{ic}}(\sigma) L_{\text{ic}} + 
+\beta_{\text{bc}} L_{\text{bc}}(\sigma) ,$$
 
 where
 
@@ -494,43 +498,44 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 
 This section provides a systematic review of the literature on applying machine learning methods to model 
 wave propagation. We aimed to answer the following research question: \textit{In which computational 
-seismology applications have machine learning methods, either independently or in a hybrid approach, 
-demonstrated superior or comparable efficiency to standard numerical methods?} Refering to efficiency
-as the computational time required to solve the differential equation.
+seismology applications have machine learning methods demonstrated to be an appropriate alternative or
+complement to standard numerical methods?} In order to answer this question, we considered works related 
+with the field of interest that offered a comparative analysis between machine learning methods and standard
+numerical methods. Moreover, applications where physics informed neural networks have been applied to model
+inverse problems were also included. Since it have shown to be a promising approach in other scientic and 
+engineering fields \citep{haghighat_physics-informed_2021,raissi_hidden_2020}.
 
-In order to answer this question, we conducted a systematic review of the literature. The search was conducted on 
-the Scopus and Google Scholar databases. A search strategy was implemented to identify relevant publications that 
-permit a comparison between machine learning methods and standard numerical methods in the context of wave propagation. 
-Therefore, initially, our search focused on how machine learning has been used for modeling wave propagation. 
-
-The initial search was conducted using the following query on the Scopus website as an initial filter:
-\texttt{"machine learning" OR "deep learning" OR "neural networks" AND "wave propaga\linebreak
-tion" OR "wave equation" AND (modeling OR modelling OR model OR simulation)}.
+A search strategy was implemented to identify relevant publications that permit a comparison between machine 
+learning methods and standard numerical methods in the context of wave propagation. Initially, our search focused 
+on how machine learning has been used for modeling wave propagation. The initial search was conducted using the following 
+query on the Scopus website as an initial filter: \texttt{"machine learning" OR "deep learning" OR "neural networks" 
+AND "wave propagation" OR "wave equation" AND (modeling OR modelling OR model OR simulation)}.
 
 This search aimed to find significant contributions and advancements in modeling wave propagation using machine
- learning techniques over the past decade (2014-2024), limited to English-language publications in the Scopus 
- database. Additionally, the search was complemented by Google Scholar using the same terms, time interval, and 
- language. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from 
- both databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
- reading the titles and abstracts, with relevance to the chosen field as the inclusion criterion. Additionally, 
- the list was restricted to works that provided a comparative analysis between machine learning methods and 
- standard numerical methods in the abstract. The flowchart and total number of works that met these conditions 
- are shown in Figure \ref{fig:scheme_systematic_review}.
+learning techniques over the past decade (2014-2024), limited to English-language publications in the Scopus 
+database. Additionally, the search was complemented by Google Scholar using the same terms, time interval, and 
+language. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from 
+both databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
+reading the titles and abstracts, with relevance to the chosen field as the inclusion criterion. Additionally, 
+the list was restricted to works that provided a comparative analysis between machine learning methods and 
+standard numerical methods in the abstract. The flowchart and total number of works that met these conditions 
+are shown in Figure \ref{fig:scheme_systematic_review}.
 
 \begin{figure}[h]
     \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
-\caption{Search flowchart and number of publications after each step. During the systematic review process, Scopus and Google Scholar were 
-utilized with the relevant search terms (i), and the research was restricted to works in English and within the time frame of 2013-2024 (ii). 
-The resulting lists were then sorted by relevance and limited to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a 
-manual filter was applied by reading the titles and abstracts to ensure the publications were pertinent to our chosen field.}
-    \label{fig:scheme_systematic_review}
+\caption{Search flowchart and number of publications after each step. During the systematic review process, 
+Scopus and Google Scholar were utilized with the relevant search terms (i), and the research was restricted to works 
+in English and within the time frame of 2013-2024 (ii). The resulting lists were then sorted by relevance and limited 
+to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a manual filter was applied by reading the 
+titles and abstracts to ensure the publications were pertinent to our chosen field.}\label{fig:scheme_systematic_review}
 \end{figure}
 
-We identified 92 articles that passed the manual filtering process. From these, we extracted relevant information to address 
-the research question. The articles were classified based on several criteria: the type of partial differential wave equation 
-employed, the number of spatial dimensions considered, whether forward modeling, inverse modeling, or both approaches were 
-utilized, and the specific application within computational seismology. This classification allowed us to systematically 
-analyze the advancements and contributions of machine learning methods in various aspects of wave propagation modeling.
+We identified \_ articles that passed the manual filtering process. From these, we extracted relevant information to 
+address the research question. The articles were classified based on several criteria: the application domain, inside 
+computational seismology the machine learning method used, the standard numerical method with which it was compared and
+the reported main outcome from the comparison. In the case of physics-informed neural networks, the application 
+domain their main outcome was also extracted. The Table \ref{tab:articles} summarizes the main findings of the
+reviewed articles. 
 
 From the resulted list of articles, we identified that the introduction of physics-informed neural 
 networks has generated a large amount of work related. For example the work of 
@@ -545,16 +550,18 @@ striking a balance between accuracy and computational efficiency \citep{Song2022
 media, showing that PINNs could invert for ellipsoidal and checkerboard velocity models 
 given the seismic response from sources placed within these models.
 
-In \citeauthoryear{moseley_physics-informed_2022}, physics-informed neural networks were successfully applied to the 2D acoustic wave 
-equation, demonstrating satisfactory outcomes in forward wave propagation and full waveform inversions, despite the efficiency of standard 
-methods. Additionally, physics-informed neural networks showcased efficient performance in solving the inverse problem. To train the model, 
-the results of a finite difference model are used. Spatial and temporal coordinates are used as inputs and intra-inputs of the network and 
-their respective wave field as output, which provides uniqueness to the solution. While restricting the solution obtained to the equation 
+In \citeauthoryear{moseley_physics-informed_2022}, physics-informed neural networks were successfully 
+applied to the 2D acoustic wave equation, demonstrating satisfactory outcomes in forward wave propagation and 
+full waveform inversions, despite the efficiency of standard methods. Additionally, physics-informed neural networks 
+showcased efficient performance in solving the inverse problem. To train the model, the results of a finite difference 
+model are used. Spatial and temporal coordinates are used as inputs and intra-inputs of the network and their respective 
+wave field as output, which provides uniqueness to the solution. While restricting the solution obtained to the equation 
 used. To test the model, 3 different speed models are used: homogeneous, layered and an irregular model of the Earth's subsoil.
 
-Similarly, in \citeauthoryear{ren_seismicnet_2024}, physics-informed neural networks were employed for modeling mechanical wave propagation 
-in semi-infinite domains, showcasing their versatility in forward modeling for seismic wave propagation, without requiring labeled data. 
-These studies collectively highlight the effectiveness of physics-informed neural networks across different wave propagation scenarios.
+Similarly, in \citeauthoryear{ren_seismicnet_2024}, physics-informed neural networks were employed for modeling 
+mechanical wave propagation in semi-infinite domains, showcasing their versatility in forward modeling for seismic 
+wave propagation, without requiring labeled data. These studies collectively highlight the effectiveness of physics-informed 
+neural networks across different wave propagation scenarios.
 
 %--------------------------------------------------------------------------------------------------
 % Section - Conclusions
