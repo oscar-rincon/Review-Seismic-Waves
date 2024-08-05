@@ -151,6 +151,16 @@ George~Em Karniadakis, Ioannis~G. Kevrekidis, Lu~Lu, Paris Perdikaris, Sifan
 \newblock URL \url{https://www.nature.com/articles/s42254-021-00314-5}.
 \newblock Number: 6 Publisher: Nature Publishing Group.
 
+\bibitem[Raissi et~al.(2019)Raissi, Perdikaris, and Karniadakis]{Raissi2019}
+M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis.
+\newblock Physics-informed neural networks: A deep learning framework for
+  solving forward and inverse problems involving nonlinear partial differential
+  equations.
+\newblock \emph{Journal of Computational Physics}, 378:\penalty0 686--707, 2
+  2019.
+\newblock ISSN 0021-9991.
+\newblock \doi{10.1016/J.JCP.2018.10.045}.
+
 \bibitem[Vadyala et~al.(2022)Vadyala, Betgeri, Matthews, and
   Matthews]{vadyala_review_2022}
 Shashank~Reddy Vadyala, Sai~Nethra Betgeri, John~C. Matthews, and Elizabeth
@@ -507,16 +517,6 @@ Maziar Raissi, Paris Perdikaris, and George~Em Karniadakis.
 \newblock \doi{10.1137/17M1120762}.
 \newblock URL \url{https://epubs.siam.org/doi/abs/10.1137/17M1120762}.
 \newblock Publisher: Society for Industrial and Applied Mathematics.
-
-\bibitem[Raissi et~al.(2019)Raissi, Perdikaris, and Karniadakis]{Raissi2019}
-M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis.
-\newblock Physics-informed neural networks: A deep learning framework for
-  solving forward and inverse problems involving nonlinear partial differential
-  equations.
-\newblock \emph{Journal of Computational Physics}, 378:\penalty0 686--707, 2
-  2019.
-\newblock ISSN 0021-9991.
-\newblock \doi{10.1016/J.JCP.2018.10.045}.
 
 \bibitem[Lagaris et~al.(1998)Lagaris, Likas, and
   Fotiadis]{lagaris_artificial_1998}
