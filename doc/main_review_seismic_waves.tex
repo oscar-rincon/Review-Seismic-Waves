@@ -25,7 +25,7 @@
 %------------------------------------------------------------------------------------------------------------------------
 
 % Create a colored box with specific background and frame colors, and sharp corners
-\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
+%\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
 
 % Add vertical space adjustment
 \vspace{-2mm} 
@@ -38,10 +38,10 @@
     \end{center}                 
 \end{minipage} 
 % Create a minipage for the first logo
-\begin{minipage}{3.1cm}
+\begin{minipage}{3.2cm}
     \begin{center}
         % Include the first logo with specific width
-        \hspace{-0.2cm}\includegraphics[width=2.8cm]{figs/format/logo_EAFIT.pdf}
+        \hspace{-0.2cm}\includegraphics[width=2.8cm]{figs/format/Logo_EAFIT.pdf}
     \end{center}
 \end{minipage}    
 % Create a minipage for the second logo
@@ -53,10 +53,10 @@
 \end{minipage}
 % Add vertical space adjustment
 \vspace{-2mm} 
-\end{tcolorbox}
+%\end{tcolorbox}
 
 % Create another colored box with specific background and frame colors, and sharp corners
-\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
+%\begin{tcolorbox}[colback=white!20,colframe=gray!20,sharp corners]
 
 % Author's name with ORCID and GitHub links
 {\begin{center}
@@ -70,8 +70,9 @@ Oscar Rincón-Cardeño\textsuperscript{1, 2,\href{https://orcid.org/0000-0002-53
 
 % Author's affiliations
 {\footnotesize
-\textsuperscript{1} School of Applied Sciences and Engineering, Universidad EAFIT, 
-Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from Universidad EAFIT
+\noindent\textsuperscript{1} School of Applied Sciences and Engineering, Universidad EAFIT, 
+Medellín, Colombia\\
+\noindent\textsuperscript{2} Applied Mechanics Research Group from Universidad EAFIT
 }
 
 %------------------------------------------------------------------------------------------------------------------------
@@ -83,7 +84,7 @@ Medellín, Colombia - \textsuperscript{2} Applied Mechanics Research Group from 
 }
 }
 
-\end{tcolorbox}
+%\end{tcolorbox}
 
 %------------------------------------------------------------------------------------------------------------------------
 % Abstract of the document
@@ -501,10 +502,15 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 \fancyhead[RO]{\textit{Applications}\, / \thepage}  
 %------------------------------------------------------------------------------------------------------------------------
 
+We aimed to answer the following research question:
+
+\begin{quote}
+\noindent\textit{In which computational seismology applications have machine learning methods demonstrated to be 
+an appropriate alternative or complement to standard numerical methods in terms of computational time and accuracy?}\\
+\end{quote}
+
 This section provides a systematic review of the literature on applying machine learning methods to model 
-wave propagation. We aimed to answer the following research question: \textit{In which computational 
-seismology applications have machine learning methods demonstrated to be an appropriate alternative or
-complement to standard numerical methods?} In order to answer this question, we considered works related 
+wave propagation. In order to answer this question, we considered works related 
 with the field of interest that offered a comparative analysis between machine learning methods and standard
 numerical methods. Additionally, applications where physics informed neural networks have been applied to model
 inverse problems were also included, even if they did not provide a direct comparison with standard numerical. 
@@ -515,8 +521,13 @@ raissi_hidden_2020}.
 A search strategy was implemented to identify relevant publications that permit a comparison between machine 
 learning methods and standard numerical methods in the context of wave propagation. Initially, our search focused 
 on how machine learning has been used for modeling wave propagation. The initial search was conducted using the 
-following query on the Scopus website as an initial filter: \texttt{"machine learning" OR "deep learning" OR 
-"neural networks" AND "wave propagation" OR "wave equation" AND (modeling OR modelling OR model OR simulation)}.
+following query on the Scopus website as an initial filter: 
+
+\begin{quote}
+\noindent\texttt{"machine learning" OR "deep learning" OR "neural networks" AND "wave\linebreak
+propagation" OR "wave equation" AND (modeling OR modelling OR model\linebreak
+OR simulation)}.
+\end{quote}
 
 This search aimed to find significant contributions and advancements in modeling wave propagation using machine
 learning techniques over the past decade (2014-2024), limited to English language articles in the Scopus 
