@@ -1,0 +1,22 @@
+﻿Scopus-10-Analyze-Year
+
+"Your query : ((""machine learning"" OR ""deep learning"" OR ""neural networks"" OR ""physics-informed neural networks"") AND (modeling OR modelling OR model OR simulation) AND (PUBYEAR > 2009 AND PUBYEAR < 2024))"
+
+
+Number of results : 10
+
+"YEAR",
+"2023","579515"
+"2022","483959"
+"2021","384202"
+"2020","295576"
+"2019","233013"
+"2018","171332"
+"2017","134510"
+"2016","110347"
+"2015","93713"
+"2014","87622"
+"2013","80352"
+"2012","73970"
+"2011","67189"
+"2010","62928"

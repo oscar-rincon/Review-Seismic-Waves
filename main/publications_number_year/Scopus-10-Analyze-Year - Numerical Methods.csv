@@ -1,0 +1,22 @@
+﻿Scopus-10-Analyze-Year
+
+"Your query : ((""machine learning"" OR ""deep learning"" OR ""neural networks"" OR ""physics-informed neural networks"" OR ""finite differences"" OR ""finite difference method"" OR ""finite elements"" OR ""finite element method"" OR ""finite volumes"" OR ""spectral methods"" OR pseudo-spectral OR ""finite volumes"") AND (modeling OR modelling OR model OR simulation) AND (PUBYEAR > 2009 AND PUBYEAR < 2024))"
+
+
+Number of results : 10
+
+"YEAR",
+"2023","673225"
+"2022","578068"
+"2021","476340"
+"2020","382752"
+"2019","319037"
+"2018","251178"
+"2017","209082"
+"2016","178987"
+"2015","158086"
+"2014","152943"
+"2013","141718"
+"2012","131317"
+"2011","120614"
+"2010","110961"
