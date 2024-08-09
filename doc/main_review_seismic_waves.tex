@@ -80,7 +80,7 @@ Medellín, Colombia\\
 % Associated document repository link
 %------------------------------------------------------------------------------------------------------------------------
 
-{\noindent\footnotesize{\href{https://github.com/oscar-rincon/review-seismic-waves}
+{\noindent\footnotesize{\href{https://github.com/oscar-rincon/Review-Seismic-Waves}
 {\faGithubSquare \href{https://github.com/oscar-rincon/review-seismic-waves}{ https://github.com/oscar-rincon/review-seismic-waves}}
 }
 }
@@ -157,18 +157,17 @@ variety of nonlinear functions without any dimensionality constraints \citep{bar
 computational scientists have explored the potential of machine learning as a numerical tool to model systems governed 
 by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. From those
 works, physics-informed neural networks is one of the methods that has gained more attention in the last years,
-cited by over 10,000 publications \citep{Raissi2019}. Figure \ref{fig:publications_absolute_relative} shows the 
-number of document published associated to wave propagation modeling and machine learning. 
+cited by over 10,000 publications \citep{Raissi2019}. Figure \ref{fig:publications_absolute_relative}.A and B shows the 
+number of document published associated to machine learning, numerical methods and wave propagation modeling. 
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=1.0\textwidth]{figs/publications_abs_relat.pdf}
+    \includegraphics[width=1.0\textwidth]{figs/publications_year.pdf}
     \caption{The growth of literature related to machine learning and wave propagation modeling. Number of publications 
-    according to Scopus between 2010 and 2023. The implemented query was: "machine learning" OR "deep learning" 
-    OR "neural networks" AND "wave propagation" OR "wave equation" AND (modeling OR modelling OR model OR simulation) 
-    AND (PUBYEAR > 2009 AND PUBYEAR < 2024). The relative number of publications is calculated as the number of
+    according to Scopus between 2010 and 2023. The relative number of publications is calculated as the number of
     publications with the choosen terms with respect to the total number of publications in Scopus between 2010 and 2023.
-    The absolute number of publications is shown in red, and the relative number of publications is shown in blue.} 
+    The amount of publications associated to the term machine learning based methods (MLBM) and standard numerical methods (SNM) (A). 
+    Also, amount of publications asociated wave propagation modeling (B) is shown.} 
     \label{fig:publications_absolute_relative}
 \end{figure}
 
@@ -230,7 +229,7 @@ u(x, 0) = h(x, 0), \quad x \in \Omega
 
 The prescribed initial condition and boundary condition are characterized via $h(x)$ and $g(x, t)$. Two general approaches 
 when mathematically modeling a system are the inverse and forward problems. The process of determining the causes 
-of a set of observations is known as the inverse problem \citep{Tarantola}, aiming to infer, for example, the properties of a 
+of a set of observations is known as the inverse problem \citep{roth_neural_1994,Tarantola}, aiming to infer, for example, the properties of a 
 medium based on its reaction to wave propagation. Since it begins with the effects and then calculates the causes, it is the 
 opposite of a forward problem, which determines the effects based on the causes. In most cases, the inverse problem is formulated 
 by iteratively performing forward modeling to infer the causes that produce a desired effect, making it computationally complex. 
@@ -244,7 +243,7 @@ An schematic representation of the forward and inverse model using numerical met
     methods such as: finite differences (FD), finite elements (FE), pseudo-spectral (PS), finite volumes (FV), and spectral 
     elements (SE). Also, deep learning techniques include, for example, Physics Informed Neural Networks (PINNs), Neural Operator 
     (NO), and Neural Networks (NN). In the case of the inverse problem, the objective is to determine the parameters, for example, 
-    the wave speed, $c$ starting from the solution $u$.}
+    the wave speed $c$ starting from the solution $u$.}
     \label{fig:forward_inverse}
 \end{figure}
 
@@ -434,7 +433,7 @@ discretization-based physics errors as well.
 
 \begin{figure}[h]
 \centering
-    \includegraphics[width=1.0\textwidth]{figs/scheme_pinns_waves.pdf}
+    \includegraphics[width=1.0\textwidth]{figs/scheme_PINNs_waves.pdf}
     \caption{Physics-informed neural networks scheme applied to the wave equation.}
     \label{deep_learning_subset_architecture}
 \end{figure}
@@ -509,19 +508,20 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 This section provides a systematic review of the literature on applying machine learning methods to model 
 wave propagation. We aimed to answer the following research question:
 
+\begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
 \noindent\textbf{In which computational seismology applications have machine learning methods demonstrated to be 
-an appropriate \textit{complement} or \textit{alternative} to standard numerical methods in terms of computational 
+an appropriate complement or alternative to standard numerical methods in terms of computational 
 time and accuracy?}
 \end{quote}
+\end{tcolorbox}
 
-In order to answer this question, we considered works related with the field of interest that offered a comparative 
-analysis between machine learning methods and standard numerical methods. In the research question we referred to 
-a \textit{complementary} approach when either a mixed method that combines machine learning and standard numerical methods 
-or a machine learning method was trained with data generated by a standard numerical method. Additionally, we have 
-opened the scope to include works where physics informed neural networks have been applied to solve inverse problems. 
-Since, generally, when applied to forward problems, they have shown to be both less accurate and computationally 
-inefficient given the required amount of time to train the model. However, when applied to inverse problems, they have 
+We referred to a \textit{complementary} approach when both machine learning and standard numerical methods 
+were used to perform the modeling. While an \textit{alternative} approach was considered when machine learning
+methods were used as the main solver.Additionally, we have 
+opened the scope to include works where physics-informed neural networks have been applied to solve inverse problems. 
+Since, although, when applied to forward problems, they have shown to be both less accurate and computationally 
+inefficient given the required amount of time to train the model. When applied to inverse problems, they have 
 demostrated to be a promising \textit{alternative} to standard numerical methods 
 \citep{haghighat_physics-informed_2021,raissi_hidden_2020}. This given its versatility to 
 deal with variable amounts of data and at the same time the ability to incorporate physical laws into the model.  
@@ -542,17 +542,19 @@ titles and abstracts to ensure the publications were pertinent to our chosen fie
 Initially, our search focused on how machine learning has been used for modeling wave propagation. The initial 
 search was conducted using the following query on the Scopus and Google Scholar websites as an initial filter: 
 
+\begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\textbf{\texttt{( "machine learning" OR "deep learning" OR "neural networks" ) AND ( "wave propagation" 
-OR "wave equation" ) AND ( modeling OR modelling OR model OR simulation )}}.
+\noindent\texttt{("machine learning" OR "deep learning" OR "neural networks") AND ("wave propagation" 
+OR "wave equation") AND (modeling OR modelling OR model OR simulation)}
 \end{quote}
+\end{tcolorbox}
 
 The search was limited to articles published between 2014 and 2024, written in English. The resulting list was then 
 sorted by relevance, with the analysis limited to the first 50 results from both 
 databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
-reading the titles and abstracts, with relevance to the chosen field, which was computational seismology, 
-as the inclusion criterion. Additionally, the list was restricted to works that provided a comparative 
-analysis between machine learning methods and standard numerical methods in the abstract. 
+reading the titles and abstracts, with relevance to the chosen field, which was computational seismology. 
+Additionally, the list was restricted to works that provided insights of a comparative analysis between machine learning 
+methods and standard numerical methods in the abstract. 
 
 The number of articles that passed the manual filtering process was \_. From these, we extracted relevant information to 
 address the research question. The articles were summarized using on the following criterias: the application domain 
