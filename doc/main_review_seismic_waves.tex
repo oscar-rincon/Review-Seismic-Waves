@@ -125,7 +125,7 @@ Medellín, Colombia\\
 %------------------------------------------------------------------------------------------------------------------------
 % Section - Introduction
 %------------------------------------------------------------------------------------------------------------------------ 
-\section*{Introduction}
+\section*{Introduction}\label{sec:introduction}
 \fancyhead[RO]{\textit{Introduction}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
@@ -201,8 +201,7 @@ computational time. We aimed to answer the following research question:
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
 \noindent\textbf{In which computational seismology applications have machine learning methods demonstrated to be 
-an appropriate complement or alternative to standard numerical methods in terms of computational 
-time and accuracy?}
+an appropriate complement or alternative to standard numerical methods?}
 \end{quote}
 \end{tcolorbox}
 
@@ -211,8 +210,8 @@ time and accuracy?}
 We refer to a complementary approach when both machine learning and standard numerical methods are used for modeling. 
 In contrast, an alternative approach is considered when machine learning methods are employed as the primary solver. 
 Additionally, we have broadened our scope to include studies where physics-informed neural networks (PINNs) are applied 
-to solve inverse problems. Although PINNs have shown to be less accurate and computationally inefficient for forward 
-problems due to the time required for model training, they have demonstrated potential as a promising alternative to 
+to solve inverse problems. Although PINNs have generally shown to be less accurate and computationally inefficient for 
+forward problems due to the time required for model training, they have demonstrated potential as alternative to 
 standard numerical methods in inverse problems \citep{haghighat_physics-informed_2021,raissi_hidden_2020}. This is due 
 to their versatility in handling varying amounts of data and their ability to incorporate physical laws into the model.
 
@@ -227,17 +226,14 @@ A dynamic model, such as wave propagation in a medium, describes how a system ch
 rely on differential equations to characterize the system's evolution. A general formulation of the governing equation 
 for a physical problem can be expressed as:
 
-
 \begin{equation*}
 D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T] .\label{eq:pde}
 \end{equation*}
  
-
 Here, $D$ represents the differential operator acting on the solution $u(x,t)$ to the differential equation, which is 
 parameterized by $\lambda$, and $f(x,t)$ is a source term. The symbols $\Omega$ and $\partial\Omega$ denote the spatial 
 domain and its boundary, respectively. Equation \ref{eq:pde} can be applied to model various systems. The corresponding 
 boundary and initial conditions are given by:
-
 
 \begin{equation*}
 B (u(x, t)) = g(x, t), \quad x \in \partial \Omega, \quad t \in [0, T] 
@@ -249,7 +245,6 @@ and
 u(x, 0) = h(x, 0), \quad x \in \Omega .
 \end{equation*}
 
-
 The prescribed initial and boundary conditions are characterized by $h(x)$ and $g(x,t)$, respectively. In mathematical 
 modeling, two general approaches are commonly used: the forward and inverse problems. The inverse problem involves 
 determining the causes of a set of observations \citep{roth_neural_1994,Tarantola}, such as inferring the properties 
@@ -257,7 +252,6 @@ of a medium based on its response to wave propagation. This approach is the oppo
 calculates the effects based on known causes. Since the inverse problem starts with the effects and seeks to determine 
 the causes, it typically requires iterative forward modeling, making it computationally complex. A schematic representation 
 of forward and inverse modeling using numerical methods is shown in Figure \ref{fig:forward_inverse}.
-
 
 \begin{figure}[h]
 \includegraphics{figs/forward_inverse_modeling_waves.pdf}
@@ -529,14 +523,12 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 \fancyhead[RO]{\textit{Applications}\, / \thepage}  
 %------------------------------------------------------------------------------------------------------------------------
 
-This section provides a systematic review of the literature on applying machine learning methods to model 
-wave propagation. This review may be of help for researchers with interest into apply these emerging techniques in wave 
-propagation modeling. Due to the extensive areas where machine learning is applied, our aim is to identified the potential 
-of these methods in computational seismology.
-
-A search strategy was implemented to identify relevant publications that allow a comparison between machine 
-learning methods and standard numerical methods in the context of wave propagation. The flowchart and total 
-number of works that met these conditions are shown in Figure \ref{fig:scheme_systematic_review}.
+This section presents a systematic review of the literature on the application of machine learning methods to model 
+wave propagation. Our goal is to assist researchers interested in applying these emerging techniques to wave propagation 
+modeling. Given the broad scope of machine learning applications, we focus on evaluating the potential of these methods 
+within computational seismology. A search strategy was employed to identify relevant publications that address the research 
+question outlined in the introduction. Figure \ref{fig:scheme_systematic_review} displays the flowchart 
+and the total number of studies meeting these criteria.
 
 \begin{figure}[h]
     \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
@@ -561,45 +553,94 @@ OR "wave equation") AND (modeling OR modelling OR model OR simulation)}
 
 \vspace*{2mm}
 
-The search was limited to articles published between 2014 and 2024, written in English. The resulting list was then 
-sorted by relevance, with the analysis limited to the first 50 results from both 
+The search was limited to articles published between 2014 and 2024, written in English. The resulting list 
+was then sorted by relevance, with the analysis limited to the first 50 results from both 
 databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
 reading the titles and abstracts, with relevance to the chosen field, which was computational seismology. 
-Additionally, the list was restricted to works that provided insights of a comparative analysis between machine learning 
-methods and standard numerical methods in the abstract. 
+Additionally, the list was restricted to works that provided insights of a comparative analysis in terms of
+computational time between machine learning methods and standard numerical methods in the abstract. Also,
+works that applied physics-informed neural networks to solve inverse problems were included.
+ 
+The number of articles that successfully passed the manual filtering process was \_. From these, we extracted 
+key information to address the research question. The articles were summarized based on the following 
+criteria: the application domain within computational seismology, the machine learning method employed, 
+the standard numerical method used for comparison, and the primary outcome reported from the comparison. 
+Table \ref{tab:systematic_review_surrogate} provides a summary of the main findings from the reviewed articles.
 
-The number of articles that passed the manual filtering process was \_. From these, we extracted relevant information to 
-address the research question. The articles were summarized using on the following criterias: the application domain 
-inside computational seismology, the machine learning method used, the standard numerical method with which it was 
-compared and the reported main outcome from the comparison. In the case of physics-informed neural networks, 
-the application domain their main outcome was also extracted. The Table \ref{tab:systematic_review} summarizes 
-the main findings of the reviewed articles. 
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \footnotesize
+    \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|m{2.7cm}|}
+    \hline
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Application}} & \multicolumn{1}{c|}{\textbf{Reported Efficiency}} \\
+    \hline
+    \hline
+    \RaggedRight Example Article 1 & \RaggedRight Type 1 & \RaggedRight Method 1 & \RaggedRight Application 1 & \RaggedRight Efficiency 1 \\
+    \hline
+    \RaggedRight Example Article 2 & \RaggedRight Type 2 & \RaggedRight Method 2 & \RaggedRight Application 2 & \RaggedRight Efficiency 2 \\
+    \hline
+    \RaggedRight Example Article 3 & \RaggedRight Type 3 & \RaggedRight Method 3 & \RaggedRight Application 3 & \RaggedRight Efficiency 3 \\
+    \hline
+    \RaggedRight Example Article 4 & \RaggedRight Type 4 & \RaggedRight Method 4 & \RaggedRight Application 4 & \RaggedRight Efficiency 4 \\
+    \hline    
+    \end{tabular}
+    \caption{Summary of the reviewed articles and their main findings.}
+    \label{tab:systematic_review_surrogate}
+\end{table}
 
-From the resulted list of articles, we identified that the introduction of physics-informed neural 
-networks has generated a large amount of work related. For example the work of 
-\citeauthoryear{karimpouli_physics_2020} explores the application of deep learning in geosciences, 
-specifically solving the 1-dimensional time-dependent seismic wave equation. Comparing Gaussian process 
-and physics-informed neural networks, the research shows that these meshless methods, requiring 
-smaller datasets, effectively incorporate physics laws, with the Gaussian process excelling in 
-solution prediction and the neural network proving superior in velocity and density inversion. 
-Their significant potential lies in addressing surrogate modeling and inverse analysis, 
-striking a balance between accuracy and computational efficiency \citep{Song2022}. 
-\citeauthoryear{rash_2022} took a similar  approach, but extending to 2D heterogeneous acoustic 
-media, showing that PINNs could invert for ellipsoidal and checkerboard velocity models 
-given the seismic response from sources placed within these models.
 
-In \citeauthoryear{moseley_physics-informed_2022}, physics-informed neural networks were successfully 
-applied to the 2D acoustic wave equation, demonstrating satisfactory outcomes in forward wave propagation and 
-full waveform inversions, despite the efficiency of standard methods. Additionally, physics-informed neural networks 
-showcased efficient performance in solving the inverse problem. To train the model, the results of a finite difference 
-model are used. Spatial and temporal coordinates are used as inputs and intra-inputs of the network and their respective 
-wave field as output, which provides uniqueness to the solution. While restricting the solution obtained to the equation 
-used. To test the model, 3 different speed models are used: homogeneous, layered and an irregular model of the Earth's subsoil.
+For physics-informed neural networks, the application domain and primary outcomes were also extracted. 
+Table \ref{tab:systematic_review_PINNs} presents a summary of the key findings from these reviewed articles.
 
-Similarly, in \citeauthoryear{ren_seismicnet_2024}, physics-informed neural networks were employed for modeling 
-mechanical wave propagation in semi-infinite domains, showcasing their versatility in forward modeling for seismic 
-wave propagation, without requiring labeled data. These studies collectively highlight the effectiveness of physics-informed 
-neural networks across different wave propagation scenarios.
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \footnotesize
+    \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|}
+    \hline
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}} & \multicolumn{1}{c|}{\textbf{Application}} & \multicolumn{1}{c|}{\textbf{Main contribution}} \\
+    \hline
+    \hline
+    \RaggedRight Example Article 1 & \RaggedRight Type 1 & \RaggedRight Application 1 & \RaggedRight Contribution 1 \\
+    \hline
+    \RaggedRight Example Article 2 & \RaggedRight Type 2 & \RaggedRight Application 2 & \RaggedRight Contribution 2\\
+    \hline
+    \RaggedRight Example Article 3 & \RaggedRight Type 3 & \RaggedRight Application 3 & \RaggedRight Contribution 3\\
+    \hline
+    \RaggedRight Example Article 4 & \RaggedRight Type 4 & \RaggedRight Application 4 & \RaggedRight Contribution 4 \\
+    \hline    
+    \end{tabular}
+    \caption{Summary of the reviewed articles and their main findings.}
+    \label{tab:systematic_review_PINNs}
+\end{table}
+
+
+% From the resulted list of articles, we identified that the introduction of physics-informed neural 
+% networks has generated a large amount of work related. For example the work of 
+% \citeauthoryear{karimpouli_physics_2020} explores the application of deep learning in geosciences, 
+% specifically solving the 1-dimensional time-dependent seismic wave equation. Comparing Gaussian process 
+% and physics-informed neural networks, the research shows that these meshless methods, requiring 
+% smaller datasets, effectively incorporate physics laws, with the Gaussian process excelling in 
+% solution prediction and the neural network proving superior in velocity and density inversion. 
+% Their significant potential lies in addressing surrogate modeling and inverse analysis, 
+% striking a balance between accuracy and computational efficiency \citep{Song2022}. 
+% \citeauthoryear{rash_2022} took a similar  approach, but extending to 2D heterogeneous acoustic 
+% media, showing that PINNs could invert for ellipsoidal and checkerboard velocity models 
+% given the seismic response from sources placed within these models.
+
+% In \citeauthoryear{moseley_physics-informed_2022}, physics-informed neural networks were successfully 
+% applied to the 2D acoustic wave equation, demonstrating satisfactory outcomes in forward wave propagation and 
+% full waveform inversions, despite the efficiency of standard methods. Additionally, physics-informed neural networks 
+% showcased efficient performance in solving the inverse problem. To train the model, the results of a finite difference 
+% model are used. Spatial and temporal coordinates are used as inputs and intra-inputs of the network and their respective 
+% wave field as output, which provides uniqueness to the solution. While restricting the solution obtained to the equation 
+% used. To test the model, 3 different speed models are used: homogeneous, layered and an irregular model of the Earth's subsoil.
+
+% Similarly, in \citeauthoryear{ren_seismicnet_2024}, physics-informed neural networks were employed for modeling 
+% mechanical wave propagation in semi-infinite domains, showcasing their versatility in forward modeling for seismic 
+% wave propagation, without requiring labeled data. These studies collectively highlight the effectiveness of physics-informed 
+% neural networks across different wave propagation scenarios.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - Conclusions
