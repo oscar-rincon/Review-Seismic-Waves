@@ -166,8 +166,8 @@ illustrate the number of publications related to machine learning, numerical met
     \caption{The growth of literature related to machine learning and wave propagation modeling is shown. 
     The number of publications was retrieved from Scopus between 2010 and 2023. The relative number of publications 
     is calculated as the number of publications containing the selected terms relative to the total number of 
-    publications in Scopus during the same period. The chosen terms were 'machine learning-based methods (MLBM)' 
-    and 'standard numerical methods (SNM)' (A), as well as MLBM specifically associated with wave propagation 
+    publications in Scopus during the same period. The chosen terms were machine learning-based methods (MLBM) 
+    and standard numerical methods (SNM) (A), as well as MLBM specifically associated with wave propagation 
     modeling (B).} 
     \label{fig:publications_absolute_relative}
 \end{figure}
@@ -185,35 +185,37 @@ particularly relevant in the context of computational seismology, where the comp
 be challenging to model. Therefore the aim of this review is to provide insights into the potential of machine 
 learning methods for wave propagation modeling and their impact on computational seismology.
 
-This work provides a mixed review of the advancements made in partial differential equations modeling 
-through machine learning and their impact. While this area can be applied to a wide range of problems, our focus 
-will be limited to the propagation of mechanical waves. The work is organized into the following sections: Section 
-\ref{sec:modeling_wave_propagation} describes general aspects about wave propagation modeling. Furthermore, 
-in Sections \ref{sec:standard_numerical_methods} and \ref{sec:machine_learning_methods}, we identify 
-existing standard and machine learning methods used to solve the diferential equations and particularly 
-on the wave equation. Then, in Section \ref{sec:applications} we systematically review the recent advances in wave 
-propagation modeling achieved through these emerging methods and identify when they can be an alternative to 
-traditional numerical methods or in an hibrid way when they can improve the solver performance in terms of 
-computational time. We aimed to answer the following research question:
+This work provides a mixed review betweem narative and systematic review of the advancements made in partial 
+differential equations modeling through machine learning and their impact. While this area can be applied to 
+a wide range of problems, our focus will be limited to the propagation of mechanical waves. The work is 
+organized into the following sections: Section \ref{sec:modeling_wave_propagation} describes general aspects 
+about wave propagation modeling. Furthermore, in Sections \ref{sec:standard_numerical_methods} and 
+\ref{sec:machine_learning_methods}, we identify existing standard and machine learning methods used to solve 
+the diferential equations and particularly on the wave equation. Then, in Section \ref{sec:applications} we 
+systematically review the recent advances in wave propagation modeling achieved through these emerging methods 
+and identify when they can be an alternative to traditional numerical methods or in an hibrid way when they can 
+improve the solver performance in terms of computational time. We aimed to answer the following research question:
 
 \vspace*{2mm}
 
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\textbf{In which computational seismology applications have machine learning methods demonstrated to be 
-an appropriate complement or alternative to standard numerical methods?}
+\noindent\textbf{What machine learning techniques have been used as a complement or alternative to traditional 
+numerical methods for modeling the wave equation in computational seismology?}
 \end{quote}
 \end{tcolorbox}
 
 \vspace*{2mm}
 
-We refer to a complementary approach when both machine learning and standard numerical methods are used for modeling. 
-In contrast, an alternative approach is considered when machine learning methods are employed as the primary solver. 
-Additionally, we have broadened our scope to include studies where physics-informed neural networks (PINNs) are applied 
-to solve inverse problems. Although PINNs have generally shown to be less accurate and computationally inefficient for 
-forward problems due to the time required for model training, they have demonstrated potential as alternative to 
-standard numerical methods in inverse problems \citep{haghighat_physics-informed_2021,raissi_hidden_2020}. This is due 
-to their versatility in handling varying amounts of data and their ability to incorporate physical laws into the model.
+We define a complementary approach as one in which both machine learning and traditional numerical methods are employed 
+together for modeling, particularly when synthetic data generated by numerical methods is used to train the machine learning 
+model. Conversely, an alternative approach is considered when machine learning techniques are used as the primary solver, 
+relying on experimental data. Furthermore, our scope includes studies where physics-informed neural networks (PINNs) are 
+applied to solve inverse problems. While PINNs have generally been found less accurate and computationally inefficient for 
+forward problems due to the extensive time required for model training, they have shown promise as alternatives to standard 
+numerical methods in inverse problems \citep{haghighat_physics-informed_2021, raissi_hidden_2020, hao_physics-informed_2023}. 
+This is largely attributed to their versatility in handling varying amounts of data and their ability to incorporate 
+physical laws directly into the model.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation
@@ -222,9 +224,9 @@ to their versatility in handling varying amounts of data and their ability to in
 \fancyhead[RO]{\textit{Modeling of Wave Propagation}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
-A dynamic model, such as wave propagation in a medium, describes how a system changes over time. These models typically 
-rely on differential equations to characterize the system's evolution. A general formulation of the governing equation 
-for a physical problem can be expressed as:
+A dynamic model, such as wave propagation in a medium, aim to describe through a function how a system changes over time. 
+These models typically rely on differential equations to characterize the system's evolution. A general formulation of 
+the governing equation for a physical problem can be expressed as:
 
 \begin{equation*}
 D(u(x,t); \lambda) = f(x,t), \quad x \in \Omega, \quad t \in [0, T] .\label{eq:pde}
@@ -278,12 +280,12 @@ seismic waves and in medical applications \citep{moseley_physics-informed_2022, 
 wave equation in a homogeneous medium can be expressed as \citep{Carcione2002}:
 
 \begin{equation*}
-\frac{\partial^2 u(x_i, t)}{\partial t^2} - c^{2} \nabla^2 u(x_i, t) = f(x_i, t) \ ,
+\frac{\partial^2 u(x, t)}{\partial t^2} - c^{2} \nabla^2 u(x, t) = f(x, t) \ ,
 \label{acoustic}
 \end{equation*}
 
-where \( u(x_i, t) \) describes the pressure of the generated seismic waves, and \( f(x_i, t) \) is a source term that 
-describes the strength and duration of the source.
+where $\nabla^2 = \sum_{i=1}^{d} = \frac{\partial}{\partial^{2} x_{i}}$, \( u(x, t) \) describes the pressure of 
+the generated waves, and \( f(x, t) \) is a source term that describes the strength and duration of the source.
 
 Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous 
 isotropic medium, is the elastic wave equation \citep{moseley_fast_2018, lehmann_fourier_2023}. This equation can 
@@ -347,11 +349,11 @@ numerical methods \citep{Igel2017}.
 In the past decades various numerical methods have been proposed to solve physics systems by partial differential 
 equations such as the wave equation. The finite-difference method is among the most 
 popular to solve partial differential equations, and particularly the wave equation. This possibly associated with 
-its simplicity and efficiency. A complete review of the finite-differences method applied to wave propagation can be 
-found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators involving differences 
-between adjacent grid points. The finite difference method suits for tackling issues related to simple geometric 
-structures. In contrast, other methods such as the finite element offers more grid flexibility, facilitating the 
-handling of intricate geometric boundaries.
+its straightforward concept and easy implementation. A complete review of the finite-differences method applied to 
+wave propagation can be found the \citeauthoryear{Moczo2014}. Partial derivatives are approximated by discrete operators 
+involving differences between adjacent grid points. The finite difference method suits for tackling issues related to 
+simple geometric structures. In contrast, other methods such as the finite element offers more grid flexibility, 
+facilitating the handling of intricate geometric boundaries.
 
 In wave propagation simulations, the partial differential equations are typically discretized on a staggered grid 
 \citep{madariaga_dynamics_1976,Virieux1986}. This approach facilitates the resolution of the rupture propagation 
@@ -425,11 +427,9 @@ learning the trajectory of a system of partial differential equations from avail
 \citep{li_neural_2020,li_fourier_2021}. Alternatively, syntetic data generated by standard numerical 
 methods can be used to train the neural network. Therefore, a surrogate model can be used to predict the
 solution of the partial differential equation at a reduced computational cost. While keeping an acceptable
-level of accuracy.
-
-One of the most popular types of deep neural networks is known as convolutional neural networks. A 
-convolutional neural network convolves learned features with input data, and uses 2D convolutional 
-layers, making this architecture well suited to processing 2D data, such as images.
+level of accuracy.  For example, one of the most popular types of deep neural networks is known as 
+convolutional neural networks. A convolutional neural network convolves learned features with input data, 
+and uses 2D convolutional layers, making this architecture well suited to processing 2D data, such as images.
 
 All these approaches employ machine learning algorithms and others such as support vector machines, 
 random forests, Gaussian processes have been also applied to model physical systems. However, they 
@@ -438,25 +438,21 @@ ignorant of the mathematical description of the physical phenomenon. In order to
 limitation physics-informed neural networks architectures have been proposed. Where the activation 
 and the loss functions are designed according to the context of the problem.
 
+\textcolor{red}{\textbf{Question:} When is necessary to involve a PDE in the model?}
+
 There has been an increasing interest in leveraging physics-informed neural networks to solve forward and 
 inverse problems where full or partial knowledge of the governing equations is known since the published 
 works of \citeauthoryear{raissi_hidden_2018}, \citeauthoryear{raissi_numerical_2018} and 
-\citeauthoryear{Raissi2019}. Although similar ideas for constraining neural networks using physical 
-laws have been explored in previous studies \citep{lagaris_artificial_1998}. The general principle of 
-physics-informed neural networks is to integrate deep neural networks and physical laws to learn the 
-underlying consistent dynamics from small or zero labeled data \citep{karniadakis_physics-informed_2021}. 
+\citeauthoryear{Raissi2019}. The core concept of PINNs is to minimize an energy functional that represents 
+the residual of the PDE along with its initial and boundary conditions. Although similar ideas for constraining 
+neural networks using physical laws have been explored in previous studies \citep{lagaris_artificial_1998}. 
+The general principle of physics-informed neural networks is to integrate deep neural networks and physical 
+laws to learn the underlying consistent dynamics from small or zero labeled data \citep{karniadakis_physics-informed_2021}. 
 As universal approximators, neural networks have the potential to represent any partial differential 
-equation. This capability eliminates the need for the discretization step, thereby avoiding 
-discretization-based physics errors as well. 
-
-\begin{figure}[h]
-\centering
-    \includegraphics[width=1.0\textwidth]{figs/scheme_PINNs_waves.pdf}
-    \caption{Physics-informed neural networks scheme applied to the wave equation.}
-    \label{deep_learning_subset_architecture}
-\end{figure}
-
-Physics-informed neural networks aim to address physical systems governed by the equation
+equation. They make use of the powerful tool that is automatic differentiation. This capability eliminates 
+the need for the discretization step, thereby avoiding discretization-based physics errors as well. 
+Instead a random sampling of the domain is implemented. Physics-informed neural networks aim to address 
+physical systems governed by the equation
 
 $$
 u_{tt} - D[u(t, x); \lambda] = 0,
@@ -473,8 +469,8 @@ where
 
 $$
 \begin{aligned}
-& \mathcal{L}_{pde}(\boldsymbol{\sigma})=\frac{1}{n_{pde}} \sum_{i=1}^{n_{pde}}\left|u_{tt} - \mathcal{D}\left[\hat{u}\left(t,
- \boldsymbol{x}_i ; \boldsymbol{\sigma}\right)\right]-f\left(t, \boldsymbol{x}_i\right)\right|^2, \\
+& \mathcal{L}_{pde}(\boldsymbol{\sigma})=\frac{1}{n_{pde}} \sum_{i=1}^{n_{pde}}\left|u_{tt} - 
+\mathcal{D}\left[\hat{u}\left(t,\boldsymbol{x}_i ; \boldsymbol{\sigma}\right)\right]-f\left(t, \boldsymbol{x}_i\right)\right|^2, \\
 & \mathcal{L}_{bc}(\boldsymbol{\sigma})=\frac{1}{n_{bc}} \sum_{i=1}^{n_{bc}}\left|\hat{u}\left(t, \boldsymbol{x}_i ;
  \boldsymbol{\sigma}\right)-g\left(t, \boldsymbol{x}_i\right)\right|^2, \\
 & \mathcal{L}_{ic}(\boldsymbol{\sigma})=\frac{1}{n_{ic}} \sum_{i=1}^{n_{ic}}\left|\hat{u}\left(0, \boldsymbol{x}_i ;
@@ -482,14 +478,25 @@ $$
 \end{aligned}
 $$
 
-and \( L_{\text{pde}} \) represents the residuals of the PDEs, \( L_{\text{ic}} \) represents the error at the collocation points at the 
-initial time point, and \( L_{\text{bc}} \) represents the error at the collocation points on the boundaries. The coefficients 
-\(\beta_{\text{ic}}\) and \(\beta_{\text{bc}}\) are training hyper-parameters.
+and \( \mathcal{L}_{\text{pde}} \) represents the residuals of the PDEs, \( \mathcal{L}_{\text{ic}} \) represents the error at the 
+collocation points at the initial time point, and \( \mathcal{L}_{\text{bc}} \) represents the error at the collocation points 
+on the boundaries. The terms \( n_{pde} \), \( n_{bc} \), and \( n_{ic} \) denote the number of collocation points used for the 
+PDE residuals, boundary conditions, and initial conditions, respectively. The coefficients \(\beta_{\text{ic}}\) and \(\beta_{\text{bc}}\) 
+are training hyper-parameters. Figure \ref{fig:physics_informed_neural_networks} illustrates the application of physics-informed 
+neural networks to the wave equation.
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=1.0\textwidth]{figs/scheme_PINNs_waves.pdf}
+        \caption{Physics-informed neural networks scheme applied to the wave equation.}
+        \label{fig:physics_informed_neural_networks}
+\end{figure}
+    
 
 One major drawback of these methods is the difficulty of transferring knowledge between different configurations. For example, when solving 
 the wave equation, CNNs and PINNs are trained with a fixed velocity parameter and cannot predict anything for a different velocity value. 
-One of the main challenges in numerically modeling mechanical is associated with the dimensional, given the computational complexity.
 
+One of the main challenges in numerically modeling mechanical is associated with the dimensionality, given the computational complexity. 
 Tackling complex high-dimensional systems comes with significant challenges. Despite this, machine learning-based algorithms offer promising 
 prospects for solving partial differential equations, as indicated by studies such as the one by \citeauthoryear{blechschmidt_three_2021}. 
 Most of the applications are implemented in one dimensional or two-dimensional domains. In \citeauthoryear{lehmann_fourier_2023} the Fourier 
@@ -553,19 +560,22 @@ OR "wave equation") AND (modeling OR modelling OR model OR simulation)}
 
 \vspace*{2mm}
 
-The search was limited to articles published between 2014 and 2024, written in English. The resulting list 
-was then sorted by relevance, with the analysis limited to the first 50 results from both 
+Google Scholar provided references from both indexed journals and preprint platforms like arXiv,
+which is useful for identifying recent literature in this rapidly evolving field. 
+
+The search was limited to articles published between 2014 and 2024. Non-English documents were also excluded. 
+The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from both 
 databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
 reading the titles and abstracts, with relevance to the chosen field, which was computational seismology. 
-Additionally, the list was restricted to works that provided insights of a comparative analysis in terms of
-computational time between machine learning methods and standard numerical methods in the abstract. Also,
-works that applied physics-informed neural networks to solve inverse problems were included.
+Also, works that applied physics-informed neural networks works that were not used to solve inverse 
+problems were excluded. Cited references were also reviewed to identify additional relevant articles. 
  
 The number of articles that successfully passed the manual filtering process was \_. From these, we extracted 
 key information to address the research question. The articles were summarized based on the following 
-criteria: the application domain within computational seismology, the machine learning method employed, 
-the standard numerical method used for comparison, and the primary outcome reported from the comparison. 
+criteria: the application domain within computational seismology, the machine learning method employed. 
+If synthetic data was used, standard numerical method used was mentioned. 
 Table \ref{tab:systematic_review_surrogate} provides a summary of the main findings from the reviewed articles.
+The list was sorted by date of publication, with the most recent articles appearing first.
 
 \begin{table}[h!]
     \centering
@@ -573,12 +583,12 @@ Table \ref{tab:systematic_review_surrogate} provides a summary of the main findi
     \footnotesize
     \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|m{2.7cm}|}
     \hline
-    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Application}} & \multicolumn{1}{c|}{\textbf{Reported Efficiency}} \\
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Application}} & \multicolumn{1}{c|}{\textbf{Dataset}} \\
     \hline
     \hline
-    \RaggedRight Example Article 1 & \RaggedRight Type 1 & \RaggedRight Method 1 & \RaggedRight Application 1 & \RaggedRight Efficiency 1 \\
+    \RaggedRight \citeauthoryear{ren_seismicnet_2024} & \RaggedRight 2D-acoustic & \RaggedRight PINNs & \RaggedRight FWIs & \RaggedRight FEM \\
     \hline
-    \RaggedRight Example Article 2 & \RaggedRight Type 2 & \RaggedRight Method 2 & \RaggedRight Application 2 & \RaggedRight Efficiency 2 \\
+    \RaggedRight \citeauthoryear{song_high-frequency_2022} & \RaggedRight 2D-frequency & \RaggedRight CNN & \RaggedRight Application 2 & \RaggedRight Efficiency 2 \\
     \hline
     \RaggedRight Example Article 3 & \RaggedRight Type 3 & \RaggedRight Method 3 & \RaggedRight Application 3 & \RaggedRight Efficiency 3 \\
     \hline
@@ -590,30 +600,7 @@ Table \ref{tab:systematic_review_surrogate} provides a summary of the main findi
 \end{table}
 
 
-For physics-informed neural networks, the application domain and primary outcomes were also extracted. 
-Table \ref{tab:systematic_review_PINNs} presents a summary of the key findings from these reviewed articles.
-
-\begin{table}[h!]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \footnotesize
-    \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|}
-    \hline
-    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}} & \multicolumn{1}{c|}{\textbf{Application}} & \multicolumn{1}{c|}{\textbf{Main contribution}} \\
-    \hline
-    \hline
-    \RaggedRight Example Article 1 & \RaggedRight Type 1 & \RaggedRight Application 1 & \RaggedRight Contribution 1 \\
-    \hline
-    \RaggedRight Example Article 2 & \RaggedRight Type 2 & \RaggedRight Application 2 & \RaggedRight Contribution 2\\
-    \hline
-    \RaggedRight Example Article 3 & \RaggedRight Type 3 & \RaggedRight Application 3 & \RaggedRight Contribution 3\\
-    \hline
-    \RaggedRight Example Article 4 & \RaggedRight Type 4 & \RaggedRight Application 4 & \RaggedRight Contribution 4 \\
-    \hline    
-    \end{tabular}
-    \caption{Summary of the reviewed articles and their main findings.}
-    \label{tab:systematic_review_PINNs}
-\end{table}
+ 
 
 
 % From the resulted list of articles, we identified that the introduction of physics-informed neural 
