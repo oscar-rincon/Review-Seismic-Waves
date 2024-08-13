@@ -141,10 +141,10 @@ finite-difference, finite-element and spectral-element methods \citep{Moczo, vir
 komatitsch_introduction_1999,chaljub_spectral-element_2007}. In these approaches, the spatial coordinates are discretized. 
 In the context of mathematical modeling, the primary objective is to ensure that the solution methods 
 are computationally efficient without sacrificing accuracy to capture the physical details inherent to the 
-system. However, standard numerical methods often encounter difficulties when addressing complex problems 
-such as irregular geometries, material changes, and mixed boundary conditions. Therefore, the computational 
-demand associated with many common models in computer sciences and engineering has increased the development 
-of innovative strategies.
+system that are required by the problem to be solved. However, standard numerical methods often encounter 
+difficulties when addressing complex problems such as irregular geometries, material changes, and mixed boundary 
+conditions. Therefore, the computational demand associated with many common models in computer sciences and engineering 
+has increased the development of innovative strategies.
 
 Research conducted with the use of machine learning has considerably grown in the late 2010s, owing to advancements 
 in hardware, such as graphic processing units and data storage technologies and the growth of available data. 
@@ -156,10 +156,11 @@ mapping the input features to the output targets in a data-driven manner. A vers
 Theorem conclusively demonstrates that neural networks have the capability to accurately approximate a wide 
 variety of nonlinear functions without any dimensionality constraints \citep{barron_universal_1993}. Therefore 
 computational scientists have explored the potential of machine learning as a numerical tool to model systems governed 
-by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. From those
-works, physics-informed neural networks is one of the methods that has gained more attention in the last years,
-cited by over 10,000 publications \citep{Raissi2019}. Figures \ref{fig:publications_absolute_relative}.A and B 
-illustrate the number of publications related to machine learning, numerical methods, and wave propagation modeling.
+by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. Figures 
+\ref{fig:publications_absolute_relative} shows the number of publications that related machine 
+learning and standard numerical methods to the modeling of partial differential equations (A) and particularly
+the seismic wave equation (B). From those works, physics-informed neural networks is one of the methods that 
+has gained more attention in the last years, being cited by over 10,000 publications \citep{Raissi2019}.
 
 \begin{figure}[H]
 \centering
@@ -173,49 +174,52 @@ illustrate the number of publications related to machine learning, numerical met
     \label{fig:publications_absolute_relative}
 \end{figure}
 
-
 Remarkable reviews have been conducted to address the increasing use of machine learning algorithms across various 
 engineering and scientific disciplines \citep{vadyala_review_2022,deng_physics-informed_2023,lino_current_2023}. 
 Also emphasis has been placed on the application of neural networks to model seismic inversion problems 
 \citep{jingbo_research_2023}. However, there is uncertainty, given the rapid growth of the field, about what 
-machine learning methods have been applied and demostrated to be an efficient efficient complement or alternative 
-to standard numerical methods \citep{grossmann_can_2023,mcgreivy_weak_2024}. Although in principle, machine learning 
+machine learning based methods have been applied and demostrated to be an efficient complement or alternative 
+to standard numerical methods \citep{grossmann_can_2023,mcgreivy_weak_2024}. In principle, machine learning 
 methods have the potential to learn a surrogate model able to approximate the solution of a partial differential 
-equation, some methods can be more efficient than others according to the problem being solved. This is 
-particularly relevant in the context of computational seismology, where the complexity of the domain phenomena can 
-be challenging to model. Therefore the aim of this review is to provide insights into the already demostrated 
-potential of machine learning methods for wave propagation modeling and their impact on computational seismology.
+equation. This is particularly relevant in the context of computational seismology, where the complexity 
+of the domain phenomena can be challenging to model. However, some methods can be more efficient than others 
+according to the problem being solved. Moreover, already proposed methods may still haven't been fully explored
+in the context of seismic wave propagation modeling. Therefore the aim of this review is to provide insights 
+into the already demostrated potential of machine learning methods for wave propagation modeling and their 
+impact on computational seismology.
 
-This work provides a mixed betweem narative and systematic review of the advancements made in partial 
-differential equations modeling through machine learning and their impact. While this area can be applied to 
-a wide range of problems, our focus will be limited to the propagation of sesimic waves. The work is 
-organized into the following sections: Section \ref{sec:modeling_wave_propagation} describes general aspects 
-about wave propagation modeling. Furthermore, in Sections \ref{sec:standard_numerical_methods} and 
-\ref{sec:machine_learning_methods}, we identify existing standard and machine learning methods used to solve 
-the diferential equations and particularly on the wave equation. Then, in Section \ref{sec:applications} we 
+This work presents a combination of narrative and systematic review, focusing on the advancements in modeling 
+partial differential equations using machine learning techniques and their resulting impact. While this area 
+can be applied to a wide range of problems, our focus will be limited to the propagation of seismic waves. 
+The work is organized into the following sections: Section \ref{sec:modeling_wave_propagation} describes 
+general aspects about wave propagation modeling. Furthermore, in Sections \ref{sec:standard_numerical_methods} 
+and \ref{sec:machine_learning_methods}, we identify existing standard and machine learning methods used to solve 
+partial diferential equations. Then, in Section \ref{sec:applications} we 
 systematically review the recent advances in wave propagation modeling achieved through these emerging methods 
-and identify when they can be an alternative to traditional numerical methods or in an hibrid way when they can 
-improve the solver performance in terms of computational time. We aimed to answer the following research question:
+and identify when they have demostrated to be an alternative to traditional numerical methods or in an 
+hibrid way when they can improve the solver performance in terms of computational time. We aimed to answer 
+the following research question:
 
 \vspace*{2mm}
 
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\textbf{What machine learning techniques have been used as a complement or alternative to traditional 
+\noindent\textbf{What machine learning techniques have shown to be a complement or alternative to traditional 
 numerical methods for modeling the wave equation in computational seismology?}
 \end{quote}
 \end{tcolorbox}
 
 \vspace*{2mm}
 
-We define a complementary approach as one in which both machine learning and traditional numerical methods are employed 
-together for modeling, particularly when synthetic data generated by numerical methods is used to train the machine learning 
-model. Furthermore, our scope includes studies where physics-informed neural networks (PINNs) or one of its extensions are
-applied to solve inverse problems. While PINNs have generally been found less accurate and computationally inefficient for 
-forward problems due to the extensive time required for model training, they have shown a promising alternative to standard 
-numerical methods in inverse problems \citep{haghighat_physics-informed_2021, raissi_hidden_2020, hao_physics-informed_2023}. 
-This is largely attributed to their versatility in handling varying amounts of data and their ability to incorporate 
-physical laws directly into the model.
+We define a \textit{complementary} approach as one in which both machine learning and traditional numerical methods are 
+employed together for modeling, particularly when synthetic data generated by standard numerical methods is used to train 
+the machine learning model and the computational time required to solve the model is reduced. 
+Furthermore, our scope includes studies where physics-informed neural networks (PINNs) or one of 
+its extensions is applied to solve inverse problems. While PINNs have generally been found less accurate and computationally 
+inefficient for forward problems due to the extensive time required during the model training, they have also shown to be a promising 
+\textit{alternative} to standard numerical methods in inverse problems \citep{haghighat_physics-informed_2021, 
+raissi_hidden_2020, hao_physics-informed_2023}. This is largely attributed to their versatility in handling varying 
+amounts of data and their ability to incorporate physical laws directly into the model.
 
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 1 - Modeling of Wave Propagation
@@ -389,7 +393,7 @@ There is considerable scientific interest in employing machine learning techniqu
 %------------------------------------------------------------------------------------------------------------------------
 % Section - 3 - Machine learning Methods 
 %------------------------------------------------------------------------------------------------------------------------
-\section{Machine learning Methods}\label{sec:machine_learning_methods}
+\section{Machine learning Based Methods}\label{sec:machine_learning_methods}
 \fancyhead[RO]{\textit{Machine learning Methods}\, / \thepage} 
 %------------------------------------------------------------------------------------------------------------------------
 
@@ -437,8 +441,6 @@ are implemented mainly as black-box tools. The constructed neural network can be
 ignorant of the mathematical description of the physical phenomenon. In order to overcome this 
 limitation physics-informed neural networks architectures have been proposed. Where the activation 
 and the loss functions are designed according to the context of the problem.
-
-\textcolor{red}{\textbf{Question:} When is necessary to involve a PDE in the model?}
 
 There has been an increasing interest in leveraging physics-informed neural networks to solve forward and 
 inverse problems where full or partial knowledge of the governing equations is known since the published 
@@ -532,9 +534,29 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 
 This section presents a systematic review of the literature on the application of machine learning methods to model 
 wave propagation. Our goal is to assist researchers interested in applying these emerging techniques to wave propagation 
-modeling. Given the broad scope of machine learning applications, we focus on evaluating the potential of these methods 
-within computational seismology. A search strategy was employed to identify relevant publications that address the research 
-question outlined in the introduction. Figure \ref{fig:scheme_systematic_review} displays the flowchart 
+modeling. We incially describe the inclusion and exclusion criteria used to select the articles for the review. 
+Then, we present the search strategy employed to identify the most relevant publications. Finally, we summarize the
+main findings from the reviewed articles, focusing into answering the research question outlined in the introduction.
+
+\subsection*{Inclusion and Exclusion Criteria}
+
+Given the wide range of machine learning applications, we focused our systematic review specifically on their potential 
+within computational seismology. Although seismological research can be approached in both data-driven and physics-informed 
+ways—where the former uses machine learning to analyze seismic data and make predictions—our research was limited to 
+methods that incorporate descriptions of physical phenomena through partial differential equations. This, given our
+research expertise. 
+
+In order to answer the research question, We included research articles that reported an improved or 
+comparable computational efficiency relative to standard numerical methods. Similarly to the approach of 
+\citeauthoryear{mcgreivy_weak_2024}, we considered studies that compared the computational time 
+required to solve models, but restricted our focus to those within our field of interest. We also included works that 
+applied physics-informed neural networks to solve inverse problems and provided this comparative analyses. In both 
+cases, either a quantitative or qualitative comparison was required.
+
+\subsection*{Search Strategy}
+
+Based on the inclusion and exclusion criteria a search strategy was employed to identify the most relevant publications that 
+address the research question outlined in the introduction. Figure \ref{fig:scheme_systematic_review} displays the flowchart 
 and the total number of studies meeting these criteria.
 
 \begin{figure}[h]
@@ -553,8 +575,8 @@ search was conducted using the following query as an initial filter:
 
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\texttt{("machine learning" OR "deep learning" OR "neural networks") AND ("wave propagation" 
-OR "wave equation") AND (modeling OR modelling OR model OR simulation)}
+\noindent\texttt{( "machine learning" OR "deep learning" OR "neural networks" ) AND ( "seismic" OR "seismology" )
+ AND ( "wave equation" ) AND ( modeling OR modelling OR model OR simulation )}
 \end{quote}
 \end{tcolorbox}
 
@@ -564,13 +586,16 @@ The search databases used were Scopus and Google Scholar. Google Scholar was par
 provided references from both indexed journals and preprint platforms like arXiv, making it useful for 
 identifying the most recent literature in this rapidly evolving field.
 
-The search was limited to articles published between 2014 and 2024. Non-English documents were also excluded. 
-The resulting list was then sorted by relevance, with the analysis limited to the first 50 results from both 
-databases, which were then merged, and duplicate works removed. The final list was manually filtered by 
-reading the titles and abstracts, with relevance to the chosen field, which was computational seismology. 
-Also, works that applied physics-informed neural networks based works that were not used to solve inverse 
-problems were excluded. Cited references were also reviewed to identify additional relevant articles. 
- 
+The search was limited to research articles published in the subject of interest. Non-English documents were also 
+excluded. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results 
+from both databases, which were then merged, and duplicate works removed. 
+
+The final list was manually filtered by reading the titles and abstracts, and verifying that the publications
+satisfies the inclusion and exclusion criteria. Finally, cited references were also reviewed to identify 
+additional relevant articles. 
+
+\subsection*{Result of Bibliometric Analyses}
+
 The number of articles that successfully passed the manual filtering process was \_. From these, we extracted 
 key information to address the research question. The articles were summarized based on several criteria, 
 including the modeled wave equation type, the specific machine learning method employed and the type 
@@ -584,7 +609,7 @@ findings from the reviewed articles, organized by publication date, with the mos
     \footnotesize
     \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|m{2.7cm}|}
     \hline
-    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Wave Equation Type}}  & \multicolumn{1}{c|}{\textbf{Approach}} & \multicolumn{1}{c|}{\textbf{Dataset}} \\
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Wave Equation}}  & \multicolumn{1}{c|}{\textbf{Approach}} & \multicolumn{1}{c|}{\textbf{Dataset}} \\
     \hline
     \hline
     \RaggedRight \citeauthoryear{ren_seismicnet_2024} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight FEM \\
@@ -596,9 +621,12 @@ findings from the reviewed articles, organized by publication date, with the mos
     \RaggedRight \citeauthoryear{rasht-behesht_physics-informed_2022} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight SEM \\
     \hline 
     \end{tabular}
-    \caption{Summary of the reviewed articles and their main findings.}
+    \caption{Summary of the reviewed publications and their main findings.}
     \label{tab:systematic_review_surrogate}
 \end{table}
+
+\section*{Discussion}
+
 
 % From the resulted list of articles, we identified that the introduction of physics-informed neural 
 % networks has generated a large amount of work related. For example the work of 
