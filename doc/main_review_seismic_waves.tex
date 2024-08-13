@@ -534,7 +534,7 @@ application of Physics-Informed Neural Networks using PyTorch, offering improved
 
 This section presents a systematic review of the literature on the application of machine learning methods to model 
 wave propagation. Our goal is to assist researchers interested in applying these emerging techniques to wave propagation 
-modeling. We incially describe the inclusion and exclusion criteria used to select the articles for the review. 
+modeling. We inicially describe the inclusion and exclusion criteria used to select the articles for the review. 
 Then, we present the search strategy employed to identify the most relevant publications. Finally, we summarize the
 main findings from the reviewed articles, focusing into answering the research question outlined in the introduction.
 
@@ -546,12 +546,14 @@ ways—where the former uses machine learning to analyze seismic data and make p
 methods that incorporate descriptions of physical phenomena through partial differential equations. This, given our
 research expertise. 
 
-In order to answer the research question, We included research articles that reported an improved or 
-comparable computational efficiency relative to standard numerical methods. Similarly to the approach of 
-\citeauthoryear{mcgreivy_weak_2024}, we considered studies that compared the computational time 
-required to solve models, but restricted our focus to those within our field of interest. We also included works that 
-applied physics-informed neural networks to solve inverse problems and provided this comparative analyses. In both 
-cases, either a quantitative or qualitative comparison was required.
+In order to answer the research question, We included research articles that reported a comparison of 
+computational efficiency relative to standard numerical methods, similarly to the approach of 
+\citeauthoryear{mcgreivy_weak_2024}. We considered studies that compared the computational time 
+required to solve the models, but restricted our focus to those within our field of interest. We also included works that 
+applied physics-informed neural networks to solve inverse problems and provided this comparative analyses. In any of the 
+cases, either a quantitative or qualitative comparison was required. Therefore we excluded studies that compare 
+their results to other machine learning methods or that do not provide a comparison at all. Also, those research
+articles that compared accuracies but not computational times.   
 
 \subsection*{Search Strategy}
 
@@ -586,18 +588,18 @@ The search databases used were Scopus and Google Scholar. Google Scholar was par
 provided references from both indexed journals and preprint platforms like arXiv, making it useful for 
 identifying the most recent literature in this rapidly evolving field.
 
-The search was limited to research articles published in the subject of interest. Non-English documents were also 
-excluded. The resulting list was then sorted by relevance, with the analysis limited to the first 50 results 
-from both databases, which were then merged, and duplicate works removed. 
+The search was limited to research articles published in the subject of interest, with non-English 
+documents excluded. The resulting list was sorted by relevance, and the analysis was restricted to the 
+first 50 results from each database. These lists were then merged, and duplicate entries were removed. 
+A manual screening was conducted by reviewing titles and abstracts to ensure that the publications met 
+the inclusion criteria. Additionally, cited references were reviewed to identify any further relevant 
+articles that matched the search criteria.
 
-The final list was manually filtered by reading the titles and abstracts, and verifying that the publications
-satisfies the inclusion and exclusion criteria. Finally, cited references were also reviewed to identify 
-additional relevant articles. 
 
-\subsection*{Result of Bibliometric Analyses}
+\subsection*{Results}
 
 The number of articles that successfully passed the manual filtering process was \_. From these, we extracted 
-key information to address the research question. The articles were summarized based on several criteria, 
+information to address the research question. The articles were summarized based on several criteria, 
 including the modeled wave equation type, the specific machine learning method employed and the type 
 of data utilized to train or test the model. If a especific standard numerical method was applied 
 it was also noted. Table \ref{tab:systematic_review_surrogate} provides a detailed summary of the main 
@@ -607,18 +609,18 @@ findings from the reviewed articles, organized by publication date, with the mos
     \centering
     \renewcommand{\arraystretch}{1.5}
     \footnotesize
-    \begin{tabular}{|m{2.7cm}||m{2.7cm}|m{2.7cm}|m{2.7cm}|m{2.7cm}|}
+    \begin{tabular}{|m{2.7cm}||m{1.5cm}|m{2.2cm}|m{1.5cm}|m{1.5cm}|m{3.3cm}|}
     \hline
-    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Wave Equation}}  & \multicolumn{1}{c|}{\textbf{Approach}} & \multicolumn{1}{c|}{\textbf{Dataset}} \\
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Wave Equation}}  & \multicolumn{1}{c|}{\textbf{Approach}}& \multicolumn{1}{c|}{\textbf{Dataset}} & \multicolumn{1}{c|}{\textbf{Outcome}} \\
     \hline
     \hline
-    \RaggedRight \citeauthoryear{ren_seismicnet_2024} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight FEM \\
+    \RaggedRight \citeauthoryear{ren_seismicnet_2024} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight FEM & \RaggedRight \\
     \hline
-    \RaggedRight \citeauthoryear{song_high-frequency_2022}  & \RaggedRight CNN & \RaggedRight 2D-Helmholtz & \RaggedRight Both & \RaggedRight SEM \\
+    \RaggedRight \citeauthoryear{song_high-frequency_2022}  & \RaggedRight CNN & \RaggedRight 2D-Helmholtz & \RaggedRight Both & \RaggedRight SEM & \RaggedRight \\
     \hline
-    \RaggedRight \citeauthoryear{zhang_elastic_2024} & \RaggedRight RNN & \RaggedRight 2D-Elastic & \RaggedRight Both & \RaggedRight Marmousi model \\
+    \RaggedRight \citeauthoryear{zhang_elastic_2024} & \RaggedRight RNN & \RaggedRight 2D-Elastic & \RaggedRight Both & \RaggedRight Marmousi model & \RaggedRight \\
     \hline       
-    \RaggedRight \citeauthoryear{rasht-behesht_physics-informed_2022} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight SEM \\
+    \RaggedRight \citeauthoryear{rasht-behesht_physics-informed_2022} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight SEM & \RaggedRight \\
     \hline 
     \end{tabular}
     \caption{Summary of the reviewed publications and their main findings.}
