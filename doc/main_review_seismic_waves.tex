@@ -546,20 +546,20 @@ ways—where the former uses machine learning to analyze seismic data and make p
 methods that incorporate descriptions of physical phenomena through partial differential equations. This, given our
 research expertise. 
 
-In order to answer the research question, We included research articles that reported a comparison of 
-computational efficiency relative to standard numerical methods, similarly to the approach of 
+In order to answer the research question, we included articles that reported a comparison of 
+computational efficiency relative to standard numerical methods, in a similar way to the criteria stablished by 
 \citeauthoryear{mcgreivy_weak_2024}. We considered studies that compared the computational time 
 required to solve the models, but restricted our focus to those within our field of interest. We also included works that 
 applied physics-informed neural networks to solve inverse problems and provided this comparative analyses. In any of the 
-cases, either a quantitative or qualitative comparison was required. Therefore we excluded studies that compare 
+cases, either a quantitative or a suppported qualitative comparison was required. Therefore we excluded studies that compare 
 their results to other machine learning methods or that do not provide a comparison at all. Also, those research
 articles that compared accuracies but not computational times.   
 
 \subsection*{Search Strategy}
 
-Based on the inclusion and exclusion criteria a search strategy was employed to identify the most relevant publications that 
-address the research question outlined in the introduction. Figure \ref{fig:scheme_systematic_review} displays the flowchart 
-and the total number of studies meeting these criteria.
+A search strategy was developed based on the research question and the inclusion and exclusion criteria to 
+identify the most relevant publications. Figure \ref{fig:scheme_systematic_review} presents the flowchart and 
+the total number of studies that met these criteria.
 
 \begin{figure}[h]
     \includegraphics[width=1.0\textwidth]{figs/scheme_systematic_review.pdf}
@@ -570,15 +570,16 @@ to a maximum of 50 entries, with duplicates removed (iii). Finally (iv), a manua
 titles and abstracts to ensure the publications were pertinent to our chosen field.}\label{fig:scheme_systematic_review}
 \end{figure}
 
-Initially, our search focused on how machine learning has been used for modeling wave propagation. The initial 
-search was conducted using the following query as an initial filter: 
+Initially, our search focused on how machine learning has been applied to modeling seismic wave propagation. 
+The search was conducted using the following query as an initial filter:
 
 \vspace*{2mm}
 
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\texttt{( "machine learning" OR "deep learning" OR "neural networks" ) AND ( "seismic" OR "seismology" )
- AND ( "wave equation" ) AND ( modeling OR modelling OR model OR simulation )}
+\noindent\texttt{TITLE-ABS-KEY ( "machine learning" OR "deep learning" OR "neural networks" ) 
+AND TITLE-ABS-KEY ( "seismic" OR "seismology" ) AND TITLE-ABS-KEY ( "wave equation" ) AND 
+TITLE-ABS-KEY ( modeling OR modelling OR model OR simulation )}
 \end{quote}
 \end{tcolorbox}
 
@@ -591,19 +592,19 @@ identifying the most recent literature in this rapidly evolving field.
 The search was limited to research articles published in the subject of interest, with non-English 
 documents excluded. The resulting list was sorted by relevance, and the analysis was restricted to the 
 first 50 results from each database. These lists were then merged, and duplicate entries were removed. 
-A manual screening was conducted by reviewing titles and abstracts to ensure that the publications met 
-the inclusion criteria. Additionally, cited references were reviewed to identify any further relevant 
-articles that matched the search criteria.
-
+A manual screening was conducted by reviewing titles, abstracts and conclusions to ensure that the 
+publications met the inclusion criteria. Additionally, cited references were reviewed into the 
+manually filtered articles to identify any further relevant articles that matched the search criteria.
 
 \subsection*{Results}
 
-The number of articles that successfully passed the manual filtering process was \_. From these, we extracted 
-information to address the research question. The articles were summarized based on several criteria, 
-including the modeled wave equation type, the specific machine learning method employed and the type 
-of data utilized to train or test the model. If a especific standard numerical method was applied 
-it was also noted. Table \ref{tab:systematic_review_surrogate} provides a detailed summary of the main 
-findings from the reviewed articles, organized by publication date, with the most recent articles listed first.
+The number of articles that successfully passed the manual filtering process was \_. From these, 
+we extracted information to address the research question. The articles were summarized based 
+on several criteria, including the type of wave equation modeled, the specific machine learning 
+method employed, and the type of data used to train or test the model. If a specific standard 
+numerical method was applied, it was also noted. Table \ref{tab:systematic_review_surrogate} 
+provides a detailed summary of the main findings from the reviewed articles, organized by 
+publication date, with the most recent articles listed first.
 
 \begin{table}[h!]
     \centering
@@ -611,7 +612,7 @@ findings from the reviewed articles, organized by publication date, with the mos
     \footnotesize
     \begin{tabular}{|m{2.7cm}||m{1.5cm}|m{2.2cm}|m{1.5cm}|m{1.5cm}|m{3.3cm}|}
     \hline
-    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Wave Equation}}  & \multicolumn{1}{c|}{\textbf{Approach}}& \multicolumn{1}{c|}{\textbf{Dataset}} & \multicolumn{1}{c|}{\textbf{Outcome}} \\
+    \multicolumn{1}{|l||}{\textbf{Article}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{SNM}}  & \multicolumn{1}{c|}{\textbf{Wave Equation}}  & \multicolumn{1}{c|}{\textbf{Approach}} & \multicolumn{1}{c|}{\textbf{Outcome}} \\
     \hline
     \hline
     \RaggedRight \citeauthoryear{ren_seismicnet_2024} & \RaggedRight PINNs & \RaggedRight 2D-Acoustic & \RaggedRight Both & \RaggedRight FEM & \RaggedRight \\
