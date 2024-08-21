@@ -1886,3 +1886,162 @@ MLBM: "task-decomposed PINNs" (Zou et al., 2023, p. 3002905)
 },
 	file = {IEEE Xplore Abstract Record:C\:\\Users\\orincon\\Zotero\\storage\\8YCFMCK9\\10229173.html:text/html;IEEE Xplore Full Text PDF:C\:\\Users\\orincon\\Zotero\\storage\\TDBP57DE\\Zou et al. - 2023 - Numerical Solver-Independent Seismic Wave Simulati.pdf:application/pdf},
 }
+
+@article{karimpouli_physics_2020,
+	title = {Physics informed machine learning: {Seismic} wave equation},
+	volume = {11},
+	issn = {1674-9871},
+	shorttitle = {Physics informed machine learning},
+	url = {https://www.sciencedirect.com/science/article/pii/S1674987120301717},
+	doi = {10.1016/j.gsf.2020.07.007},
+	abstract = {Similar to many fields of sciences, recent deep learning advances have been applied extensively in geosciences for both small- and large-scale problems. However, the necessity of using large training data and the ‘black box’ nature of learning have limited them in practice and difficult to interpret. Furthermore, including the governing equations and physical facts in such methods is also another challenge, which entails either ignoring the physics or simplifying them using unrealistic data. To address such issues, physics informed machine learning methods have been developed which can integrate the governing physics law into the learning process. In this work, a 1-dimensional (1D) time-dependent seismic wave equation is considered and solved using two methods, namely Gaussian process (GP) and physics informed neural networks. We show that these meshless methods are trained by smaller amount of data and can predict the solution of the equation with even high accuracy. They are also capable of inverting any parameter involved in the governing equation such as wave velocity in our case. Results show that the GP can predict the solution of the seismic wave equation with a lower level of error, while our developed neural network is more accurate for velocity (P- and S-wave) and density inversion.},
+	number = {6},
+	urldate = {2024-08-17},
+	journal = {Geoscience Frontiers},
+	author = {Karimpouli, Sadegh and Tahmasebi, Pejman},
+	month = nov,
+	year = {2020},
+	note = {1 - Yes - Inverse},
+	keywords = {Gaussian process (GP), Optimization, Physics informed machine learning (PIML), Seismic wave},
+	pages = {1993--2001},
+	annote = {Inclusion criteria fulfilled: Yes
+},
+	annote = {Relevance order: 1
+
+},
+	annote = {Summary
+MLBM: PINNs and Gaussian Process
+Wave Equation: 1D Acoustic
+Application
+"velocity (P- and S-wave) and density inversion" (Karimpouli y Tahmasebi, 2020, p. 1993)
+
+},
+	file = {Karimpouli y Tahmasebi - 2020 - Physics informed machine learning Seismic wave eq.pdf:C\:\\Users\\orincon\\Zotero\\storage\\I9NPGTBE\\Karimpouli y Tahmasebi - 2020 - Physics informed machine learning Seismic wave eq.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\orincon\\Zotero\\storage\\PHRWFK2N\\S1674987120301717.html:text/html},
+}
+
+@article{moseley_deep_2020,
+	title = {Deep learning for fast simulation of seismic waves in complex media},
+	volume = {11},
+	issn = {1869-9510},
+	url = {https://se.copernicus.org/articles/11/1527/2020/},
+	doi = {10.5194/se-11-1527-2020},
+	abstract = {The simulation of seismic waves is a core task in many geophysical applications. Numerical methods such as finite difference (FD) modelling and spectral element methods (SEMs) are the most popular techniques for simulating seismic waves, but disadvantages such as their computational cost prohibit their use for many tasks. In this work, we investigate the potential of deep learning for aiding seismic simulation in the solid Earth sciences. We present two deep neural networks which are able to simulate the seismic response at multiple locations in horizontally layered and faulted 2-D acoustic media an order of magnitude faster than traditional finite difference modelling. The first network is able to simulate the seismic response in horizontally layered media and uses a WaveNet network architecture design. The second network is significantly more general than the first and is able to simulate the seismic response in faulted media with arbitrary layers, fault properties and an arbitrary location of the seismic source on the surface of the media, using a conditional autoencoder design. We test the sensitivity of the accuracy of both networks to different network hyperparameters and show that the WaveNet network can be retrained to carry out fast seismic inversion in the same media. We find that are there are challenges when extending our methods to more complex, elastic and 3-D Earth models; for example, the accuracy of both networks is reduced when they are tested on models outside of their training distribution. We discuss further research directions which could address these challenges and potentially yield useful tools for practical simulation tasks.},
+	language = {English},
+	number = {4},
+	urldate = {2024-08-17},
+	journal = {Solid Earth},
+	author = {Moseley, Ben and Nissen-Meyer, Tarje and Markham, Andrew},
+	month = aug,
+	year = {2020},
+	note = {Publisher: Copernicus GmbH},
+	pages = {1527--1549},
+	file = {Full Text PDF:C\:\\Users\\orincon\\Zotero\\storage\\SX7PSFTP\\Moseley et al. - 2020 - Deep learning for fast simulation of seismic waves.pdf:application/pdf},
+}
+
+@incollection{nichols_improving_2020,
+	address = {Cham},
+	title = {Improving {Seismic} {Wave} {Simulation} and {Inversion} {Using} {Deep} {Learning}},
+	volume = {1315},
+	isbn = {978-3-030-63392-9 978-3-030-63393-6},
+	url = {https://link.springer.com/10.1007/978-3-030-63393-6_1},
+	abstract = {Accurate simulation of wave motion for the modeling and inversion of seismic wave propagation is a classical high-performance computing (HPC) application using the ﬁnite diﬀerence, the ﬁnite element methods and spectral element methods to solve the wave equations numerically. The paper presents a new method to improve the performance of the seismic wave simulation and inversion by integrating the deep learning software platform and deep learning models with the HPC application. The paper has three contributions: 1) Instead of using traditional HPC software, the authors implement the numerical solutions for the wave equation employing recently developed tensor processing capabilities widely used in the deep learning software platform of PyTorch. By using PyTorch, the classical HPC application is reformulated as a deep learning recurrent neural network (RNN) framework; 2) The authors customize the automatic diﬀerentiation of PyTorch to integrate the adjoint state method for an eﬃcient gradient calculation; 3) The authors build a deep learning model to reduce the physical model dimensions to improve the accuracy and performance of seismic inversion. The authors use the automatic diﬀerentiation functionality and a variety of optimizers provided by PyTorch to enhance the performance of the classical HPC application. Additionally, methods developed in the paper can be extended into other physics-based scientiﬁc computing applications such as computational ﬂuid dynamics, medical imaging, nondestructive testing, as well as the propagation of electromagnetic waves in the earth.},
+	language = {en},
+	urldate = {2024-08-13},
+	booktitle = {Driving {Scientific} and {Engineering} {Discoveries} {Through} the {Convergence} of {HPC}, {Big} {Data} and {AI}},
+	publisher = {Springer International Publishing},
+	author = {Huang, Lei and Clee, Edward and Ranasinghe, Nishath},
+	editor = {Nichols, Jeffrey and Verastegui, Becky and Maccabe, Arthur ‘Barney’ and Hernandez, Oscar and Parete-Koon, Suzanne and Ahearn, Theresa},
+	year = {2020},
+	note = {3 - Yes - Inverse},
+	keywords = {not comparative},
+	pages = {3--19},
+	annote = {Inclusion criteria fulfilled: Yes
+},
+	annote = {Relevance order: 3
+},
+	annote = {Summary
+MLBM: RNN
+Application: 
+"Seismic Inversion" (Huang et al., 2020, p. 12)
+},
+	file = {Huang et al. - 2020 - Improving Seismic Wave Simulation and Inversion Us.pdf:C\:\\Users\\orincon\\Zotero\\storage\\3MFAYALW\\Huang et al. - 2020 - Improving Seismic Wave Simulation and Inversion Us.pdf:application/pdf},
+}
+
+@article{xiong_learning_2022,
+	title = {Learning stable seismic wave equations for porous media from real data},
+	volume = {230},
+	issn = {0956-540X},
+	url = {https://doi.org/10.1093/gji/ggac082},
+	doi = {10.1093/gji/ggac082},
+	abstract = {This work presents a machine-learning-based framework to determine unknown coefficients in seismic wave equations for porous media saturated with fluids by using real data as labels, which are velocities of P and S waves. The coefficients are functions of basic rock physics parameters. By using this framework, the trained neural networks incorporate certain mathematical and physical constraints on the coefficients. Working on a single-fluid model, we train the networks with synthetic as well as real data sets. The prediction results show that the learned model is inherently stable, has good physical properties and can accurately predict synthetic data as well as real logging data of shale reservoirs with relative mean square errors less than 5 per cent. They also demonstrate that the wave propagation phenomenon corresponding to the logging data can be well described with the single-fluid model.},
+	number = {1},
+	urldate = {2024-08-16},
+	journal = {Geophysical Journal International},
+	author = {Xiong, Fansheng and Yong, Wen-An},
+	month = jul,
+	year = {2022},
+	note = {13 - Yes - Inverse},
+	keywords = {Inverse Problem},
+	pages = {349--362},
+	annote = {Inclusion criteria fulfilled: Yes
+},
+	annote = {Relevance order: 14
+},
+	annote = {Summary
+MLBM
+Physically constrained neural network
+Application
+"predict synthetic data as well as real logging data of shale reservoirs" (Xiong y Yong, 2022, p. 359)
+},
+	file = {Full Text PDF:C\:\\Users\\orincon\\Zotero\\storage\\UUTGY8VR\\Xiong y Yong - 2022 - Learning stable seismic wave equations for porous .pdf:application/pdf;Snapshot:C\:\\Users\\orincon\\Zotero\\storage\\N39TKPA9\\6536916.html:text/html},
+}
+
+@article{geng_deep_2022,
+	title = {Deep learning for velocity model building with common-image gather volumes},
+	volume = {228},
+	issn = {0956-540X},
+	url = {https://doi.org/10.1093/gji/ggab385},
+	doi = {10.1093/gji/ggab385},
+	abstract = {Subsurface velocity model building is a crucial step for seismic imaging. It is a challenging problem for conventional methods such as full-waveform inversion (FWI) and wave equation migration velocity analysis (WEMVA), due to the highly nonlinear relationship between subsurface velocity values and seismic responses. In addition, traditional FWI and WEMVA methods are often computationally expensive. In this paper, we propose to apply a deep learning technique to construct subsurface velocity models automatically from common-image gather (CIG) volumes. In our method, pairs of synthetic velocity models and CIG volumes are generated to train a convolutional neural network. Our proposed network achieves promising results on different synthetic data sets. The training performance of several commonly used loss functions is also studied.},
+	number = {2},
+	urldate = {2024-08-14},
+	journal = {Geophysical Journal International},
+	author = {Geng, Zhicheng and Zhao, Zeyu and Shi, Yunzhi and Wu, Xinming and Fomel, Sergey and Sen, Mrinal},
+	month = feb,
+	year = {2022},
+	note = {4 - Yes},
+	keywords = {Not comparative},
+	pages = {1054--1070},
+	annote = {Inclusion criteria fulfilled: Yes
+},
+	annote = {Relevance order: 4
+},
+	annote = {Summary
+MLBM: CNN
+SNM: 
+Wave Equation: 
+
+},
+	file = {Full Text PDF:C\:\\Users\\orincon\\Zotero\\storage\\MYXWAX3H\\Geng et al. - 2022 - Deep learning for velocity model building with com.pdf:application/pdf;Snapshot:C\:\\Users\\orincon\\Zotero\\storage\\JPEM5F8F\\6373930.html:text/html},
+}
+
+@article{zou_seismic_2024,
+	title = {Seismic {Wavefields} {Modeling} {With} {Variable} {Horizontally} {Layered} {Velocity} {Models} via {Velocity}-{Encoded} {PINN}},
+	volume = {62},
+	issn = {1558-0644},
+	url = {https://ieeexplore.ieee.org/document/10551894},
+	doi = {10.1109/TGRS.2024.3411472},
+	abstract = {Seismic modeling is crucial for tackling waveform-based inverse problems in geophysics. Physics-informed neural networks (PINNs) have become a popular tool for simulating seismic waves. Their ability to incorporate partial differential equations (PDEs), initial conditions (ICs), and boundary conditions directly into the loss function allows for physically accurate modeling. The prevalent approach in the current literature treats the wave equation as a parametric PDE. However, the majority of the existing studies simulate wavefields for a specific velocity model, necessitating network retraining for different models, thereby diminishing modeling efficiency. In response, we present a velocity-encoded (VE) PINN (VE-PINN) that introduces feature parameters to represent various layered velocity models, integrating them into the network. Drawing inspiration from supervised learning, our approach employs a VE method to compute initial wavefields for variable layered models. Remarkably, our proposed VE-PINN demonstrates the ability to generalize across different ICs within the dataset. This eliminates the need to retrain the network for each new solution, offering significant efficiency gains. Numerical results show that the VE-PINN significantly enhances efficiency in solving the acoustic wave equation for various layered velocity models compared with finite-difference methods (FDMs). Subsequently, we extend the application of our method to time-domain simulation for variable source locations, demonstrating that the VE-PINN yields the results that are consistent with numerical wavefields.},
+	urldate = {2024-08-16},
+	journal = {IEEE Transactions on Geoscience and Remote Sensing},
+	author = {Zou, Jingbo and Liu, Cai and Zhao, Pengfei and Song, Chao},
+	year = {2024},
+	note = {15},
+	keywords = {Computational modeling, Mathematical models, Numerical models, Physics-informed neural network (PINN), Position measurement, Propagation, seismic modeling, Time-domain analysis, Training, variable velocity models, velocity-encoded (VE) strategy},
+	pages = {1--11},
+	annote = {Summary
+MLBM: "VE-PINN" (Zou et al., 2024, p. 4507611)
+
+},
+	file = {IEEE Xplore Abstract Record:C\:\\Users\\orincon\\Zotero\\storage\\YYC7LT9J\\10551894.html:text/html;IEEE Xplore Full Text PDF:C\:\\Users\\orincon\\Zotero\\storage\\SEXI9EZJ\\Zou et al. - 2024 - Seismic Wavefields Modeling With Variable Horizont.pdf:application/pdf},
+}

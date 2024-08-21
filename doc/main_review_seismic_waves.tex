@@ -113,10 +113,9 @@ Medellín, Colombia\\
         to model wave propagation, with a special emphasis on computational seismology. We discuss the fundamentals 
         of wave propagation modeling, standard numerical methods, and recent advances in solving differential 
         equations through these approaches. We conduct a systematic review of the literature to identify 
-        applications where these methods, either standalone or in hybrid approaches with standard numerical methods, 
-        have demonstrated efficiency in terms of computational time. The results of this review provide insights 
-        into the potential of machine learning techniques for wave propagation modeling and their impact on 
-        computational seismology.        
+        applications of these methods, either standalone or in hybrid approaches with standard numerical methods. 
+        The results of this review provide insights into the potential of machine learning techniques for wave 
+        propagation modeling and their impact on computational seismology.        
     \end{abstract}
 
     \keywords{wave equations, numerical methods, machine learning, partial differential equations, computational seismology.}   
@@ -538,7 +537,7 @@ wave propagation. We inicially describe the inclusion and exclusion criteria use
 Then, we present the search strategy employed to identify the most relevant publications. Finally, we summarize the
 main findings from the reviewed articles, focusing into answering the research question outlined in the introduction.
 
-\subsection*{Inclusion Criteria}
+\subsection*{Inclusion and Exclusion Criteria}
 
 Given the wide range of machine learning applications, we focused our systematic review specifically on their potential 
 within computational seismology. Although seismological research can be approached in both data-driven and physics-informed 
@@ -546,9 +545,7 @@ ways—where the former uses machine learning to analyze seismic data and make p
 methods that incorporate descriptions of physical phenomena through partial differential equations. This, given the
 research expertise of the authors.  
 
-\subsection*{Exclusion Criteria}
-
-In order to answer the research question, we considered articles that reported a quantitative or a suppported qualitative 
+In order to answer the research question, we considered articles that reported a quantitative or a supported qualitative 
 comparison of the implemented model computational efficiency relative to a standard numerical methods, in a similar way 
 to the criteria stablished by \citeauthoryear{mcgreivy_weak_2024}. Therefore we excluded studies that compare 
 their results to other machine learning methods or that do not provide a comparison at all. Also, those research
@@ -613,19 +610,19 @@ used to compare and the outcome from the comparison (Table \ref{tab:systematic_r
     \centering
     \renewcommand{\arraystretch}{1.5}
     \footnotesize
-    \begin{tabular}{|m{3.8cm}||m{1.7cm}|m{1.4cm}|m{1.3cm}|m{6.0cm}|}
+    \begin{tabular}{|m{3.2cm}||m{1.6cm}|m{1.6cm}|m{0.8cm}|m{6.0cm}|}
     \hline
-    \multicolumn{1}{|l||}{\textbf{Publication}} & \multicolumn{1}{c|}{{\textbf{Equation}}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{SNM}} & \multicolumn{1}{c|}{\textbf{Outcome}} \\
+    \multicolumn{1}{|l||}{\textbf{Publication}} & \multicolumn{1}{c|}{{\textbf{Equation(s)}}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{SNM}} & \multicolumn{1}{c|}{\textbf{Outcome}} \\
     \hline
     \hline
-    \RaggedRight \citeauthoryear{roncoroni_synthetic_2021} & \RaggedRight  1D Acoustic  & \RaggedRight RNN  & \RaggedRight FD & \RaggedRight 27 times faster \\
+    \RaggedRight \citeauthoryear{ji_efficient_2024} & \RaggedRight  3-D Acoustic and Elastic & \RaggedRight RCNN  & \RaggedRight FD & \RaggedRight can be significantly reduced to 1/110 \\
     \hline
-    \RaggedRight \citeauthoryear{ji_efficient_2024} & \RaggedRight  1D Acoustic  & \RaggedRight RNN & \RaggedRight FD & \RaggedRight can be significantly reduced to 1/110\\
-    \hline
-    \RaggedRight   & \RaggedRight   & \RaggedRight  & \RaggedRight    & \RaggedRight \\
-    \hline       
-    \RaggedRight   & \RaggedRight  & \RaggedRight   & \RaggedRight   & \RaggedRight \\
+    \RaggedRight  \citeauthoryear{zou_seismic_2024} & \RaggedRight 2-D Acoustic & \RaggedRight VE-PINN   & \RaggedRight FD  & \RaggedRight significantly enhances efficiency in solving the acoustic wave equation \\
     \hline 
+    \RaggedRight  \citeauthoryear{roncoroni_synthetic_2021} & \RaggedRight  1-D Acoustic  & \RaggedRight RNN  & \RaggedRight FD & \RaggedRight prediction time is much lower than classical methods \\
+    \hline
+    \RaggedRight  \citeauthoryear{moseley_deep_2020} & \RaggedRight 2-D Acoustic  & \RaggedRight WaveNet and Conditional Autoencoder & \RaggedRight FD   & \RaggedRight Both networks are 20–500 times faster than FD modelling\\
+    \hline       
     \end{tabular}
     \caption{Summary of the reviewed publications that enhance efficiency of prediction relative to a traditional method.}
     \label{tab:systematic_review_surrogate}
@@ -639,18 +636,18 @@ and the proposed application (Table \ref{tab:systematic_review_inverse}).
     \centering
     \renewcommand{\arraystretch}{1.5}
     \footnotesize
-    \begin{tabular}{|m{3.8cm}||m{1.7cm}|m{1.4cm}|m{6.0cm}|}
+    \begin{tabular}{|m{5.0cm}||m{1.7cm}|m{1.6cm}|m{6.0cm}|}
     \hline
     \multicolumn{1}{|l||}{\textbf{Publication}} & \multicolumn{1}{c|}{{\textbf{Equation}}} & \multicolumn{1}{c|}{\textbf{MLBM}} & \multicolumn{1}{c|}{\textbf{Application}} \\
     \hline
     \hline
-    \RaggedRight \citeauthoryear{roncoroni_synthetic_2021} & \RaggedRight  1D Acoustic  & \RaggedRight RNN  &  \RaggedRight 27 times faster \\
+    \RaggedRight \citeauthoryear{xiong_learning_2022} & \RaggedRight 1-D Poroelastic  & \RaggedRight DNN  &  \RaggedRight predict synthetic data as well as real logging data of shale reservoirs \\
     \hline
-    \RaggedRight \citeauthoryear{ji_efficient_2024} & \RaggedRight  1D Acoustic  & \RaggedRight RNN & \RaggedRight can be significantly reduced to 1/110\\
+    \RaggedRight \citeauthoryear{moseley_deep_2020} & \RaggedRight  2-D Acoustic  & \RaggedRight WaveNet & \RaggedRight seismic inversion in the horizontally layered media\\
     \hline
-    \RaggedRight   & \RaggedRight   & \RaggedRight  & \RaggedRight \\
+    \RaggedRight  \citeauthoryear{nichols_improving_2020} & \RaggedRight 1-D Acoustic & \RaggedRight RNN & \RaggedRight FWI \\
     \hline       
-    \RaggedRight   & \RaggedRight  & \RaggedRight   & \RaggedRight \\
+    \RaggedRight  \citeauthoryear{karimpouli_physics_2020} & \RaggedRight 1-D Acoustic & \RaggedRight GP and PINNs & \RaggedRight velocity (P- and S-wave) and density inversion\\
     \hline 
     \end{tabular}
     \caption{Summary of the reviewed publications that solved an inverse problem.}
