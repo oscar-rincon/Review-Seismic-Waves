@@ -104,11 +104,9 @@ Medellín, Colombia\\
         % No indentation for the first paragraph
         \noindent
         % Abstract content      
-        Numerical modeling has been crucial for addressing problems across various scientific and engineering 
-        disciplines involving partial differential equations. In particular, wave propagation modeling has seen
-         significant development in scientific computation. Standard numerical modeling methods have demonstrated 
-         notable accuracy; however, their computational cost can be substantial. Recently, alternative methods based 
-         on machine learning have emerged, offering a promising balance between computational cost and accuracy 
+        Wave propagation modeling through standard numerical modeling methods have demonstrated notable accuracy; 
+        however, their computational cost can be substantial. Recently, alternative methods based 
+        on machine learning have emerged, offering a promising balance between computational cost and accuracy 
         when applied to wave propagation problems. In this work, we present a review of methods developed and used 
         to model wave propagation, with a special emphasis on computational seismology. We discuss the fundamentals 
         of wave propagation modeling, standard numerical methods, and recent advances in solving differential 
@@ -117,7 +115,6 @@ Medellín, Colombia\\
         The results of this review provide insights into the potential of machine learning techniques for wave 
         propagation modeling and their impact on computational seismology.        
     \end{abstract}
-
     \keywords{wave equations, numerical methods, machine learning, partial differential equations, computational seismology.}   
 
 \end{tcolorbox} 
@@ -130,10 +127,10 @@ Medellín, Colombia\\
 %------------------------------------------------------------------------------------------------------------------------
 
 \lettrine{\textcolor{gray}{W}}{ }ave propagation is a physical phenomenon governed by partial differential equations, 
-which hold significant importance across various applied sciences and engineering fields. However, analytical 
-solutions are not always available in many practical situations and numerical methods are usually required to 
-approximate the exact solutions. Consequently, these methods have been applied to solve the partial differential 
-equations \citep{Seriani2020}.
+which hold significant importance across various applied sciences and engineering fields given its relevance in fields 
+such as seismology and medical imaging. However, analytical solutions are not always available in many practical 
+situations and numerical methods are usually required to approximate the exact solutions. Consequently, these methods 
+have been applied to solve the partial differential equations \citep{Seriani2020}.
 
 In the field of wave propagation, numerous techniques address wave propagation challenges. Classical methods include 
 finite-difference, finite-element and spectral-element methods \citep{Moczo, virieux_review_2011, Igel2017,
@@ -146,13 +143,13 @@ conditions. Therefore, the computational demand associated with many common mode
 has increased the development of innovative strategies.
 
 Research conducted with the use of machine learning has considerably grown in the late 2010s, owing to advancements 
-in hardware, such as graphic processing units and data storage technologies and the growth of available data. 
+in hardware, such as graphic processing units and data storage technologies and the growth of data availability. 
 Additionally, the discovery of better training practices for neural networks, and the availability of open-source 
 packages like Tensorflow, PyTorch and JAX \citep{abadi_tensorflow_2016,paszke_pytorch_2019,jax2018github}, as well 
 as the availability of Automatic Differentiation in such packages \citep{paszke_automatic_2017,baydin_automatic_2017}. 
 Particularly, neural networks learning algorithms offer attractive approximation capabilities for any function by 
 mapping the input features to the output targets in a data-driven manner. A version of the Universal Approximation 
-Theorem conclusively demonstrates that neural networks have the capability to accurately approximate a wide 
+Theorem demonstrates that neural networks have the capability to accurately approximate a wide 
 variety of nonlinear functions without any dimensionality constraints \citep{barron_universal_1993}. Therefore 
 computational scientists have explored the potential of machine learning as a numerical tool to model systems governed 
 by partial differential equations \citep{cuomo_scientific_2022,karniadakis_physics-informed_2021}. Figures 
@@ -206,7 +203,7 @@ of computational time. We aimed to answer the following research question:
 
 \begin{tcolorbox}[colback=gray!20, colframe=gray!20, sharp corners]
 \begin{quote}
-\noindent\textbf{What machine learning techniques have been applied to model the wave equation in computational seismology?}
+\noindent\textbf{What machine learning techniques have been applied to model the wave equation in geophysics?}
 \end{quote}
 \end{tcolorbox}
 
@@ -289,7 +286,7 @@ wave equation in a homogeneous medium can be expressed as \citep{Carcione2002}:
 \label{acoustic}
 \end{equation*}
 
-where $\nabla^2 = \sum_{i=1}^{d} = \frac{\partial}{\partial^{2} x_{i}}$, \( u(x, t) \) describes the pressure of 
+\noindent where $\nabla^2 = \sum_{i=1}^{d} = \frac{\partial}{\partial^{2} x_{i}}$, \( u(x, t) \) describes the pressure of 
 the generated waves, and \( f(x, t) \) is a source term that describes the strength and duration of the source.
 
 Another common expression used to describe the propagation of seismic waves, for the case of a heterogeneous 
@@ -302,7 +299,7 @@ be expressed as:
 \label{elastic}
 \end{equation*}
 
-where $\rho$ is the material density, $u$ is the displacement vector, and $\lambda$, $\mu$ are the Lamé parameters 
+\noindent where $\rho$ is the material density, $u$ is the displacement vector, and $\lambda$, $\mu$ are the Lamé parameters 
 characterizing the material. These equations are fundamental for modeling the propagation of seismic waves in 
 elastic media. The acoustic wave equation is a simplification that assumes the waves are longitudinal and the 
 medium is homogeneous and isotropic. In contrast, the elastic wave equation accounts for the heterogeneous 
@@ -320,7 +317,7 @@ viscoelastic behavior and can be expressed as:
 \label{viscoelastic}
 \end{equation*}
     
-where $\eta$ is the viscosity coefficient. Anisotropic Wave Equation describe propagation in anisotropic media, 
+\noindent where $\eta$ is the viscosity coefficient. Anisotropic Wave Equation describe propagation in anisotropic media, 
 the elastic properties vary with direction. The wave equation is modified to include additional terms representing 
 this anisotropy. It can be described as:
 
@@ -329,7 +326,7 @@ this anisotropy. It can be described as:
 \label{anisotropic}
 \end{equation*}
     
-where $\sigma$ is the anisotropic stress tensor and $f$ is a source term. Nonlinear Wave Equation are considered 
+\noindent where $\sigma$ is the anisotropic stress tensor and $f$ is a source term. Nonlinear Wave Equation are considered 
 in situations where wave amplitudes are very large, linear approximations are insufficient, and nonlinear terms 
 must be considered in the wave equation.
 
@@ -338,7 +335,7 @@ must be considered in the wave equation.
 \label{nonlinear}
 \end{equation*}
     
-where $\beta$ is a nonlinearity coefficient. These variants allow for more precise and realistic modeling 
+\noindent where $\beta$ is a nonlinearity coefficient. These variants allow for more precise and realistic modeling 
 of seismic wave propagation in different types of media and under various conditions. The choice of the 
 appropriate wave equation depends on the characteristics of the medium and the seismic phenomenon being studied. 
 Tradicionally, the wave equation and its applications to computational seismology have been solved using 
