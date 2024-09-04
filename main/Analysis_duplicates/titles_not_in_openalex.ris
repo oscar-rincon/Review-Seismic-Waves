@@ -1,0 +1,274 @@
+TY  - JOUR
+TI  - Physics informed machine learning: Seismic wave equation
+DO  - 10.1016/j.gsf.2020.07.007
+VL  - 11
+IS  - 6.0
+SP  - 1993-2001
+ER  - 
+
+TY  - JOUR
+TI  - Synthetic seismic data generation with deep learning
+DO  - 10.1016/j.jappgeo.2021.104347
+VL  - 190
+ER  - 
+
+TY  - JOUR
+TI  - Adaptive-Sampling Physics-Informed Neural Network for Viscoacoustic Wavefield Simulation
+DO  - 10.1109/LGRS.2024.3418814
+VL  - 21
+ER  - 
+
+TY  - JOUR
+TI  - Deep-neural-networks-based approaches for Biot–squirt model in rock physics
+DO  - 10.1007/s11600-022-00740-8
+VL  - 70
+IS  - 2.0
+SP  - 593-607
+ER  - 
+
+TY  - JOUR
+TI  - Seismic Wavefields Modeling With Variable Horizontally Layered Velocity Models via Velocity-Encoded PINN
+DO  - 10.1109/TGRS.2024.3411472
+VL  - 62
+ER  - 
+
+TY  - JOUR
+TI  - An Efficient Platform for Numerical Modeling of Partial Differential Equations
+DO  - 10.1109/TGRS.2024.3409620
+VL  - 62
+SP  - 1–13
+ER  - 
+
+TY  - JOUR
+TI  - PINNeik: Eikonal solution using physics-informed neural networks
+DO  - 10.1016/j.cageo.2021.104833
+VL  - 155
+ER  - 
+
+TY  - JOUR
+TI  - PINNup: Robust Neural Network Wavefield Solutions Using Frequency Upscaling and Neuron Splitting
+DO  - 10.1029/2021JB023703
+VL  - 127
+IS  - 6.0
+ER  - 
+
+TY  - JOUR
+TI  - Enhancing one-way wave equation-based migration with deep learning
+DO  - 10.1190/geo2022-0159.1
+VL  - 88
+IS  - 1.0
+SP  - WA105-WA114
+ER  - 
+
+TY  - JOUR
+TI  - Data-Driven Design of Wave-Propagation Models for Shale-Oil Reservoirs Based on Machine Learning
+DO  - 10.1029/2021JB022665
+VL  - 126
+IS  - 12.0
+ER  - 
+
+TY  - JOUR
+TI  - Solving the frequency-domain acoustic VTI wave equation using physics-informed neural networks
+DO  - 10.1093/gji/ggab010
+VL  - 225
+IS  - 2.0
+SP  - 846-859
+ER  - 
+
+TY  - JOUR
+TI  - Parametric elastic full waveform inversion with convolutional neural network
+DO  - 10.1007/s11600-023-01123-3
+VL  - 72
+IS  - 2.0
+SP  - 673-687
+ER  - 
+
+TY  - JOUR
+TI  - Elastic-AdjointNet: A physics guided deep autoencoder to overcome cross talk effects in multiparameter full waveform inversion
+DO  - 10.1190/image2022-3745050.1
+VL  - 2022-August
+SP  - 882-886
+ER  - 
+
+TY  - JOUR
+TI  - Hard enforcement of physics-informed neural network solutions of acoustic wave propagation
+DO  - 10.1007/s10596-023-10232-3
+VL  - 27
+IS  - 5.0
+SP  - 737-751
+ER  - 
+
+TY  - JOUR
+TI  - Subsurface velocity profiling by application of physics informed neural networks
+ER  - 
+
+TY  - JOUR
+TI  - 3-D S Wave Imaging via Robust Neural Network Interpolation of 2-D Profiles From Wave-Equation Dispersion Inversion of Seismic Ambient Noise
+DO  - 10.1029/2022JB024663
+VL  - 127
+IS  - 12.0
+ER  - 
+
+TY  - JOUR
+TI  - Low-frequency marine seismic data reconstruction based on the far-field signature using a modified U-Net
+DO  - 10.1080/08123985.2024.2317129
+VL  - 55
+IS  - 3.0
+SP  - 263-276
+ER  - 
+
+TY  - JOUR
+TI  - PINNslope: Seismic data interpolation and local slope estimation with physics informed neural networks
+DO  - 10.1190/geo2023-0323.1
+VL  - 89
+IS  - 4.0
+SP  - V331-V345
+ER  - 
+
+TY  - JOUR
+TI  - Fast and accurate seismic tomography via deep learning
+DO  - 10.1007/978-3-030-31760-7_5
+VL  - 865
+SP  - 129-156
+ER  - 
+
+TY  - JOUR
+TI  - On the numerical resolution of the second-order viscoacoustic and viscoelastic anisotropic wave equations using the recursive convolution method
+DO  - 10.1016/j.cageo.2024.105538
+VL  - 184
+ER  - 
+
+TY  - JOUR
+TI  - A Deep-Learning-Based Generalized Convolutional Model for Seismic Data and Its Application in Seismic Deconvolution
+DO  - 10.1109/TGRS.2021.3076991
+VL  - 60
+ER  - 
+
+TY  - JOUR
+TI  - Physics-Guided Unsupervised Deep-Learning Seismic Inversion With Uncertainty Quantification
+VL  - 32
+IS  - 3.0
+SP  - 257-270
+ER  - 
+
+TY  - JOUR
+TI  - A deep learning-based inverse Hessian for Full Waveform Inversion
+DO  - 10.1190/image2023-3908592.1
+VL  - 2023-August
+SP  - 635-639
+ER  - 
+
+TY  - JOUR
+TI  - Shear-wave velocity prediction of tight reservoirs based on poroelasticity theory: A comparative study of deep neural network and rock physics model
+DO  - 10.1016/j.geoen.2024.213028
+VL  - 240
+ER  - 
+
+TY  - JOUR
+TI  - Autoencoded Elastic Wave-Equation Traveltime Inversion: Toward Reliable Near-Surface Tomogram
+DO  - 10.1109/TGRS.2023.3243140
+VL  - 61
+SP  - 1-13
+ER  - 
+
+TY  - JOUR
+TI  - Robust Full Waveform Inversion: A Source Wavelet Manipulation Perspective
+DO  - 10.1137/22M1540612
+VL  - 45
+IS  - 6.0
+SP  - B753-B775
+ER  - 
+
+TY  - JOUR
+TI  - Is it time to swish? Comparing activation functions in solving the Helmholtz equation using physics-informed neural networks
+VL  - 7
+SP  - 5438-5442
+ER  - 
+
+TY  - JOUR
+TI  - pyseis: a high-performance, user-friendly Python package for GPU-accelerated seismic modeling and subsurface imaging
+DO  - 10.1190/image2023-3916155.1
+VL  - 2023-August
+SP  - 1683-1687
+ER  - 
+
+TY  - JOUR
+TI  - Skeletonized Wave-Equation Refraction Inversion with Autoencoded Waveforms
+DO  - 10.1109/TGRS.2020.3046093
+VL  - 59
+IS  - 10.0
+SP  - 8210-8227
+ER  - 
+
+TY  - JOUR
+TI  - FWIGAN: Full-Waveform Inversion via a Physics-Informed Generative Adversarial Network
+DO  - 10.1029/2022JB025493
+VL  - 128
+IS  - 4.0
+ER  - 
+
+TY  - JOUR
+TI  - Seismic inversion by multi-dimensional newtonian machine learning
+DO  - 10.1190/segam2020-3425975.1
+VL  - 2020-October
+SP  - 1691-1694
+ER  - 
+
+TY  - JOUR
+TI  - Efficient seismic numerical modelling technique using the YOLOv2-based expanding domain method
+VL  - 31
+IS  - 5.0
+SP  - 425-449
+ER  - 
+
+TY  - JOUR
+TI  - An empirical analysis of the influence of seismic data modeling for estimating velocity models with fully convolutional networks
+VL  - 1
+SP  - 93-98
+ER  - 
+
+TY  - JOUR
+TI  - A Multi-Task Learning Framework of Stable Q-Compensated Reverse Time Migration Based on Fractional Viscoacoustic Wave Equation
+DO  - 10.3390/fractalfract7120874
+VL  - 7
+IS  - 12.0
+ER  - 
+
+TY  - JOUR
+TI  - Deep Learning-Based Data-Driven P-/S-Wave Vector Decomposition for Multicomponent Seismic Data
+DO  - 10.1109/TGRS.2024.3400875
+VL  - 62
+SP  - 1-19
+ER  - 
+
+TY  - JOUR
+TI  - Tensor-optimized hardware accelerates fused discontinuous Galerkin simulations
+DO  - 10.1016/j.parco.2019.102550
+VL  - 89
+ER  - 
+
+TY  - JOUR
+TI  - Learning-Based Seismic Velocity Inversion with Synthetic and Field Data
+DO  - 10.3390/s23198277
+VL  - 23
+IS  - 19.0
+ER  - 
+
+TY  - JOUR
+TI  - An Eigenfunction Representation of Deep Waveguides with Application to Unconventional Reservoirs
+DO  - 10.1190/geo2021-0201.1
+VL  - 86
+IS  - 6.0
+ER  - 
+
+TY  - JOUR
+TI  - Multi-mode wave-equation based Scholte wave inversion
+DO  - 10.1190/segam2021-3594533.1
+VL  - 2021-September
+SP  - 632-636
+ER  - 
+
+TY  - JOUR
+TI  - Deep learning for attenuating random and coherence noise simultaneously
+ER  - 
+
