@@ -48,6 +48,17 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     }
 mpl.rcParams.update(pgf_with_latex)
 
+# === Forzar uniformidad en etiquetas de ticks ===
+mpl.rcParams['xtick.color'] = 'black'
+mpl.rcParams['ytick.color'] = 'black'
+mpl.rcParams['axes.edgecolor'] = 'black'
+
+# Force tick labels to use same font object as the rest of the plot
+mpl.rcParams['xtick.major.size'] = 3
+mpl.rcParams['ytick.major.size'] = 3
+mpl.rcParams['xtick.direction'] = 'out'
+mpl.rcParams['ytick.direction'] = 'out'
+
 # I make my own newfig and savefig functions
 def newfig(width,height, nplots = 1):
     fig = plt.figure(figsize=figsize(width, height, nplots))

@@ -1,0 +1,23 @@
+﻿Scopus-10-Analyze-Year
+
+"Your query : (TITLE-ABS-KEY(( ""finite differences"" OR ""finite difference method"" OR ""finite elements"" OR ""finite element method"" OR ""finite volumes"" OR ""spectral methods"" OR ""pseudo-spectral"" ) AND (modeling OR modelling OR model OR simulation) ) AND PUBYEAR > 2009 AND PUBYEAR < 2025)"
+
+
+Number of results : 10
+
+"YEAR",
+"2024","47322"
+"2023","44091"
+"2022","42563"
+"2021","39954"
+"2020","37040"
+"2019","37059"
+"2018","34098"
+"2017","32044"
+"2016","29528"
+"2015","28117"
+"2014","29938"
+"2013","28205"
+"2012","26941"
+"2011","25173"
+"2010","22440"
