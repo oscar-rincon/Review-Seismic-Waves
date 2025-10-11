@@ -1,30 +1,59 @@
 # A Review of Recent Progress in Seismic Waves Propagation Modeling Using Machine Learning Based Methods
 
-Numerical modeling has been crucial for addressing problems across various scientific and engineering 
-disciplines involving partial differential equations. In particular, wave propagation modeling has seen
-significant development in scientific computation. Standard numerical modeling methods have demonstrated 
-notable accuracy; however, their computational cost can be substantial. Recently, alternative methods based 
-on machine learning have emerged, offering a promising balance between computational cost and accuracy 
-when applied to wave propagation problems. In this work, we present a review of methods developed and used 
-to model wave propagation, with a special emphasis on computational seismology. We discuss the fundamentals 
-of wave propagation modeling, standard numerical methods, and recent advances in solving differential 
-equations through these approaches. We conduct a systematic review of the literature to identify 
-applications where these methods, either standalone or in hybrid approaches with standard numerical methods, 
-have demonstrated efficiency in terms of computational time. The results of this review provide insights 
-into the potential of machine learning techniques for wave propagation modeling and their impact on 
-computational seismology. 
+ 
 
 ## Installation
 
 We recommend setting up a new Python environment with conda. You can do this by running the following commands:
 
 ```
-conda env create -f environment.yml
-conda activate review-seismic-waves-env
+conda env create -f ml-seismic-waves-env.yml
+conda activate ml-seismic-waves-env
 ```
 
-To verify the packages installed in your `review-seismic-waves-env` conda environment, you can use the following command:
+### Install PyTorch with CUDA support
+
+After activating the environment, install PyTorch, TorchVision, and TorchAudio with CUDA 12.8 support (adjust if your nvidia-smi shows a different CUDA version):
 
  ```
-conda list -n review-seismic-waves-env
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+ ```
+
+Make sure your system’s NVIDIA driver and CUDA toolkit are properly installed.
+You can check your CUDA version with:
+
+ ```
+nvidia-smi
+ ```
+
+Example output: 
+
+ ```
+CUDA Version: 12.8
+ ```
+
+To confirm that PyTorch detects your GPU and CUDA correctly, run:
+
+ ```
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+ ```
+
+Example output:
+
+ ```
+2.8.0+cu128 12.8 True NVIDIA RTX 2000 Ada Generation Laptop GPU
+ ```
+
+ 2.8.0+cu128   →  PyTorch version 2.8.0 compiled with CUDA 12.8
+
+12.8          →  CUDA runtime version recognized by PyTorch
+
+True          →  GPU is available and correctly detected
+
+NVIDIA RTX 2000 Ada Generation Laptop GPU  →  Your GPU model
+
+To verify the packages installed in your `ml-seismic-waves-env-env` conda environment, you can use the following command:
+
+ ```
+conda list -n ml-seismic-waves-env
  ```
