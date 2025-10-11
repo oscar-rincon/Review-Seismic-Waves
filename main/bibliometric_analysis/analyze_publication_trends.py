@@ -1,6 +1,10 @@
-# -*- coding: utf-8 -*-
+
 """
-Created on Mon Oct 14 10:00:00 2024
+Created on Mon Oct 11 2025
+
+author: Oscar Rincón-Cardeño
+email: os.rinconc@gmail.com
+github: https://github.com/orincon
 
 This script analyzes publication data from Scopus related to numerical methods,
 machine learning, and wave propagation between 2010 and 2024. It also integrates
@@ -8,7 +12,7 @@ Google Trends data to compare the popularity of Python frameworks (TensorFlow,
 PyTorch, JAX). The results are visualized in a grid of plots and exported
 as PDF and SVG figures.
 """
- 
+
 #%% 
 import os
 import sys
@@ -16,10 +20,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.gridspec import GridSpec
-# Configuración del directorio actual y del directorio de utilidades
-current_dir = os.getcwd()
+ 
+# Set up paths for utility imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
 utilities_dir = os.path.join(current_dir, '../../utils')
+
+# Change working directory
+os.chdir(current_dir)
 sys.path.insert(0, utilities_dir)
+
 from plotting import *  # Importar utilidades de trazado personalizadas
  
 #%% ========================================================
