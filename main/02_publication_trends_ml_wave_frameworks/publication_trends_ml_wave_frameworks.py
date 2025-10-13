@@ -93,7 +93,7 @@ df.dropna(subset=['Month'], inplace=True)
 # === 5. Plot ==============================================
 # ==========================================================
 color_standard = '#000000'
-color_ml = '#3f4d90'
+color_ml = '#2255a080'
 color_either = "#8e8e8e"
 color_wave = '#8e8e8e'
 colors_frameworks = [color_standard, color_ml, color_either]
@@ -159,11 +159,24 @@ ax2.grid(False)
 # === Bottom-left: Average frameworks bar plot ===
 ax3 = fig.add_subplot(gs[1, 0])
 means = df[['TensorFlow', 'PyTorch', 'JAX']].mean()
-ax3.bar(means.index, means.values, color=colors_frameworks)
-ax3.set_ylabel("Average interest", fontsize=9)
-ax3.set_ylim(0, 100)
-ax3.set_yticks(np.arange(0, 101, 20))
-ax3.set_yticklabels(np.arange(0, 101, 20))
+
+# Bar plot (normalized)
+bars = ax3.bar(means.index, means.values, color=colors_frameworks)
+
+# Add values on top of bars
+for bar, value in zip(bars, means.values):
+    height = bar.get_height()
+    ax3.text(
+        bar.get_x() + bar.get_width() / 2,  # x position: center of the bar
+        height + 0.02,                     # y position: a bit above the bar
+        f"{value:.1f}%",                    # label text
+        ha='center', va='bottom', fontsize=8
+    )
+
+# Axis labels and styling
+ax3.set_ylabel("Average interest (%)", fontsize=9)
+ax3.set_ylim(-0.00, 1.01*100)
+ax3.set_yticks(np.arange(0, 1.1*100, 20))
 ax3.spines['top'].set_visible(False)
 ax3.spines['right'].set_visible(False)
 ax3.spines['bottom'].set_color('black')
@@ -181,11 +194,10 @@ years_line = np.arange(df['Month'].dt.year.min(), 2026, 2)
 tick_positions = [pd.Timestamp(f"{y}-01-01") for y in years_line]
 ax4.set_xticks(tick_positions)
 ax4.set_xticklabels(years_line)
-ax4.set_yticks(np.arange(0, 101, 20))
-ax4.set_yticklabels(np.arange(0, 101, 20))
+ax4.set_yticks(np.arange(0, 1.1*100, 20))
 ax4.set_xlim(df['Month'].min(), pd.Timestamp("2025-03-01"))
-ax4.set_ylim(-5, 100)
-ax4.set_ylabel("Interest over time", fontsize=9)
+ax4.set_ylim(-0.05*100, 1*100)
+ax4.set_ylabel("Interest over time (%)", fontsize=9)
 ax4.spines['top'].set_visible(False)
 ax4.spines['right'].set_visible(False)
 ax4.spines['bottom'].set_color('black')
@@ -194,7 +206,7 @@ ax4.tick_params(axis='both', labelsize=8, direction='out', length=3, width=0.8, 
 ax4.legend(frameon=False, fontsize=8)
 ax4.grid(False)
 
-plt.savefig("figs/publications_frameworks.pdf", bbox_inches="tight", dpi=300)
-plt.savefig("figs/publications_frameworks.svg", bbox_inches="tight", dpi=300)
+plt.savefig("figs/publication_trends_ml_wave_frameworks.pdf", bbox_inches="tight", dpi=300)
+plt.savefig("figs/publication_trends_ml_wave_frameworks.svg", bbox_inches="tight", dpi=300)
 plt.show()
  
