@@ -41,7 +41,7 @@ utilities_dir = os.path.join(current_dir, '../../utils')
 os.chdir(current_dir)
 sys.path.insert(0, utilities_dir)
 
-from plotting import *  # Importar utilidades de trazado personalizadas
+from plotting import *   
 
 #%% 
 
