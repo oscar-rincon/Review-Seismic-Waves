@@ -1,7 +1,5 @@
 # A Review of Recent Progress in Seismic Waves Propagation Modeling Using Machine Learning Based Methods
 
- 
-
 ## Installation
 
 We recommend setting up a new Python environment with conda. You can do this by running the following commands:
