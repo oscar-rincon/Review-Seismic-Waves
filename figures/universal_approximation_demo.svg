@@ -8,14 +8,14 @@
    version="1.1"
    id="svg1"
    xml:space="preserve"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="example_universal_approx_theorem.svg"
+   inkscape:version="1.4.2 (1:1.4.2+202505120737+ebf0e940d0)"
+   sodipodi:docname="universal_approximation_demo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:ns1="http://www.iki.fi/pav/software/textext/"><sodipodi:namedview
+   xmlns:ns11="http://www.iki.fi/pav/software/textext/"><sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
      bordercolor="#000000"
@@ -25,13 +25,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.3643317"
-     inkscape:cx="101.5149"
-     inkscape:cy="144.02656"
+     inkscape:zoom="2.8958119"
+     inkscape:cx="77.180427"
+     inkscape:cy="135.71323"
      inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="296"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" /><defs
      id="defs1"><marker
@@ -4266,7 +4266,93 @@
          y="10.239375"
          width="6.4528751"
          height="129.0575"
-         id="rect46-2" /></clipPath></defs><g
+         id="rect46-2" /></clipPath><g
+       id="id-8a442b1d-0296-46fc-a8b6-786d9e5de7e5-6"
+       style="stroke-width:0">
+      <g
+   id="id-ef2f264c-df4b-47c9-aff7-08368b9be7f3-2"
+   style="stroke-width:0">
+        <path
+   d="m 7.203125,-4.5 c 0,-0.21875 -0.078125,-0.3125 -0.140625,-0.3125 -0.046875,0 -0.140625,0.046875 -0.140625,0.28125 C 6.875,-3.84375 6.1875,-3.4375 5.53125,-3.4375 4.953125,-3.4375 4.453125,-3.75 3.9375,-4.09375 3.40625,-4.453125 2.859375,-4.8125 2.21875,-4.8125 c -0.9375,0 -1.671875,0.703125 -1.671875,1.625 0,0.21875 0.078125,0.296875 0.140625,0.296875 0.09375,0 0.140625,-0.1875 0.140625,-0.234375 C 0.875,-3.953125 1.6875,-4.25 2.21875,-4.25 c 0.578125,0 1.078125,0.296875 1.59375,0.65625 0.53125,0.359375 1.078125,0.71875 1.71875,0.71875 0.921875,0 1.671875,-0.71875 1.671875,-1.625 z m 0,2.328125 c 0,-0.296875 -0.125,-0.3125 -0.140625,-0.3125 -0.046875,0 -0.140625,0.046875 -0.140625,0.265625 C 6.875,-1.53125 6.1875,-1.109375 5.53125,-1.109375 c -0.578125,0 -1.078125,-0.3125 -1.59375,-0.671875 C 3.40625,-2.140625 2.859375,-2.5 2.21875,-2.5 c -0.9375,0 -1.671875,0.71875 -1.671875,1.625 0,0.234375 0.078125,0.3125 0.140625,0.3125 0.09375,0 0.140625,-0.1875 0.140625,-0.234375 C 0.875,-1.640625 1.6875,-1.9375 2.21875,-1.9375 c 0.578125,0 1.078125,0.3125 1.59375,0.65625 0.53125,0.359375 1.078125,0.71875 1.71875,0.71875 0.953125,0 1.671875,-0.734375 1.671875,-1.609375 z m 0,0"
+   id="id-47c19ab7-3837-4643-9e4d-bd87bc8d397b-6"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-4167ba83-01c4-4a60-bddd-0be7ac50b696-18"
+   style="stroke-width:0">
+        <path
+   d="M 4.78125,-6.25 4.9375,-6.921875 C 4.8125,-6.953125 4.53125,-7.03125 4.15625,-7.03125 c -0.9375,0 -1.796875,0.71875 -2.015625,1.703125 L 1.9375,-4.421875 H 1.203125 L 1.09375,-3.84375 H 1.828125 L 1,0 h 0.75 l 0.828125,-3.84375 h 1.09375 L 3.78125,-4.421875 h -1.125 l 0.265625,-1.1875 c 0.15625,-0.734375 0.84375,-0.8125 1.09375,-0.8125 0.203125,0 0.453125,0.015625 0.765625,0.171875 z m 0,0"
+   id="id-515be5b1-0132-4775-b51a-b11451c96bea-7"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-97815bdf-7ef1-46f3-a45f-4f95ddf051a3-92"
+   style="stroke-width:0">
+        <path
+   d="m 4.578125,0 -1.5,-2.28125 2.28125,-2.140625 H 4.53125 L 2.84375,-2.78125 1.828125,-4.421875 H 1 L 2.421875,-2.28125 0,0 H 0.8125 L 2.65625,-1.875 3.765625,0 Z m 0,0"
+   id="id-e9f1eab6-aca1-40b4-a3d3-ef2f17a0988e-0"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-4dd09823-c29e-4b6c-a7eb-fd001602f731-2"
+   style="stroke-width:0">
+        <path
+   d="m 3.3125,2.5 c -0.484375,-0.484375 -1.75,-1.765625 -1.75,-5 0,-0.546875 0.03125,-1.71875 0.4375,-2.890625 0.40625,-1.15625 0.984375,-1.75 1.3125,-2.09375 H 2.703125 C 2.375,-7.171875 1.71875,-6.5625 1.25,-5.34375 0.859375,-4.28125 0.78125,-3.21875 0.78125,-2.5 c 0,3.234375 1.4375,4.546875 1.921875,5 z m 0,0"
+   id="id-707fcff0-7eac-4ce7-bc43-d63a643cb098-3"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-06fbbf47-0665-40cf-bd2b-eb4a48e9737c-7"
+   style="stroke-width:0">
+        <path
+   d="m 3.078125,-2.5 c 0,-3.21875 -1.4375,-4.53125 -1.90625,-4.984375 H 0.5625 C 1.03125,-7 2.296875,-5.71875 2.296875,-2.5 c 0,0.5625 -0.03125,1.734375 -0.4375,2.90625 C 1.453125,1.5625 0.890625,2.15625 0.5625,2.5 h 0.609375 c 0.3125,-0.3125 0.984375,-0.921875 1.4375,-2.140625 0.40625,-1.0625 0.46875,-2.125 0.46875,-2.859375 z m 0,0"
+   id="id-32c1f1ad-fb24-40b2-9447-013bfd627b31-5"
+   style="stroke-width:0" />
+      </g>
+    </g><g
+       id="id-8a442b1d-0296-46fc-a8b6-786d9e5de7e5-0"
+       style="stroke-width:0">
+      <g
+   id="id-ef2f264c-df4b-47c9-aff7-08368b9be7f3-60"
+   style="stroke-width:0">
+        <path
+   d="m 7.203125,-4.5 c 0,-0.21875 -0.078125,-0.3125 -0.140625,-0.3125 -0.046875,0 -0.140625,0.046875 -0.140625,0.28125 C 6.875,-3.84375 6.1875,-3.4375 5.53125,-3.4375 4.953125,-3.4375 4.453125,-3.75 3.9375,-4.09375 3.40625,-4.453125 2.859375,-4.8125 2.21875,-4.8125 c -0.9375,0 -1.671875,0.703125 -1.671875,1.625 0,0.21875 0.078125,0.296875 0.140625,0.296875 0.09375,0 0.140625,-0.1875 0.140625,-0.234375 C 0.875,-3.953125 1.6875,-4.25 2.21875,-4.25 c 0.578125,0 1.078125,0.296875 1.59375,0.65625 0.53125,0.359375 1.078125,0.71875 1.71875,0.71875 0.921875,0 1.671875,-0.71875 1.671875,-1.625 z m 0,2.328125 c 0,-0.296875 -0.125,-0.3125 -0.140625,-0.3125 -0.046875,0 -0.140625,0.046875 -0.140625,0.265625 C 6.875,-1.53125 6.1875,-1.109375 5.53125,-1.109375 c -0.578125,0 -1.078125,-0.3125 -1.59375,-0.671875 C 3.40625,-2.140625 2.859375,-2.5 2.21875,-2.5 c -0.9375,0 -1.671875,0.71875 -1.671875,1.625 0,0.234375 0.078125,0.3125 0.140625,0.3125 0.09375,0 0.140625,-0.1875 0.140625,-0.234375 C 0.875,-1.640625 1.6875,-1.9375 2.21875,-1.9375 c 0.578125,0 1.078125,0.3125 1.59375,0.65625 0.53125,0.359375 1.078125,0.71875 1.71875,0.71875 0.953125,0 1.671875,-0.734375 1.671875,-1.609375 z m 0,0"
+   id="id-47c19ab7-3837-4643-9e4d-bd87bc8d397b-8"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-4167ba83-01c4-4a60-bddd-0be7ac50b696-3"
+   style="stroke-width:0">
+        <path
+   d="M 4.78125,-6.25 4.9375,-6.921875 C 4.8125,-6.953125 4.53125,-7.03125 4.15625,-7.03125 c -0.9375,0 -1.796875,0.71875 -2.015625,1.703125 L 1.9375,-4.421875 H 1.203125 L 1.09375,-3.84375 H 1.828125 L 1,0 h 0.75 l 0.828125,-3.84375 h 1.09375 L 3.78125,-4.421875 h -1.125 l 0.265625,-1.1875 c 0.15625,-0.734375 0.84375,-0.8125 1.09375,-0.8125 0.203125,0 0.453125,0.015625 0.765625,0.171875 z m 0,0"
+   id="id-515be5b1-0132-4775-b51a-b11451c96bea-78"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-97815bdf-7ef1-46f3-a45f-4f95ddf051a3-2"
+   style="stroke-width:0">
+        <path
+   d="m 4.578125,0 -1.5,-2.28125 2.28125,-2.140625 H 4.53125 L 2.84375,-2.78125 1.828125,-4.421875 H 1 L 2.421875,-2.28125 0,0 H 0.8125 L 2.65625,-1.875 3.765625,0 Z m 0,0"
+   id="id-e9f1eab6-aca1-40b4-a3d3-ef2f17a0988e-1"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-4dd09823-c29e-4b6c-a7eb-fd001602f731-0"
+   style="stroke-width:0">
+        <path
+   d="m 3.3125,2.5 c -0.484375,-0.484375 -1.75,-1.765625 -1.75,-5 0,-0.546875 0.03125,-1.71875 0.4375,-2.890625 0.40625,-1.15625 0.984375,-1.75 1.3125,-2.09375 H 2.703125 C 2.375,-7.171875 1.71875,-6.5625 1.25,-5.34375 0.859375,-4.28125 0.78125,-3.21875 0.78125,-2.5 c 0,3.234375 1.4375,4.546875 1.921875,5 z m 0,0"
+   id="id-707fcff0-7eac-4ce7-bc43-d63a643cb098-5"
+   style="stroke-width:0" />
+      </g>
+      <g
+   id="id-06fbbf47-0665-40cf-bd2b-eb4a48e9737c-8"
+   style="stroke-width:0">
+        <path
+   d="m 3.078125,-2.5 c 0,-3.21875 -1.4375,-4.53125 -1.90625,-4.984375 H 0.5625 C 1.03125,-7 2.296875,-5.71875 2.296875,-2.5 c 0,0.5625 -0.03125,1.734375 -0.4375,2.90625 C 1.453125,1.5625 0.890625,2.15625 0.5625,2.5 h 0.609375 c 0.3125,-0.3125 0.984375,-0.921875 1.4375,-2.140625 0.40625,-1.0625 0.46875,-2.125 0.46875,-2.859375 z m 0,0"
+   id="id-32c1f1ad-fb24-40b2-9447-013bfd627b31-55"
+   style="stroke-width:0" />
+      </g>
+    </g></defs><g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
@@ -4297,14 +4383,14 @@
        id="path47-3" /><g
        id="g2645"
        transform="matrix(0.352778,0,0,0.352778,65.2141,-38.194)"
-       ns1:version="1.12.0"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$n_1$"
-       ns1:preamble="C:\Users\orincon\Documents\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:jacobian_sqrt="0.352778"><defs
+       ns11:version="1.12.0"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$n_1$"
+       ns11:preamble="C:\Users\orincon\Documents\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:jacobian_sqrt="0.352778"><defs
    id="defs4992">
     <g
    id="g712">
@@ -4418,16 +4504,16 @@
        cy="94.540634"
        r="4.7931132" /><g
        transform="matrix(0.352778,0,0,0.352778,67.903819,73.907371)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$x$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$x$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g3469-9-5-3"><defs
    id="id-8f5bb0e8-6755-4164-85fe-910f0915e77b"
@@ -4466,16 +4552,16 @@
        cy="74.687386"
        r="4.7931132" /><g
        transform="matrix(0.352778,0,0,0.352778,150.94646,72.929008)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$\\sum$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$\\sum$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g3469-9-5-0"><defs
    id="id-a2ffffd4-841d-4388-a8d9-219e7bd42de1"
@@ -4519,16 +4605,16 @@
        cy="74.687386"
        r="4.7931132" /><g
        transform="matrix(0.352778,0,0,0.352778,165.99112,72.543002)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$\\hat{\\hspace{-0.2em}f}\\hspace{0.2em}(x)$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$\\hat{\\hspace{-0.2em}f}\\hspace{0.2em}(x)$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g3469-9-5"><defs
    id="id-5acbfdb3-8154-4163-9260-7d517d28119c"
@@ -4650,16 +4736,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,175.10907,72.926383)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$\\approx f \\hspace{0.2em}(x)$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$\\approx f \\hspace{0.2em}(x)$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g3469-9-5-2"><defs
    id="id-3d123736-86d0-4716-9291-87360dae674f"
@@ -4781,16 +4867,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,107.68796,60.1947)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\fontsize{9}{10}\\selectfont ReLU}"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="{\\fontsize{9}{10}\\selectfont ReLU}"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-0"><defs
    id="id-ea137a8c-38b0-4b3a-b073-0f98e683cabf"
@@ -4869,16 +4955,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,107.68796,73.5547)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\fontsize{9}{10}\\selectfont ReLU}\n"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="{\\fontsize{9}{10}\\selectfont ReLU}\n"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9"><defs
    id="id-e889341c-093f-45f2-a920-6e8727da0253"
@@ -4957,16 +5043,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,107.68796,93.4079)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="{\\fontsize{9}{10}\\selectfont ReLU}\n\n"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4.2"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="{\\fontsize{9}{10}\\selectfont ReLU}\n\n"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4.2"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-8"><defs
    id="id-0d133bc4-ce6e-4249-9500-fc7c6e55abcd"
@@ -5045,16 +5131,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,88.7307,61.605029)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}1}$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}1}$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8"><defs
    id="id-a6aa231d-c7e4-49cf-8fa5-3774a444c91a"
@@ -5132,16 +5218,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,88.7307,75.834462)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}2}$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}2}$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8-3"><defs
    id="id-7b19792f-f7bc-44af-bad2-31b51c7e4406"
@@ -5219,16 +5305,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,124.355,75.5742)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$(w_{2},y_{\\hspace{0.2mm}2}^{\\hspace{0.5mm}\\text{offset}})$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$(w_{2},y_{\\hspace{0.2mm}2}^{\\hspace{0.5mm}\\text{offset}})$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8-8-9-0-4"><defs
    id="id-1ba5074a-3eb2-4e73-895f-f6af7e5b6bba"
@@ -5426,7 +5512,7 @@
       </g><g
    transform="translate(182.818,131.149)"
    style="stroke-width:0"
-   id="g303"><path
+   id="g49"><path
    d="m 2.640625,-1.3125 c 0,-0.265625 -0.03125,-0.671875 -0.265625,-1.015625 C 2.15625,-2.640625 1.796875,-2.75 1.5,-2.75 c -0.734375,0 -1.296875,0.640625 -1.296875,1.40625 0,0.765625 0.609375,1.40625 1.390625,1.40625 0.34375,0 0.703125,-0.109375 1.015625,-0.296875 L 2.578125,-0.65625 c -0.34375,0.25 -0.71875,0.328125 -0.96875,0.328125 -0.53125,0 -0.921875,-0.4375 -0.9375,-0.984375 z m -0.375,-0.359375 H 0.71875 c 0.125,-0.46875 0.484375,-0.6875 0.78125,-0.6875 0.265625,0 0.65625,0.140625 0.765625,0.6875 z m 0,0"
    id="id-29c37133-676f-4673-84c6-e79a2f558ba4"
    style="stroke-width:0" />
@@ -5468,16 +5554,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,124.88417,61.344767)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$(w_{1},y_{\\hspace{0.2mm}1}^{\\hspace{0.5mm}\\text{offset}})$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$(w_{1},y_{\\hspace{0.2mm}1}^{\\hspace{0.5mm}\\text{offset}})$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8-8-9-0-4-3"><defs
    id="id-631f0c64-9f5e-4e25-a83b-a163773876a1"
@@ -5717,16 +5803,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,88.6023,89.1237)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}N}$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$x^{\\hspace{0.5mm}*}_{\\hspace{0.2mm}N}$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8-8-9"><defs
    id="id-54033e3d-ea38-40bc-aee1-29a25aa93c4d"
@@ -5804,16 +5890,16 @@
       </g></g>
 </g><g
        transform="matrix(0.352778,0,0,0.352778,124.653,88.8637)"
-       ns1:version="1.10.2"
-       ns1:texconverter="xelatex"
-       ns1:pdfconverter="inkscape"
-       ns1:text="$(w_{N},y_{\\hspace{0.2mm}N}^{\\hspace{0.5mm}\\text{offset}})$"
-       ns1:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
-       ns1:scale="1.0"
-       ns1:alignment="middle center"
-       ns1:stroke-to-path="0"
-       ns1:inkscapeversion="1.4"
-       ns1:jacobian_sqrt="0.352778"
+       ns11:version="1.10.2"
+       ns11:texconverter="xelatex"
+       ns11:pdfconverter="inkscape"
+       ns11:text="$(w_{N},y_{\\hspace{0.2mm}N}^{\\hspace{0.5mm}\\text{offset}})$"
+       ns11:preamble="C:\Users\oscar\OneDrive\Documentos\inkscape_textext\template.tex"
+       ns11:scale="1.0"
+       ns11:alignment="middle center"
+       ns11:stroke-to-path="0"
+       ns11:inkscapeversion="1.4"
+       ns11:jacobian_sqrt="0.352778"
        style="stroke-width:0"
        id="g18-9-1-8-8-9-0"><defs
    id="id-dc688646-ac38-4cd2-8d13-b98dc0ff9bea"

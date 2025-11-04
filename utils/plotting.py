@@ -35,7 +35,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "text.usetex": False,                # use LaTeX to write all text
     "font.family": "sans-serif",
     # "font.serif": [],
-    "font.sans-serif": ["DejaVu Sans"], # specify the sans-serif font
+    #"font.sans-serif": ["DejaVu Sans"], # specify the sans-serif font
     "font.monospace": [],
     "axes.labelsize": 8,               # LaTeX default is 10pt font.
     "font.size": 0,
