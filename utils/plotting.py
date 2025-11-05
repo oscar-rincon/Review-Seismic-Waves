@@ -38,7 +38,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     #"font.sans-serif": ["DejaVu Sans"], # specify the sans-serif font
     "font.monospace": [],
     "axes.labelsize": 8,               # LaTeX default is 10pt font.
-    "font.size": 0,
+    "font.size": 8,
     "legend.fontsize": 8,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 8,
     "ytick.labelsize": 8,
