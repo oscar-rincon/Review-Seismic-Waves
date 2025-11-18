@@ -1,0 +1,431 @@
+% ===============================
+%       DOCUMENT CLASS
+% ===============================
+% Use one of the two documentclass lines depending on aspect ratio needed
+% for 4x3 aspect ratio slides
+% \documentclass{beamer}
+
+% for 16x9 (modern wide screen) aspect ratio slides
+\documentclass[aspectratio=169]{beamer}
+
+% ===============================
+%           PACKAGES
+% ===============================
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{xcolor}        % include this in your preamble
+ 
+ 
+ 
+
+% ===============================
+%         THEME SELECTION
+% ===============================
+% Oxford Maths theming
+\usetheme{oxfordmaths}
+ 
+% ===============================
+%            DOCUMENT
+% ===============================
+\begin{document}
+
+\setbeamercolor{background canvas}{bg=darkblue}
+\begin{frame}[plain]
+
+\color{white}
+ 
+\vspace{0.2cm}
+\centering
+{\fontsize{10pt}{10pt}\selectfont\textsc{propuesta de tesis}} \\[0.1cm]
+{{\fontsize{18pt}{18pt}\selectfont Aprendizaje automático en el\\[0.03cm] modelado de la propagación de ondas:}\\[0.13cm]
+{\fontsize{18pt}{18pt}\selectfont De los métodos numéricos estándar a las\\[0.1cm] redes neuronales informadas por la física}} \\[0.5cm]
+
+{\fontsize{8pt}{10pt}\selectfont
+\setlength{\tabcolsep}{3pt} % antes era ~6pt
+\begin{tabular}{rl}
+\textbf{Estudiante:} & Oscar Rincón Cardeño \\
+\textbf{Director:} & Nicolás Guarín-Zapata, Ph.D. \\
+\textbf{Codirectora:} & Silvana Montoya-Noguera, Ph.D. \\
+\textbf{Grupos de investigación:} & Aplicaciones Matemáticas en Ciencias e Ingeniería \\
+& Naturaleza y Ciudad \\[0.4cm]
+\end{tabular}
+}
+
+{\fontsize{8pt}{10pt}\selectfont
+Universidad EAFIT\\
+Escuela de Ciencias Aplicadas e Ingeniería\\
+Doctorado en Ingeniería\\
+Noviembre de 2025
+}
+
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+
+\begin{frame}[plain]{\textbf{\textcolor{darkblue}{Contenido}}}
+
+{\fontsize{13pt}{13pt}\selectfont
+\begin{itemize}
+    \item Introducción  
+        \begin{itemize}\fontsize{12pt}{12pt}\selectfont
+            \item Modelado de la propagación de ondas
+            \item Métodos numéricos estándar
+            \item Métodos basados en aprendizaje automático
+        \end{itemize}
+
+    \item Objetivos de investigación
+    \item Metodología
+    \item Avances preliminares
+\end{itemize}
+}
+
+\end{frame}
+\setcounter{framenumber}{0}
+\section[Modelado de la propagación de ondas]{Modelado de la propagación de ondas}
+%\setbeamercolor{background canvas}{bg=darkblue}
+%\begin{frame}[plain]
+%\addtocounter{framenumber}{-1}
+% \hypertarget{Modelado de la propagación de ondas}{}
+% 
+%{\huge \textcolor{white}{Modelado de la propagación de ondas}}
+%
+%\end{frame}
+
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame} 
+
+\vspace{0.4cm}
+
+
+Un \textbf{\textcolor{darkblue}{modelo matemático que describe la propagación de ondas}} en un medio busca representar, en el caso directo, mediante una función, cómo evoluciona un sistema a lo largo del tiempo y en el espacio. 
+
+\vspace{0.2cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/seismic_inverse_esp.pdf}
+\end{figure}    
+
+\end{frame}
+
+\begin{frame} 
+
+\vspace{0.8cm}
+
+La relevancia de esta investigación se sustenta en el \textbf{\textcolor{darkblue}{creciente interés por integrar técnicas de aprendizaje automático}} en áreas tradicionalmente dominadas por métodos numéricos estándar, como la sismología.
+
+\vspace{0.3cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/publication_trends_ml_wave_esp.pdf}
+\end{figure}    
+
+\end{frame}
+
+
+\begin{frame} 
+
+\vspace{0.8cm}
+
+La investigación en aprendizaje automático fue impulsada por avances en hardware como las GPUs, un incremento significativo en la disponibilidad de datos, así como el desarrollo de \textbf{\textcolor{darkblue}{herramientas computacionales de acceso abierto}} para la implementación de estos métodos.
+
+\vspace{0.3cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/frameworks_esp.pdf}
+\end{figure}    
+
+\end{frame}
+
+\begin{frame} 
+
+Proponemos abordar la intersección entre el \textbf{\textcolor{darkblue}{aprendizaje automático}} y el modelado de \textbf{\textcolor{darkblue}{la propagación de ondas}}, específicamente en aplicaciones en \textbf{\textcolor{darkblue}{sismología}}.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/intersection_ml_wave_seismology_esp.pdf}
+\end{figure}    
+
+\end{frame}
+
+\begin{frame} 
+
+Se plantea la siguiente \textbf{\textcolor{darkblue}{pregunta de investigación}}:\\[0.5cm]
+
+\begin{quote}
+¿De qué manera el aprendizaje automático puede constituir una alternativa o un complemento para las aplicaciones relacionadas con la propagación de ondas sísmicas?
+\end{quote}
+
+\end{frame}
+
+\section[Métodos numéricos estándar]{Métodos numéricos estándar}
+%\setbeamercolor{background canvas}{bg=darkblue}
+%\begin{frame}[plain]
+%\addtocounter{framenumber}{-1}
+% \hypertarget{Métodos numéricos estándar}{}
+% 
+%{\huge \textcolor{white}{Métodos numéricos estándar}}
+%
+%\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame} 
+
+En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}} la precisión requerida que se logra depende de la discretización de la malla computacional.
+
+\vspace{0.3cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/mallas.pdf}
+\end{figure}    
+
+\end{frame}
+
+\begin{frame} 
+
+Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada $\hat{f}(x,y)$ obtenida mediante el método de diferencias finitas}} para la ecuación de Helmholtz:
+ 
+\begin{equation*}
+\begin{cases}
+\nabla^2 f + (5\pi)^2 f = 0, & \text{en } \Omega, \\[6pt]
+f = 0, & \text{en } \partial\Omega.
+\end{cases}
+\end{equation*}
+
+\indent La solución analítica correspondiente está dada por
+
+\[
+f(x,y) = \sin(5\pi x)\sin(5\pi y).
+\]
+    
+\end{frame}
+
+\begin{frame} 
+
+El refinamiento de la malla mejora la aproximación numérica.
+
+\vspace{0.3cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/solucion_diferencias_finitas.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame} 
+
+Se reduce el error relativo con respecto a la solución analítica y, al mismo tiempo, incrementa el tiempo de cómputo.
+
+\vspace{0.3cm}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/convergencia.pdf}
+\end{figure} 
+
+\end{frame}
+
+\section[Métodos basados en aprendizaje automático]{Métodos basados en aprendizaje automático}
+%\setbeamercolor{background canvas}{bg=darkblue}
+%\begin{frame}[plain]
+%\addtocounter{framenumber}{-1}
+% \hypertarget{Métodos basados en aprendizaje automático}{}
+% 
+%{\huge \textcolor{white}{Métodos basados en aprendizaje automático}}
+%
+%\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame} 
+ 
+\end{frame}
+
+\begin{frame}
+
+\begin{quote}
+Una red neuronal de propagación hacia adelante con una sola capa oculta y cierto número finito de neuronas puede aproximar de manera arbitraria cualquier función continua definida en un subconjunto compacto del espacio de entradas, siempre que la función de activación utilizada sea no constante, acotada y continua.
+\end{quote}
+
+\end{frame}
+
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/universal_approximation_demo_net.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/universal_approximation_demo_plot.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/scheme_surrgate_models_NNs_esp.pdf}
+\end{figure} 
+
+\end{frame}
+
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/scheme_PINNs_esp.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/pinn_sampling_esp.pdf}
+\end{figure} 
+
+\end{frame}
+
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/pinn_approximation_demo.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame} 
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/pinn_convergence_demo.pdf}
+\end{figure} 
+
+\end{frame}
+
+\section[Objetivos de la investigación]{Objetivos de la investigación}
+\setbeamercolor{background canvas}{bg=darkblue}
+\begin{frame}[plain]
+\addtocounter{framenumber}{-1}
+ \hypertarget{Objetivos de la investigación}{}
+ 
+{\huge \textcolor{white}{Objetivos de la investigación}}
+
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame}
+
+\textbf{\textcolor{darkblue}{Objetivo general:}}\\[0.4cm]
+
+Desarrollar enfoques de aprendizaje automático que puedan constituir una alternativa o complemento a los métodos numéricos estándar en la modelación de la propagación de ondas, con énfasis en la evaluación de su rendimiento computacional y aplicabilidad en sismología.
+
+\end{frame} 
+
+\begin{frame}
+ 
+\textbf{\textcolor{darkblue}{Objetivos específicos:}}\\[0.4cm]
+
+{\fontsize{10pt}{10pt}\selectfont 
+\begin{itemize}
+     \item \textbf{\textcolor{darkblue}{Mapear}} las técnicas de aprendizaje automático utilizadas en el modelado de la ecuación de ondas aplicadas a la sismología, resaltando sus aplicaciones, alcances y desafíos actuales.
+     \item \textbf{\textcolor{darkblue}{Comparar}} métodos representativos de aprendizaje automático, frente a enfoques numéricos estándares, evaluando su precisión y eficiencia computacional, destacando sus ventajas, limitaciones y potencial de integración.
+     \item \textbf{\textcolor{darkblue}{Evaluar}} la capacidad de las PINNs para resolver problemas inversos en sismología, en lo referente a mantener una precisión comparable a la de los métodos estándar y, al mismo tiempo, reducir los costos computacionales.
+     \item \textbf{\textcolor{darkblue}{Escalar}} los enfoques basados en aprendizaje automático para favorecer el uso de datos provenientes de problemas en sismología en escenarios no controlados.
+\end{itemize}
+}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/escheme_objetives.pdf}
+\end{figure} 
+
+\end{frame}
+
+
+\section[Métodología]{Métodología de la investigación}
+\setbeamercolor{background canvas}{bg=darkblue}
+\begin{frame}[plain]
+\addtocounter{framenumber}{-1}
+ \hypertarget{Métodología de la investigación}{}
+ 
+{\huge \textcolor{white}{Métodología de la investigación}}
+
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+
+\begin{frame}
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/methodology.pdf}
+\end{figure} 
+
+\end{frame}
+
+
+\section[Avances preliminares]{Avances preliminares}
+\setbeamercolor{background canvas}{bg=darkblue}
+\begin{frame}[plain]
+\addtocounter{framenumber}{-1}
+ \hypertarget{Avances preliminares}{}
+ 
+{\huge \textcolor{white}{Avances preliminares}}
+
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame} 
+ 
+\end{frame}
+
+
+\section[Análisis comparativo]{Análisis comparativo}
+%\setbeamercolor{background canvas}{bg=darkblue}
+%\begin{frame}[plain]
+%\addtocounter{framenumber}{-1}
+% \hypertarget{Análisis comparativo}{}
+% 
+%{\huge \textcolor{white}{Análisis comparativo del modelado numérica de la dispersión de ondas}}
+%
+%\end{frame}
+
+
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame} 
+ 
+\end{frame}
+
+\begin{frame} 
+ 
+\end{frame}
+
+\begin{frame} 
+ 
+\end{frame}
+
+\begin{frame} 
+ 
+\end{frame}
+
+\begin{frame} 
+ 
+\end{frame}
+
+\end{document}

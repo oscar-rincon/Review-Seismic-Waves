@@ -1,0 +1,85 @@
+%% =====================================================================
+%% CONFIGURACIÓN DEL TEMA
+%% =====================================================================
+
+% Sin símbolos de navegación
+\setbeamertemplate{navigation symbols}{}
+
+% ------------------------------------------------------------
+% COLORES
+% ------------------------------------------------------------
+\definecolor{darkblue}{RGB}{0,33,71}
+\usecolortheme[named=darkblue]{structure}
+
+% ------------------------------------------------------------
+% TIPOGRAFÍA GLOBAL (MODIFICABLE)
+% ------------------------------------------------------------
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{FiraSans}
+\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+%\usepackage{mathspec} 
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[italic]{mathastext} 
+ 
+% Tamaños de fuente para footer
+\setbeamerfont{title in head/foot}{size*={7pt}{7pt}}
+
+
+% ------------------------------------------------------------
+% DIMENSIONES GLOBALES
+% ------------------------------------------------------------
+\newlength{\textmargin}
+\setlength{\textmargin}{15mm}
+
+\setbeamersize{
+  text margin left=\textmargin,
+  text margin right=\textmargin
+}
+
+\newlength{\titlehmargin}
+\setlength{\titlehmargin}{5mm}
+
+\newlength{\titlevmargin}
+\setlength{\titlevmargin}{1mm}
+
+\newlength{\fullpagewidth}
+\setlength{\fullpagewidth}{%
+  \dimexpr\textwidth+\textmargin+\textmargin\relax
+}
+
+% ------------------------------------------------------------
+% QUITAR COMPLETAMENTE EL ENCABEZADO
+% ------------------------------------------------------------
+
+\setbeamertemplate{headline}{}
+
+% ------------------------------------------------------------
+% FOOTER: sección izquierda + número derecha
+% ------------------------------------------------------------
+
+\setbeamertemplate{footline}{%
+  \vspace{1pt}
+  % Línea superior finita y centrada en la página útil
+  \noindent\hspace{\titlehmargin}%
+  \rule{\dimexpr\fullpagewidth-2\titlehmargin\relax}{0.3pt}%
+  \par
+
+  % Espaciado controlado
+  \vspace{0.4em}
+
+  % Caja con contenido alineado en una sola línea
+  \begin{beamercolorbox}[wd=\dimexpr\fullpagewidth-2\titlehmargin\relax,ht=2.2ex,dp=1ex]{footline}
+      {\usebeamerfont{title in head/foot}\hspace{3.5em}\insertsectionhead}%
+      \hfill
+      {\usebeamerfont{title in head/foot}\insertframenumber}
+      \hspace{-1.5em}
+  \end{beamercolorbox}
+
+  \vspace{0.3em}
+}
+
+%% =====================================================================
+%%  FIN DEL TEMA
+%% =====================================================================
