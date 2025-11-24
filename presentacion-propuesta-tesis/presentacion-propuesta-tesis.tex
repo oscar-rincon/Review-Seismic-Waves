@@ -208,7 +208,7 @@ En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}} la precisió
 
 \begin{frame} 
 
-Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada $\hat{f}(x,y)$ obtenida mediante el método de diferencias finitas}} para la ecuación de Helmholtz:
+Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada $\boldsymbol{\hat{f}}$ obtenida mediante el método de diferencias finitas}} para la ecuación de Helmholtz:
  
 \begin{equation*}
 \begin{cases}
@@ -265,19 +265,29 @@ Se reduce el error relativo con respecto a la solución analítica y, al mismo t
 %\end{frame}
 
 \setbeamercolor{background canvas}{bg=gray!5}
+
+\begin{frame}{Aprendizaje automático como alternativa para el modelado de la propagación de ondas} 
+
+\end{frame}
+
 \begin{frame}{¿Qué es una red neuronal?} 
  
-Se define como una composición de otras funciones 
-\(g_{i}(x)\), cada una de las cuales representa una transformación aplicada a la entrada $x$:
+Una red neuronal puede entenderse como una función \(f(x)\) que es 
+\textbf{\textcolor{darkblue}{la composición de varias funciones}} \(g_i(x)\), 
+cada una de las cuales aplica una transformación a la entrada \(x\):
 \[
 f(x) = g_n(g_{n-1}(\ldots g_2(g_1(x))\ldots)).
 \]
-Cada función $g_i(x)$ puede representarse como:
+
+Cada función \(g_i(x)\) puede escribirse como:
 \[
 g_i(x) = \sigma(w_i x + b_i),
 \]
-donde $w_i$ y $b_i$ son parámetros ajustables (peso y sesgo, respectivamente) y $\sigma$ es una función de activación no lineal.    
+donde \(w_i\) y \(b_i\) son parámetros ajustables (peso y sesgo, respectivamente), y \(\sigma\) es una función de activación no lineal.    
+
 \end{frame}
+
+
 
 \begin{frame}{Teorema de aproximación universal}
 
