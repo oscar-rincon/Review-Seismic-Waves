@@ -63,19 +63,19 @@
   \vspace{1pt}
   % Línea superior finita y centrada en la página útil
   \noindent\hspace{\titlehmargin}%
-  \rule{\dimexpr\fullpagewidth-2\titlehmargin\relax}{0.3pt}%
+  \textcolor{gray}{\rule{\dimexpr\fullpagewidth-2\titlehmargin\relax}{0.3pt}}%
   \par
 
   % Espaciado controlado
   \vspace{0.4em}
 
-  % Caja con contenido alineado en una sola línea
-  \begin{beamercolorbox}[wd=\dimexpr\fullpagewidth-2\titlehmargin\relax,ht=2.2ex,dp=1ex]{footline}
-      {\usebeamerfont{title in head/foot}\hspace{3.5em}\insertsectionhead}%
-      \hfill
-      {\usebeamerfont{title in head/foot}\insertframenumber}
-      \hspace{-1.5em}
-  \end{beamercolorbox}
+% Caja con contenido alineado en una sola línea
+\begin{beamercolorbox}[wd=\dimexpr\fullpagewidth-2\titlehmargin\relax,ht=2.2ex,dp=1ex]{footline}
+    {\textcolor{gray}{\usebeamerfont{title in head/foot}\hspace{3.5em}\insertsectionhead}%
+    \hfill
+    {\usebeamerfont{title in head/foot}\textcolor{gray}{\insertframenumber}}
+    \hspace{-1.5em}}
+\end{beamercolorbox}
 
   \vspace{0.3em}
 }

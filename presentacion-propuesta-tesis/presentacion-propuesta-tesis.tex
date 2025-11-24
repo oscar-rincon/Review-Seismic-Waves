@@ -265,15 +265,48 @@ Se reduce el error relativo con respecto a la solución analítica y, al mismo t
 %\end{frame}
 
 \setbeamercolor{background canvas}{bg=gray!5}
-\begin{frame} 
+\begin{frame}{¿Qué es una red neuronal?} 
  
+Se define como una composición de otras funciones 
+\(g_{i}(x)\), cada una de las cuales representa una transformación aplicada a la entrada $x$:
+\[
+f(x) = g_n(g_{n-1}(\ldots g_2(g_1(x))\ldots)).
+\]
+Cada función $g_i(x)$ puede representarse como:
+\[
+g_i(x) = \sigma(w_i x + b_i),
+\]
+donde $w_i$ y $b_i$ son parámetros ajustables (peso y sesgo, respectivamente) y $\sigma$ es una función de activación no lineal.    
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Teorema de aproximación universal}
 
 \begin{quote}
-Una red neuronal de propagación hacia adelante con una sola capa oculta y cierto número finito de neuronas puede aproximar de manera arbitraria cualquier función continua definida en un subconjunto compacto del espacio de entradas, siempre que la función de activación utilizada sea no constante, acotada y continua.
+Una red neuronal con una sola capa oculta y cierto número finito de neuronas puede aproximar de manera arbitraria cualquier función continua, dada una función de activación adecuada.
 \end{quote}
+
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/universal_approximation_nn.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame}{Ejemplo: aproximación de funciones con redes neuronales}
+
+Queremos aproximar la siguiente función:
+\[
+f(x) = x^3 + x^2 - x - 1.
+\]
+Utilizando una red neuronal de una sola capa de la forma:
+\[
+f(x) \approx \hat{f}_{i}(x) = \sum_{i=1}^{N} g_i(x).
+\]
+donde cada función $g_i(x)$ está dada por:
+\[
+g_i(x) = w_i \, \text{ReLU}(x - x_i^*) + y^{\text{offset}}_{i}.
+\]
 
 \end{frame}
 
