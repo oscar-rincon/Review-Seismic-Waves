@@ -39,7 +39,7 @@
 \vspace{0.2cm}
 \centering
 {\fontsize{10pt}{10pt}\selectfont\textsc{propuesta de tesis}} \\[0.1cm]
-{{\fontsize{18pt}{18pt}\selectfont Aprendizaje automático en el\\[0.03cm] modelado de la propagación de ondas:}\\[0.13cm]
+{{\fontsize{18pt}{18pt}\selectfont Aprendizaje automático en el\\[0.03cm] modelado de la propagación de ondas:}\\[0.1cm]
 {\fontsize{18pt}{18pt}\selectfont De los métodos numéricos estándar a las\\[0.1cm] redes neuronales informadas por la física}} \\[0.5cm]
 
 {\fontsize{8pt}{10pt}\selectfont
@@ -99,7 +99,8 @@ Noviembre de 2025\\
 \begin{frame}[plain]
 \addtocounter{framenumber}{-1}
  \hypertarget{Introducción}{}
- 
+
+\vspace{2.5cm}  
 {\huge \textcolor{white}{Introducción}}
 
 \end{frame}
@@ -195,7 +196,9 @@ Se plantea la siguiente \textbf{\textcolor{darkblue}{pregunta de investigación}
 \setbeamercolor{background canvas}{bg=gray!5}
 \begin{frame} 
 
-En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}} la precisión requerida que se logra depende de la discretización de la malla computacional.
+%En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}} la precisión requerida que se logra depende de la discretización de la malla computacional.
+
+En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}}, el dominio espacial se discretiza para resolver la ecuación diferencial.
 
 \vspace{0.3cm}
 
@@ -206,9 +209,36 @@ En los \textbf{\textcolor{darkblue}{métodos numéricos estándar}} la precisió
 
 \end{frame}
 
-\begin{frame} 
+% \begin{frame} 
 
-Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada $\boldsymbol{\hat{f}}$ obtenida mediante el método de diferencias finitas}} para la ecuación de Helmholtz:
+% Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada $\boldsymbol{\hat{f}}$ obtenida mediante el método de diferencias finitas}} para la ecuación de Helmholtz:
+ 
+% \begin{equation*}
+% \begin{cases}
+% \nabla^2 f + (5\pi)^2 f = 0, & \text{en } \Omega, \\[6pt]
+% f = 0, & \text{en } \partial\Omega.
+% \end{cases}
+% \end{equation*}
+
+% \indent La solución analítica correspondiente está dada por
+
+% \[
+% f(x,y) = \sin(5\pi x)\sin(5\pi y).
+% \]
+    
+% \end{frame}
+
+\begin{frame}
+
+\begin{columns}[c]  % alineación vertical centrada
+% ======================================================
+% === Columna izquierda: ecuación + texto
+% ======================================================
+\begin{column}{0.55\textwidth}
+
+Consideremos \textbf{\textcolor{darkblue}{el caso de la solución aproximada 
+$\boldsymbol{\hat{f}}$ obtenida mediante el método de diferencias finitas}} 
+para la ecuación de Helmholtz:
  
 \begin{equation*}
 \begin{cases}
@@ -222,14 +252,33 @@ f = 0, & \text{en } \partial\Omega.
 \[
 f(x,y) = \sin(5\pi x)\sin(5\pi y).
 \]
-    
+
+\end{column}
+
+% ======================================================
+% === Columna derecha: figura analítica exacta
+% ======================================================
+\begin{column}{0.45\textwidth}
+
+\begin{figure}
+    \centering
+    % Ajusta el ancho a tu gusto
+    \includegraphics[width=0.75\linewidth]{figures/analytical_plot.pdf}
+    % \caption*{Solución analítica $f_{\text{exact}}$}
+\end{figure}
+
+\end{column}
+
+\end{columns}
+
 \end{frame}
+
 
 \begin{frame} 
 
-El refinamiento de la malla mejora la aproximación numérica.
+la precisión requerida que se logra \textbf{\textcolor{darkblue}{depende de la discretización de la malla computacional.}}
 
-\vspace{0.3cm}
+\vspace{0.1cm}
 
 \begin{figure} 
     \centering
@@ -240,7 +289,7 @@ El refinamiento de la malla mejora la aproximación numérica.
 
 \begin{frame} 
 
-Se reduce el error relativo con respecto a la solución analítica y, al mismo tiempo, incrementa el tiempo de cómputo.
+Se reduce el error relativo con respecto a la solución analítica y, al mismo tiempo, \textbf{\textcolor{darkblue}{incrementa el tiempo de cómputo.}}
 
 \vspace{0.3cm}
 
@@ -248,6 +297,8 @@ Se reduce el error relativo con respecto a la solución analítica y, al mismo t
     \centering
     \includegraphics[width=1.0\textwidth]{figures/convergencia.pdf}
 \end{figure} 
+
+Se ha sugerido que las implementaciones basadas en \textbf{\textcolor{darkblue}{aprendizaje automático}} pueden hacer que sus aplicaciones sean más eficientes.
 
 \end{frame}
 
@@ -266,27 +317,30 @@ Se reduce el error relativo con respecto a la solución analítica y, al mismo t
 
 \setbeamercolor{background canvas}{bg=gray!5}
 
-\begin{frame}{Aprendizaje automático como alternativa para el modelado de la propagación de ondas} 
-
-\end{frame}
-
-\begin{frame}{¿Qué es una red neuronal?} 
  
-Una red neuronal puede entenderse como una función \(f(x)\) que es 
+
+\begin{frame}{} 
+
+\textbf{\textcolor{darkblue}{Una red neuronal}} puede entenderse como una función \(f(x)\) que es 
 \textbf{\textcolor{darkblue}{la composición de varias funciones}} \(g_i(x)\), 
-cada una de las cuales aplica una transformación a la entrada \(x\):
+cada una representando una transformación aplicada a la entrada \(x\):
 \[
 f(x) = g_n(g_{n-1}(\ldots g_2(g_1(x))\ldots)).
 \]
 
-Cada función \(g_i(x)\) puede escribirse como:
-\[
+Cada función \(g_i(x)\) se define como:
+\(
 g_i(x) = \sigma(w_i x + b_i),
-\]
-donde \(w_i\) y \(b_i\) son parámetros ajustables (peso y sesgo, respectivamente), y \(\sigma\) es una función de activación no lineal.    
+\)
+donde \(w_i\) y \(b_i\) \textbf{\textcolor{darkblue}{son parámetros ajustables (peso y sesgo)}} y \(\sigma\) es una función de activación.
+
+\begin{figure}[t]  % más arriba
+    \centering
+    \vspace{-0.05cm}
+    \includegraphics[width=0.42\textwidth]{figures/subconjuntos_inteligenicia_artificial.pdf}
+\end{figure}
 
 \end{frame}
-
 
 
 \begin{frame}{Teorema de aproximación universal}
@@ -303,9 +357,9 @@ Una red neuronal con una sola capa oculta y cierto número finito de neuronas pu
 
 \end{frame}
 
-\begin{frame}{Ejemplo: aproximación de funciones con redes neuronales}
-
-Queremos aproximar la siguiente función:
+ \begin{frame}
+\vspace{0.5cm}    
+Queremos \textbf{\textcolor{darkblue}{aproximar la siguiente función}}:
 \[
 f(x) = x^3 + x^2 - x - 1.
 \]
@@ -313,23 +367,37 @@ Utilizando una red neuronal de una sola capa de la forma:
 \[
 f(x) \approx \hat{f}_{i}(x) = \sum_{i=1}^{N} g_i(x).
 \]
-donde cada función $g_i(x)$ está dada por:
-\[
+Donde:
+\(
 g_i(x) = w_i \, \text{ReLU}(x - x_i^*) + y^{\text{offset}}_{i}.
-\]
+\)
+
+\begin{figure} 
+    \centering
+    \vspace{-0.3cm}
+    \includegraphics[width=0.55\textwidth]{figures/plot_basic_relu_function.pdf}
+\end{figure} 
+
 
 \end{frame}
 
 
 \begin{frame} 
+
+Se construye una red con una sola capa oculta y un número finito de neuronas \(N\).
+
 \begin{figure} 
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/universal_approximation_demo_net.pdf}
+    \vspace{0.2cm}
+    \includegraphics[width=0.9\textwidth]{figures/universal_approximation_demo_net.pdf}
 \end{figure} 
 
 \end{frame}
 
 \begin{frame} 
+
+La combinación de todos los tramos produce una aproximación por partes que captura la estructura de \(f(x)\).
+
 \begin{figure} 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/universal_approximation_demo_plot.pdf}
@@ -337,11 +405,13 @@ g_i(x) = w_i \, \text{ReLU}(x - x_i^*) + y^{\text{offset}}_{i}.
 
 \end{frame}
 
-\begin{frame} 
+\begin{frame}
 
 \begin{quote}
 Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha capa podría requerir un número de neuronas inviable y aun así no garantizar un aprendizaje y generalización adecuados.
 \end{quote}
+
+\hfill \textit{Goodfellow, Bengio \& Courville (2016)}\hspace{0.8cm}
 
 \end{frame}
 
@@ -395,7 +465,8 @@ Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha 
 \begin{frame}[plain]
 \addtocounter{framenumber}{-1}
  \hypertarget{Objetivos de investigación}{}
- 
+
+\vspace{2.5cm}    
 {\huge \textcolor{white}{Objetivos de investigación}}
 
 \end{frame}
@@ -444,7 +515,8 @@ Desarrollar enfoques de aprendizaje automático que puedan constituir una altern
 \begin{frame}[plain]
 \addtocounter{framenumber}{-1}
  \hypertarget{Métodología}{}
- 
+
+\vspace{2.5cm}  
 {\huge \textcolor{white}{Métodología}}
 
 \end{frame}
@@ -467,7 +539,8 @@ Desarrollar enfoques de aprendizaje automático que puedan constituir una altern
 \begin{frame}[plain]
 \addtocounter{framenumber}{-1}
  \hypertarget{Avances preliminares}{}
- 
+
+\vspace{2.5cm}  
 {\huge \textcolor{white}{Avances preliminares}}
 
 \end{frame}
