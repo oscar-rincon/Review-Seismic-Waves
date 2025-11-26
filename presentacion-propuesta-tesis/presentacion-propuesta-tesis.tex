@@ -16,7 +16,7 @@
 \usepackage{tcolorbox}
 \usepackage{booktabs}
 \usepackage{xcolor}        % include this in your preamble
- 
+\usepackage{qrcode} 
  
  
 
@@ -408,14 +408,22 @@ La combinación de todos los tramos produce una aproximación por partes que cap
 \begin{frame}
 
 \begin{quote}
-Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha capa podría requerir un número de neuronas inviable y aun así no garantizar un aprendizaje y generalización adecuados.
+Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha capa \textbf{\textcolor{darkblue}{podría requerir un número de neuronas inviable}} y aun así no garantizar un aprendizaje y generalización adecuados.
 \end{quote}
 
-\hfill \textit{Goodfellow, Bengio \& Courville (2016)}\hspace{0.8cm}
+%\hfill \textit{Goodfellow, Bengio \& Courville (2016)}\hspace{0.8cm}
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/universal_approximation_nn_limitation.pdf}
+\end{figure} 
+
 
 \end{frame}
 
 \begin{frame} 
+
+En un \textbf{\textcolor{darkblue}{modelo sustituto}} la función a aproximar corresponde a la solución de una ecuación diferencial.
+
 \begin{figure} 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/scheme_surrgate_models_NNs_esp.pdf}
@@ -425,6 +433,9 @@ Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha 
 
 
 \begin{frame} 
+
+Las \textbf{\textcolor{darkblue}{redes neuronales informadas por la física}} integran el conocimiento de las leyes físicas en el proceso de entrenamiento de la red neuronal.
+
 \begin{figure} 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/scheme_PINNs_esp.pdf}
@@ -432,9 +443,35 @@ Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha 
 
 \end{frame}
 
+ \begin{frame} 
+Consideremos aproximar la solución de la  \textbf{\textcolor{darkblue}{ecuación de Helmholtz}}:
+\[
+\nabla^2 f + (5\pi)^2 f = 0.
+\]
+Proponemos una aproximación del tipo 
+\[ f(x,y) \approx \hat{f}_\theta(x,y)=x(1-x)\,y(1-y)\,f_\theta(x,y) \] 
+A partir de ella, definimos el \textbf{residuo físico} asociado a la ecuación diferencial:
+\[
+\mathcal{R}(x,y;\theta) = \nabla^2 f_\theta + (5\pi)^2 f_\theta.
+\]
+La red se entrena minimizando la función de pérdida:
+\[
+L_{\text{physics}} = \frac{1}{N} \sum_{i=1}^{N} |\mathcal{R}(x_i,y_i;\theta)|^2,
+\]
+%de modo que la aproximación cumpla la ecuación diferencial en el dominio.
+
+%\vspace{0.2cm}
+%\footnotesize{Las derivadas, como \( \Delta \text{NN}(x) \), se calculan mediante \textbf{diferenciación automática}.}
+
+\end{frame}
+
 \begin{frame} 
+
+Aumentar la cantidad de puntos de muestreo permite capturar de manera más detallada las variaciones de la solución.
+
 \begin{figure} 
     \centering
+    \vspace{0.5cm}
     \includegraphics[width=1.0\textwidth]{figures/pinn_sampling_esp.pdf}
 \end{figure} 
 
@@ -442,6 +479,9 @@ Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha 
 
 
 \begin{frame} 
+
+Al aumentar la cantidad de puntos de entrenamiento, la red mejora su capacidad para aproximar la solución analítica, reduciendo el error relativo.
+
 \begin{figure} 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/pinn_approximation_demo.pdf}
@@ -450,10 +490,27 @@ Aunque una red de una sola capa es capaz de aproximar cualquier función, dicha 
 \end{frame}
 
 \begin{frame} 
+
+El tiempo de evaluación del modelo, una vez entrenado, permanece prácticamente constante, independientemente del número de puntos empleados.
+
+
 \begin{figure} 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/pinn_convergence_demo.pdf}
 \end{figure} 
+
+El tiempo de entrenamiento alcanza valores del orden de \(10^{1}\,\text{s}\), lo que representa dos órdenes de magnitud más que el tiempo máximo registrado con el método de diferencias finitas
+
+\end{frame}
+
+\begin{frame} 
+
+\begin{enumerate}
+    \item ¿Qué técnicas de aprendizaje automático se han aplicado para modelar la propagación de ondas en el contexto de la sismología?
+    \item ¿Cómo pueden compararse los enfoques modernos basados en aprendizaje automático para resolver PDEs con los métodos numéricos estándar?
+    \item ¿En qué medida las PINNs pueden estimar de forma eficiente  los parámetros físicos del modelo a partir de observaciones sísmicas, manteniendo una precisión comparable a la de los métodos de inversión estándar?
+    \item ¿De qué manera pueden los enfoques basados en aprendizaje automático escalarse para aprovechar datos provenientes de problemas sismológicos en contextos no controlados?
+\end{enumerate}
 
 \end{frame}
 
@@ -546,13 +603,36 @@ Desarrollar enfoques de aprendizaje automático que puedan constituir una altern
 \end{frame}
 
 \setbeamercolor{background canvas}{bg=gray!5}
-\begin{frame} 
- 
+\begin{frame}{Avances preliminares}
+
+\begin{itemize}
+
+\item \textbf{Revisión exploratoria del estado del arte}  
+      -- Uso de aprendizaje automático en modelación de propagación de ondas.  
+      -- Manuscrito en fase final de redacción.
+
+\item \textbf{Repositorio de reproducibilidad en PyTorch}  
+      -- Reimplementación del trabajo clásico de Raissi (2019).  
+      -- Código abierto con experimentos verificables.  
+      -- Disponible en GitHub: \texttt{ReScience-PINNs}.
+
+\item \textbf{Comparación numérica BEM vs.\ PINNs}  
+      -- Resultados presentados en \textit{MadeAI 2025} (Porto, Portugal).  
+      -- Manuscrito preparado para ser enviado a \textit{Engineering Computations}.  
+      -- Preprint disponible en arXiv.
+
+\item \textbf{Trabajo de grado (dominios semi-infinitos)}  
+      -- Presentado en la 5\textsuperscript{a} Semana de la Geofísica (2025).  
+      -- Estrategia alternativa de muestreo y fronteras para PINNs.  
+      -- Borrador de artículo en preparación.
+
+\end{itemize}
+
 \end{frame}
  
 
 \setbeamercolor{background canvas}{bg=gray!5}
-\begin{frame} 
+\begin{frame}{Comparación numérica BEM vs.\ PINNs} 
 
  
 
@@ -564,24 +644,190 @@ Desarrollar enfoques de aprendizaje automático que puedan constituir una altern
 
 \begin{frame} 
  
+Consideramos el problema clásico de \textbf{\textcolor{darkblue}{la dispersión de ondas acústicas por un obstáculo cilíndrico}} bajo una onda incidente armónica en el tiempo.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/scattering_3d.pdf}
+\end{figure} 
+
 \end{frame}
 
-\begin{frame} 
+\begin{frame}
+    \frametitle{}
+
+Cuando un campo acústico incidente interactúa con un obstáculo, se genera un
+\textbf{\textcolor{darkblue}{campo dispersado}} que modifica la propagación original.
+
+\begin{columns}
+
+    % Primera columna
+    \column{0.4\textwidth}
+
+    \vspace{0.2cm}
+    \textbf{\textcolor{darkblue}{Campo de presión acústica}}
+    \[
+        u = u_{\text{inc}} + u_{\text{sct}}
+    \]
+
+    %\vspace{0.1cm}
+
+    \textbf{\textcolor{darkblue}{Ecuación de Helmholtz}}
+    \[
+        \Delta u + k^2 u = 0
+    \]
  
+
+    % Segunda columna
+    \column{0.4\textwidth}
+    \begin{figure} 
+    \centering
+    \vspace{0.5cm}
+    \includegraphics[width=0.8\textwidth]{figures/schematic_scattering_2d.pdf}
+    \end{figure} 
+
+\end{columns}
+
 \end{frame}
 
-\begin{frame} 
- 
+\begin{frame}{Método de elementos de frontera} 
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/scheme_bem_scattering.pdf}
+\end{figure} 
+
 \end{frame}
+
+
+\begin{frame}{Método de redes neuronales informadas por la física}    
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/scheme_pinns_scattering.pdf}
+\end{figure}     
+    
+\end{frame}
+
+\begin{frame}
+
+La solución analítica se utilizó para calcular el error relativo de los métodos numéricos evaluados en este estudio.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/displacement_exact.pdf}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame}
+
+ \vspace{0.5cm}   
+ Un ajuste de hiperparámetros permite alcanzar la mayor precisión.   
+\vspace{0.5cm}
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/hyperparameter_tunning.pdf}
+\end{figure}     
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Network training}
+    \begin{center}
+    \includegraphics[width=0.75\textwidth]{figures/loss.pdf}
+    
+
+    \vspace{0.5cm}
+
+    \animategraphics[autoplay,loop,width=0.65\linewidth]{2}{entrenamiento/frame_}{000}{019} 
+\end{center}
+    \vspace{0.3cm}
+    %\textit{\footnotesize Neural network prediction improving over epochs}
+
+\end{frame}
+
+\begin{frame}
+
+Si bien las PINN son capaces de resolver problemas directos, su proceso de entrenamiento suele ser computacionalmente costoso debido a los largos tiempos de entrenamiento.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/accuracy_time_error_bem_pinns.pdf}
+\end{figure}  
+
+\end{frame}
+
+\begin{frame}
+Una distinción importante entre BEM y PINN radica en cómo cada método maneja la condición de radiación, que rige el comportamiento del campo disperso a grandes distancias.
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/generalization_1.pdf}
+\end{figure}  
+
+\end{frame}
+
+\begin{frame}
+
+Las PINN no representen con precisión la respuesta de campo lejano, especialmente fuera del dominio utilizado durante el entrenamiento.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/generalization_2.pdf}
+\end{figure}  
+
+\end{frame}
+
+\begin{frame}{Conclusiones del estudio BEM vs.\ PINNs}
+
+\begin{itemize}
+
+\item Las técnicas basadas en redes neuronales ofrecen ventajas como implementación libre de malla, diferenciación automática e inferencia eficiente.
+
+\item Las PINNs requieren tiempos de entrenamiento mucho mayores que BEM para lograr precisión comparable, limitando su uso en problemas directos.
+
+\item Los enfoques híbridos PINN–BEM son prometedores, especialmente para problemas inversos que demandan múltiples evaluaciones del modelo.
+
+\end{itemize}
+
+\end{frame}
+
 
 \setbeamercolor{background canvas}{bg=darkblue}
 \begin{frame}[plain]
+\addtocounter{framenumber}{-1}
+ \hypertarget{Avances preliminares}{}
 
-\textcolor{white}{\textbf{Contacto:} orincon@eafit.edu.co}\\
-  
- 
-
+\vspace{2.5cm}  
+{\huge \textcolor{white}{Gracias por su atención}}
 
 \end{frame}
 
+\setbeamercolor{background canvas}{bg=gray!5}
+\begin{frame}[plain]
+
+\centering
+\textbf{Contacto:} \texttt{orincon@eafit.edu.co}
+
+\vspace{1cm}
+
+\begin{tabular}{cc}
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \qrcode[height=3.8cm]{https://github.com/oscar-rincon/ReScience-PINNs}\\
+        \vspace{0.5cm} % <-- Espacio real debajo del QR
+        {\small Repositorio PINNs reproducible}
+    \end{minipage}
+    &
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \qrcode[height=3.8cm]{https://doi.org/10.48550/arXiv.2509.12483}\\
+        \vspace{0.5cm} % <-- Espacio real debajo del QR
+        {\small Preprint del artículo en arXiv}
+    \end{minipage}
+\end{tabular}
+
+ 
+
+\end{frame}
 \end{document}
