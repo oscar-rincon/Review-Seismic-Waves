@@ -1,7 +1,8 @@
 # === Custom ignores ===
 # Ignore all generated PDF files
  
-
+/main/bibliometric_analysis_trends_gaps/papers_pdfs/*.pdf
+ 
 # Ignore all PyTorch model files
 *.pt
 *.npz
