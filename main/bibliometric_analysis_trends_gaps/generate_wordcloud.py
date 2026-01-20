@@ -190,7 +190,7 @@ wc = WordCloud(
     prefer_horizontal=0.7,
     max_words=200,
     width=4100,
-    height=2050,
+    height=int(4100*0.3),
     random_state=1,
     min_font_size=60,
     max_font_size=240
@@ -200,10 +200,10 @@ wc.generate(cleaned_text)
 
 
 # Plot
-plt.figure(figsize=(7.0, 3.5), constrained_layout=True)
+plt.figure(figsize=(7.0, (7.0*0.3)), constrained_layout=True)
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
-plt.savefig("figs/wordcloud.pdf", dpi=300)
+plt.savefig("figs/wordcloud.svg", dpi=300)
 plt.show()
 
 
