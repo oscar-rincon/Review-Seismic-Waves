@@ -1,0 +1,33 @@
+Title
+Physics informed machine learning: Seismic wave equation
+Synthetic seismic data generation with deep learning
+Adaptive-Sampling Physics-Informed Neural Network for Viscoacoustic Wavefield Simulation
+Deep-neural-networks-based approaches for Biot–squirt model in rock physics
+Seismic Wavefields Modeling With Variable Horizontally Layered Velocity Models via Velocity-Encoded PINN
+An Efficient Platform for Numerical Modeling of Partial Differential Equations
+PINNeik: Eikonal solution using physics-informed neural networks
+PINNup: Robust Neural Network Wavefield Solutions Using Frequency Upscaling and Neuron Splitting
+Enhancing one-way wave equation-based migration with deep learning
+Solving the frequency-domain acoustic VTI wave equation using physics-informed neural networks
+Parametric elastic full waveform inversion with convolutional neural network
+Hard enforcement of physics-informed neural network solutions of acoustic wave propagation
+Low-frequency marine seismic data reconstruction based on the far-field signature using a modified U-Net
+On the numerical resolution of the second-order viscoacoustic and viscoelastic anisotropic wave equations using the recursive convolution method
+Physics-Guided Unsupervised Deep-Learning Seismic Inversion With Uncertainty Quantification
+Shear-wave velocity prediction of tight reservoirs based on poroelasticity theory: A comparative study of deep neural network and rock physics model
+Autoencoded Elastic Wave-Equation Traveltime Inversion: Toward Reliable Near-Surface Tomogram
+Robust Full Waveform Inversion: A Source Wavelet Manipulation Perspective
+"pyseis: a high-performance, user-friendly Python package for GPU-accelerated seismic modeling and subsurface imaging"
+FWIGAN: Full-Waveform Inversion via a Physics-Informed Generative Adversarial Network
+Efficient seismic numerical modelling technique using the YOLOv2-based expanding domain method
+An empirical analysis of the influence of seismic data modeling for estimating velocity models with fully convolutional networks
+A Multi-Task Learning Framework of Stable Q-Compensated Reverse Time Migration Based on Fractional Viscoacoustic Wave Equation
+Tensor-optimized hardware accelerates fused discontinuous Galerkin simulations
+Learning-Based Seismic Velocity Inversion with Synthetic and Field Data
+An Eigenfunction Representation of Deep Waveguides with Application to Unconventional Reservoirs
+Learning-Based Seismic Velocity Inversion with Synthetic and Field Data
+Physics-Informed Neural Networks with Fourier Features for Seismic Wavefield Simulation in Time-Domain Nonsmooth Complex Media
+Physics-informed Neural Networks (PINNs) for Wave Propagation and Full Waveform Inversions
+Multiple-Input Fourier Neural Operator (MIFNO) for source-dependent 3D elastodynamics
+Accelerating Least Squares Imaging Using Deep Learning Techniques
+Diffusion-based subsurface multiphysics monitoring and forecasting

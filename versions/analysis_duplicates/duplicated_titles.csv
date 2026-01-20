@@ -5,6 +5,7 @@ A Deep-Learning-Based Generalized Convolutional Model for Seismic Data and Its A
 A Detailed View of the 2020–2023 Southwestern Puerto Rico Seismic Sequence with Deep Learning
 A Physics-Based Neural-Network Way to Perform Seismic Full Waveform Inversion
 A Physics-guided Generative AI Toolkit for Geophysical Monitoring
+A deep learning-based inverse Hessian for Full Waveform Inversion
 A study of deep neural networks for Newtonian noise subtraction at Terziet in Limburg—the Euregio Meuse-Rhine candidate site for Einstein Telescope
 A versatile framework to solve the Helmholtz equation using physics-informed neural networks
 Accelerating 2D and 3D frequency-domain seismic wave modeling through interpolating frequency-domain wavefields by deep learning
@@ -14,6 +15,7 @@ Applying scientific machine learning to improve seismic wave simulation and inve
 Automated time-window selection based on machine learning for full-waveform inversion
 Bridging the gap: Deep learning on seismic field data with synthetic training for building Gulf of Mexico velocity models
 Data-Driven Design of Wave-Propagation Models for Shale-Oil Reservoirs Based on Machine Learning
+Deep Learning Seismic Inversion Based on Prestack Waveform Datasets
 Deep Learning Seismic Substructure Detection using the Frozen Gaussian Approximation
 Deep Learning-Based Data-Driven P-/S-Wave Vector Decomposition for Multicomponent Seismic Data
 Deep Neural Helmholtz Operators for 3D Elastic Wave Propagation and Inversion
@@ -24,6 +26,7 @@ Deep learning seismic substructure detection using the Frozen Gaussian approxima
 Deep learning-based groundwater storage estimation from seismic data
 Detection of point scatterers using diffraction imaging and deep learning
 Domain Knowledge Informed Multitask Learning for Landslide-Induced Seismic Classification
+Effects of Acoustic Stimulation on Fluid Flow in Porous Media
 Elastic-AdjointNet: A physics guided deep autoencoder to overcome cross talk effects in multiparameter full waveform inversion
 Encoder-Decoder Architecture for 3D Seismic Inversion
 Enhanced neural network sampling for two-stage Markov chain Monte Carlo seismic inversion
@@ -32,7 +35,9 @@ Fourier Neural Operator Surrogate Model to Predict 3D Seismic Waves Propagation
 Frequency-Domain Wave Simulation Using Physics-Informed Neural Networks (PINNs) with Free Surface Boundary Condition
 Helmholtz-equation solution in nonsmooth media by a physics-informed neural network incorporating quadratic terms and a perfectly matching layer condition
 High-frequency wavefield extrapolation using the Fourier neural operator
+Improving Distributed Acoustic Sensing Data Quality with Self-Supervised Learning
 Improving Seismic Wave Simulation and Inversion Using Deep Learning
+Is it time to swish? Comparing activation functions in solving the Helmholtz equation using physics-informed neural networks
 Learned multiphysics inversion with differentiable programming and machine learning
 Learning stable seismic wave equations for porous media from real data
 Memory Optimization in RNN-Based Full Waveform Inversion Using Boundary Saving Wavefield Reconstruction
@@ -62,6 +67,7 @@ Self-adaptive physics-driven deep learning for seismic wave modeling in complex 
 Sensing and computational frameworks for improving drill-string dynamics estimation
 Simulating Multicomponent Elastic Seismic Wavefield Using Deep Learning
 Simulating seismic multifrequency wavefields with the Fourier feature physics-informed neural network
+Simulation of Pier Ground Motion Wave Propagation Based on Machine Learning Algorithm and FEPG Finite Element Analysis System
 Skeletonized Wave-Equation Refraction Inversion with Autoencoded Waveforms
 Small-data-driven fast seismic simulations for complex media using physics-informed Fourier neural operators
 Solving Seismic Wave Equations on Variable Velocity Models With Fourier Neural Operator
