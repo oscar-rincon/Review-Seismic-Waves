@@ -1,15 +1,18 @@
-
 from collections import Counter
 from wordcloud import WordCloud, STOPWORDS
 from os import system, listdir
 from os.path import join
 import glob
 import string
-
 import matplotlib.pyplot as plt
 from matplotlib import cm
+from matplotlib.colors import LinearSegmentedColormap
 import spacy
 
+blue_gray_cmap = LinearSegmentedColormap.from_list(
+    "blue_gray",
+    ["#1f4fd8", "#8e8e8e"]  # blue → gray
+)
 
 # Utilities
 def load_text(path):
@@ -160,7 +163,6 @@ def clean_text(text, stopwords, nlp, acronyms=None):
         ):
             lemma = token.lemma_
 
-            # skip duplicated consecutive tokens (km km, time time)
             if lemma == prev:
                 continue
 
@@ -173,7 +175,7 @@ def clean_text(text, stopwords, nlp, acronyms=None):
 
     return " ".join(tokens)
 
-
+# Clean text
 cleaned_text = clean_text(
     text=text,
     stopwords=stopwords,
@@ -181,12 +183,11 @@ cleaned_text = clean_text(
     acronyms=ACRONYMS
 )
 
-
 # WordCloud
 wc = WordCloud(
     font_path="Montserrat-SemiBold.ttf",
     background_color="white",
-    colormap=cm.coolwarm,
+    colormap=blue_gray_cmap,
     prefer_horizontal=0.7,
     max_words=200,
     width=4100,
@@ -197,7 +198,6 @@ wc = WordCloud(
 )
 
 wc.generate(cleaned_text)
-
 
 # Plot
 plt.figure(figsize=(7.0, (7.0*0.3)), constrained_layout=True)
@@ -215,3 +215,4 @@ with open("data/included_words_with_relevance.txt", "w") as f:
     f.write("word,relevance\n")
     for w, v in sorted(wc.words_.items(), key=lambda x: x[1], reverse=True):
         f.write(f"{w},{v:.6f}\n")
+ 
