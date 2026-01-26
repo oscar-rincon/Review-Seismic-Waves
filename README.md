@@ -1,4 +1,4 @@
-# A Review of Recent Progress in Seismic Waves Propagation Modeling Using Machine Learning Based Methods
+# A Scoping Review of Machine Learning Approaches for Wave Propagation Modeling in Seismology 
 
 ## Installation
 
@@ -11,7 +11,7 @@ conda activate ml-seismic-waves-env
 
 ### Install PyTorch with CUDA support
 
-After activating the environment, install PyTorch, TorchVision, and TorchAudio with CUDA 12.8 support (adjust if your nvidia-smi shows a different CUDA version):
+After activating the environment, install PyTorch, TorchVision, and TorchAudio with CUDA 12.8 support (adjust if your nvidia-smi shows a different CUDA version): 
 
  ```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
